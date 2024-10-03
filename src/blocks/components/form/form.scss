@@ -1,0 +1,344 @@
+ .form {
+
+     & input[type="text"],
+     & input[type="date"],
+     & input[type="number"],
+     & input[type="password"],
+     & input[type="email"],
+     & input[type="tel"] {
+
+         font-size: 14px;
+         line-height: 15px;
+         padding-left: rem(24);
+         padding-right: rem(24);
+         padding-top: 10px;
+         padding-bottom: 10px;
+         box-sizing: border-box;
+         width: auto;
+         flex-grow: 1;
+         border: 2px solid transparent;
+         border-radius: 40px;
+
+         width: 100%;
+         color: var(--color-text-1);
+         height: 50px;
+         background-color: #eee;
+         transition: border 0.4s;
+
+         @media screen and (min-width: $w576) {
+             height: 52px;
+         }
+
+
+
+         &::placeholder {
+             color: var(--color-text-2);
+             opacity: 1;
+             text-shadow: none;
+             font-weight: 400;
+         }
+
+         &:focus {
+             border-color: #3b99fc;
+             outline: 0;
+         }
+
+         &:required {
+             background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGNsaXAtcGF0aD0idXJsKCNwcmVmaXhfX3ByZWZpeF9fY2xpcDBfOTU4XzY1MikiPjxwYXRoIGQ9Ik0zLjMgOGwuMTE2LTMuMDU2LTIuNzE1IDEuNjRMMCA1LjQxNiAyLjg2MSA0IDAgMi41ODNsLjctMS4xNjYgMi43MTYgMS42MzlMMy4zIDBoMS40MDJsLS4xMTcgMy4wNTZMNy4zIDEuNDE2IDggMi41ODQgNS4xMzkgNCA4IDUuNDE3bC0uNyAxLjE2Ni0yLjcxNi0xLjYzOUw0LjcgOEgzLjN6IiBmaWxsPSIjRjU2NzJBIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0icHJlZml4X19wcmVmaXhfX2NsaXAwXzk1OF82NTIiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoOHY4SDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+);
+             background-repeat: no-repeat;
+             background-position: calc(100% - 16px) center;
+             padding-right: 32px;
+         }
+     }
+
+     & input[disabled] {
+         background-color: #eee;
+         cursor: not-allowed;
+         color: var(--color-borders-2);
+     }
+
+     & input[data-mac-mask] {
+         text-transform: uppercase;
+     }
+
+     & select {
+         height: 52px;
+         width: 100%;
+     }
+
+     & input[type="date"] {
+         padding-right: 3em;
+         background-size: 1.2em auto;
+         background-repeat: no-repeat;
+         background-position: calc(100% - 1.25em) center;
+         min-width: 165px;
+         cursor: pointer;
+
+     }
+
+     & input[type="date"][aria-valid="false"],
+     & input[type="text"][aria-valid="false"],
+     & input[type="number"][aria-valid="false"],
+     & input[type="tel"][aria-valid="false"],
+     & input[type="password"][aria-valid="false"],
+     & input[type="email"][aria-valid="false"] {
+         border-color: #f00;
+         background-color: rgba(249, 66, 88, 0.12);
+
+     }
+
+     & .af-select[aria-valid="false"] {
+         border-color: #f00;
+         background-color: rgba(249, 66, 88, 0.12);
+         ;
+     }
+
+     & input[type="password"][aria-valid="true"],
+     & input[type="email"][aria-valid="true"] {
+         //border-color: #0f0;
+         padding-right: 3em;
+         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMuNTY3IDEwLjI5OUwxMy41NDkuMzE3bDEuNDE0IDEuNDE0LTkuOTgyIDkuOTgyLTEuNDE0LTEuNDE0eiIgZmlsbD0iIzRBQzYzNSIvPjxwYXRoIGQ9Ik0xLjUxIDUuNDM0bDQuNDMgNC40MzItMS40MTMgMS40MTRMLjA5NiA2Ljg0OSAxLjUxIDUuNDM0eiIgZmlsbD0iIzRBQzYzNSIvPjwvc3ZnPg==);
+         background-size: 1em auto;
+         background-repeat: no-repeat;
+         background-position: 96% center;
+     }
+
+     & textarea {
+         min-height: 129px;
+         max-width: 100%;
+         resize: vertical;
+         width: 100%;
+         font-size: 14px;
+         padding: rem(15);
+         line-height: 140%;
+         outline: none !important;
+         border: 2px solid var(--color-borders-2);
+         border-radius: 8px;
+         transition: 0.3s ease;
+
+
+
+         &::placeholder {
+             color: var(--color-text-2);
+             opacity: 1;
+             text-shadow: none;
+             font-weight: 400;
+         }
+
+         &:focus {
+             outline: none;
+             border-color: var(--color-accent-2);
+         }
+     }
+
+     &.is-validate {
+         & input:invalid {
+             background-color: rgba(249, 66, 88, 0.12);
+             ;
+         }
+     }
+
+
+
+
+     & div.error {
+         color: #F94258;
+         font-size: 13px;
+         padding-top: 0.5em;
+         width: 100%;
+         line-height: 140%;
+         font-weight: 400;
+
+         @media screen and (min-width: $w760) {
+             font-size: 15px;
+         }
+     }
+
+     &__note {
+
+         font-size: 14px;
+         color: var(--gray-36, #5B5B5B);
+         width: 100%;
+         line-height: 150%;
+
+         & span {
+             cursor: pointer;
+         }
+
+         & a {
+             color: var(--green);
+
+             &:hover {
+                 text-decoration: underline;
+
+             }
+         }
+
+         &--col2 {
+             display: flex;
+             justify-content: space-between;
+             flex-direction: column;
+
+             &>span {
+                 cursor: pointer;
+                 padding-bottom: 10px;
+
+                 @media screen and (min-width: $w760) {
+                     padding-bottom: 0;
+                 }
+             }
+
+             @media screen and (min-width: $w760) {
+                 flex-direction: row;
+             }
+         }
+     }
+
+     &__submit {
+         padding-top: 3em;
+     }
+
+     &__item {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         width: 100%;
+
+         @media screen and (min-width: $w760) {
+             flex-direction: row;
+             align-items: center;
+             margin: -10px;
+             width: calc(100% + 20px);
+         }
+
+         &>.form__item {
+             margin: 0;
+             flex-direction: column;
+             width: 100%;
+
+             @media screen and (min-width: $w1440) {
+                 flex-direction: row;
+             }
+         }
+
+
+     }
+
+     &__subitem {
+         flex-grow: 1;
+         margin-bottom: 15px;
+         margin-right: 0;
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+         position: relative;
+
+         &--leftlabel {
+             max-width: 240px;
+             font-size: 16px;
+             align-self: start;
+             font-weight: 600;
+
+             @media screen and (min-width: $w760) {
+                 align-self: center;
+                 font-weight: normal;
+             }
+         }
+
+         &--w-auto {
+             @media screen and (min-width: $w760) {
+                 flex-grow: 0;
+                 width: auto;
+             }
+         }
+
+         & .form__item {
+             & .form__subitem {
+                 &:last-child {
+                     margin-bottom: 0;
+                 }
+             }
+         }
+
+         @media screen and (min-width: $w760) {
+             padding: 11px 10px;
+             margin-bottom: 0;
+         }
+     }
+
+     &__label {
+
+         font-weight: 600;
+         font-size: 16px;
+         width: 100%;
+         color: $main;
+         color: var(--text-01);
+         padding-bottom: 10px;
+
+         @media screen and (min-width: $w480) {
+             font-size: 18px;
+         }
+
+         & span[data-tooltip] {
+             display: inline-block;
+             vertical-align: middle;
+             margin-left: 0.5em;
+             cursor: pointer;
+
+             & svg {
+                 fill: var(--blue-light);
+             }
+
+             &:hover {
+                 & svg {
+                     fill: var(--blue-dark);
+                 }
+             }
+         }
+     }
+
+     &__buttons {
+
+         display: flex;
+         margin: -5px;
+         flex-direction: column-reverse;
+         width: 100%;
+         justify-content: flex-end;
+
+         @media screen and (min-width: $w576) {
+             flex-direction: row;
+
+         }
+
+         & button {
+             margin: 5px;
+         }
+     }
+
+     & fieldset {
+         border: none;
+         padding: 0;
+         margin-top: rem(40);
+
+
+         &:first-child {
+             margin-top: rem(0);
+         }
+     }
+
+     & legend {
+         margin-bottom: rem(30);
+     }
+
+     & .af-select {
+         height: 48px;
+         box-sizing: border-box;
+         border-radius: 8px;
+
+         & .select-options li {
+             max-width: none;
+         }
+     }
+
+
+ }

@@ -1,0 +1,156 @@
+ .pagination {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     width: 100%;
+
+     @media screen and (max-width: $w480) {
+         flex-wrap: wrap;
+         flex-direction: column-reverse;
+     }
+
+     &__page {
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         padding: 24px 0;
+
+         & ul {
+             display: flex;
+             list-style-type: none;
+
+             & li {
+
+                 margin: 0 4px;
+
+                 & span,
+                 & a {
+                     width: rem(36);
+                     height: rem(36);
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     color: var(--color-text-03);
+                     font-size: 14px;
+                     font-weight: 500;
+                     background-color: var(--color-bg-1);
+                     color: var(--color-text-1);
+                     border-radius: 6px;
+                     transition: 0.3s ease;
+
+                     @media screen and (min-width: $w992) {
+                         width: rem(52);
+                         height: rem(52);
+                         font-size: 16px;
+                     }
+
+                     & svg {
+                         fill: var(--color-text-03);
+                         min-width: 24px;
+                         height: 24px;
+                     }
+
+                     &:hover {
+                         background-color: var(--color-bg-3);
+                         color: var(--color-accent-2);
+
+                         & svg {
+                             fill: #fff;
+                         }
+                     }
+                 }
+
+                 & span {
+                     pointer-events: none;
+                 }
+
+                 &.active a {
+                     background-color: var(--color-bg-7);
+                     color: #fff;
+
+                     & svg {
+                         fill: #fff;
+
+                     }
+                 }
+
+                 &.next,
+                 &.prev {
+
+                     & a {
+                         background-color: transparent;
+                         border: 2px solid var(--color-borders-2);
+
+                         & svg {
+                             fill: var(--color-accent-1);
+                         }
+
+                         &:hover {
+                             background-color: var(--color-bg-3);
+                             border: 2px solid var(--color-bg-5);
+
+                             & svg {
+                                 fill: var(--color-accent-2);
+                             }
+                         }
+                     }
+
+                     & span {
+                         background-color: transparent;
+                         border: 2px solid var(--color-borders-1);
+
+                         & svg {
+                             fill: var(--color-borders-1);
+                         }
+                     }
+
+                     & a:not(:hover) {
+                         @media screen and (max-width: $w576) {
+                             background-color: transparent;
+                         }
+                     }
+                 }
+
+             }
+         }
+
+     }
+
+     &__more {
+
+         width: 100%;
+
+         @media screen and (max-width: $w480) {
+             padding-bottom: 24px;
+
+         }
+
+         & .btn {
+             width: 100%;
+         }
+     }
+
+     &--showmore {
+         & .pagination {
+             &__page {
+                 width: auto;
+             }
+         }
+     }
+
+     &__total {
+         color: var(--color-text-03);
+         white-space: nowrap;
+
+         text-align: center;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+ }
+
+ .card-review__project * {
+     margin: 0;
+ }

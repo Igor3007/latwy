@@ -1,0 +1,200 @@
+{
+    "filter": {
+        "all": {
+            "name": "Все",
+            "icon": false
+        },
+        "region": {
+            "name": "По регионам",
+            "icon": "/img/icons/ic_pen-contacts.svg"
+        },
+        "industry": {
+            "name": "По отраслям",
+            "icon": "/img/icons/ic_routes.svg"
+        },
+        "product": {
+            "name": "По продукции",
+            "icon": "/img/icons/ic_hand-gear.svg"
+        }
+    },
+
+    "clients": [
+
+        {
+            "logo": "/img/clients/logo--1.jpg",
+            "region": "Россия",
+            "industry": "Медицина",
+            "product": "Передаточные окна"
+        },
+        {
+            "logo": "/img/clients/logo--2.jpg",
+            "region": "Беларусь",
+            "industry": "Автомобили",
+            "product": "Передаточные окна"
+        },
+        {
+            "logo": "/img/clients/logo--3.jpg",
+            "region": "Казахстан",
+            "industry": "Медицина",
+            "product": "Передаточные окна"
+        },
+        {
+            "logo": "/img/clients/logo-.jpg",
+            "region": "Узбекистан",
+            "industry": "Hi-tech",
+            "product": "Передаточные окна"
+        },
+        {
+            "logo": "/img/clients/logo-mailru.jpg",
+            "region": "Россия",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-mercedes.jpg",
+            "region": "Россия",
+            "industry": "Автомобили",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-rafarma.jpg",
+            "region": "Беларусь",
+            "industry": "Медицина",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-rosatom.jpg",
+            "region": "Казахстан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-roskosmos.jpg",
+            "region": "Узбекистан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-samsung.jpg",
+            "region": "Беларусь",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-roskosmos.jpg",
+            "region": "Казахстан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo--2.jpg",
+            "region": "Беларусь",
+            "industry": "Автомобили",
+            "product": "Передаточные окна"
+        },
+        {
+            "logo": "/img/clients/logo--3.jpg",
+            "region": "Казахстан",
+            "industry": "Медицина",
+            "product": "Передаточные окна"
+        },
+        {
+            "logo": "/img/clients/logo-.jpg",
+            "region": "Узбекистан",
+            "industry": "Hi-tech",
+            "product": "Передаточные окна"
+        },
+        {
+            "logo": "/img/clients/logo-mailru.jpg",
+            "region": "Россия",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-mercedes.jpg",
+            "region": "Россия",
+            "industry": "Автомобили",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-rafarma.jpg",
+            "region": "Беларусь",
+            "industry": "Медицина",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-rosatom.jpg",
+            "region": "Казахстан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-roskosmos.jpg",
+            "region": "Узбекистан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-samsung.jpg",
+            "region": "Беларусь",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-roskosmos.jpg",
+            "region": "Казахстан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-samsung.jpg",
+            "region": "Узбекистан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-mercedes.jpg",
+            "region": "Россия",
+            "industry": "Автомобили",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-rafarma.jpg",
+            "region": "Беларусь",
+            "industry": "Медицина",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-rosatom.jpg",
+            "region": "Казахстан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-roskosmos.jpg",
+            "region": "Узбекистан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-samsung.jpg",
+            "region": "Беларусь",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-roskosmos.jpg",
+            "region": "Казахстан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        },
+        {
+            "logo": "/img/clients/logo-samsung.jpg",
+            "region": "Узбекистан",
+            "industry": "Hi-tech",
+            "product": "Гермошкафы"
+        }
+
+
+    ]
+}

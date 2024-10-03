@@ -1,0 +1,135 @@
+.section-page-404 {
+    padding: 20px 0;
+
+    @media screen and (min-width: $w992) {
+        padding: 45px 0;
+    }
+
+    @media screen and (min-width: $w1440) {
+        padding: 70px 0;
+    }
+}
+
+.page-404 {
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media screen and (min-width: $w992) {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        &__left {
+            width: 60%;
+            padding-right: 50px;
+        }
+
+        &__right {
+            width: 40%;
+        }
+    }
+
+    &__right {
+        padding-bottom: 24px;
+
+        @media screen and (min-width: $w992) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__label {
+        color: var(--color-text-2);
+        padding-bottom: 12px;
+
+        @media screen and (min-width: $w992) {
+            padding-bottom: 0px;
+        }
+
+
+    }
+
+    &__title {
+        @include font-h4;
+        line-height: 120%;
+        padding-bottom: 0.8em;
+
+        @media screen and (min-width: $w1440) {
+            @include font-h1;
+        }
+
+        @media screen and (min-width: $w760) {
+            @include font-h2;
+
+        }
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        padding-bottom: 12px;
+    }
+
+    &__row {
+
+        @media screen and (min-width: $w992) {
+            padding-bottom: 24px;
+
+        }
+
+        @media screen and (min-width: $w576) {
+            display: flex;
+            gap: 12px
+        }
+
+        & a {
+            width: 100%;
+            display: block;
+            margin-bottom: 12px;
+
+            @media screen and (min-width: $w576) {
+                width: auto;
+            }
+
+            & .btn {
+                width: 100%;
+            }
+        }
+
+        & .btn {
+            @media screen and (min-width: $w480) {
+                max-width: 240px;
+            }
+        }
+    }
+
+    &__phones {
+        @media screen and (min-width: $w992) {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+
+    &__num {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 24px;
+
+
+
+        & span {
+            color: var(--color-text-2);
+            display: block;
+            padding-bottom: 6px;
+            font-size: 14px;
+        }
+
+        & a {
+            font-weight: bold;
+            font-size: 20px;
+            color: var(--color-accent-1);
+        }
+    }
+
+
+}

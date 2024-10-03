@@ -1,0 +1,28 @@
+mixin page-404
+  section.section-page-404
+    .container
+      .page-404 
+        .page-404__left
+          .page-404__label Ошибка:
+          .page-404__title 404 — Страница не найдена
+          .page-404__subtitle Однако вы всегда можете:
+          .page-404__row
+            a(href='/catalog.html'): button.btn Перейти в каталог
+            a(href='/'): button.btn.btn-light Вернуться на главную
+          .page-404__subtitle Также в случае возникновения любых вопросов или для оформления заказа просто позвоните нам по телефонам:
+          .page-404__phones
+            .page-404__num
+              span Беларусь
+              a(href='#') +375 (29) 224-07-65
+            .page-404__num
+              span Россия
+              a(href='#') +7 (499) 113-56-52
+          .page-404__desc Наши менеджеры проконсультируют вас совершенно бесплатно.
+
+          
+
+        .page-404__right
+          .page-404__image
+            picture
+              img(src="/img/other/img-404.jpg")
+        

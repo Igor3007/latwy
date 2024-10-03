@@ -1,0 +1,215 @@
+.video {
+    margin: 0 auto;
+    position: relative;
+    background: #eee;
+    overflow: hidden;
+
+
+    & iframe {
+        border: none;
+        position: relative;
+        z-index: 2;
+    }
+
+    &.is-play {
+
+        position: relative;
+
+        @keyframes load {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        &::before {
+            content: '';
+            width: 36px;
+            min-width: 36px;
+            height: 36px;
+            border: 5px solid #fff;
+            display: block;
+            border-radius: 50%;
+            border-left: 5px solid transparent;
+            animation: load 0.8s infinite linear;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top: 50%;
+            margin-left: -18px;
+            margin-top: -18px;
+
+
+
+            @media screen and (min-width: $w576) {
+                width: 50px;
+                min-width: 50px;
+                height: 50px;
+                margin-left: -25px;
+                margin-top: -25px;
+            }
+
+        }
+
+        & .video__preview {
+            visibility: hidden;
+        }
+
+        & .video__action {
+            display: none;
+        }
+
+        & .video__iframe {
+            display: block;
+        }
+    }
+
+    &__preview {
+        & picture {
+            padding-top: 56%;
+            display: block;
+            position: relative;
+
+            & img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                color: transparent;
+                margin: 0;
+            }
+
+        }
+    }
+
+    &__action {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: 0.3s ease;
+
+        @media screen and (min-width: $w760) {
+            padding: 24px;
+
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+
+
+            & .video__button {}
+        }
+    }
+
+    &__title {
+
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        color: #FFFFFF;
+        max-width: rem(400);
+        margin: 0 auto;
+        line-height: 140%;
+
+        @media screen and (min-width: $w760) {
+            font-size: 28px;
+        }
+
+
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: var(--color-accent-1);
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+
+        @media screen and (min-width: $w992) {
+            width: 52px;
+            height: 52px;
+        }
+
+        @media screen and (min-width: $w1440) {
+            width: 58px;
+            height: 58px;
+        }
+
+
+        & span {
+            display: none;
+        }
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        & a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        & span {
+            color: #FFFFFF;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+
+        & svg {
+
+            width: rem(28);
+            height: rem(25);
+            transition: 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+
+
+
+
+
+
+        }
+    }
+
+    &__iframe {
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+
+        & iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+}

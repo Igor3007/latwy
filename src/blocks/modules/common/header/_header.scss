@@ -1,0 +1,46 @@
+.header {
+
+    padding: 6px 0;
+    background-color: #F5F7FA;
+
+    @media screen and (min-width: $w576) {
+        padding: 12px 0;
+    }
+
+    @media screen and (min-width: $w1440) {
+        padding: 20px 0;
+    }
+
+    &__wrp {
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    &__logo {
+        & .bgimage {
+            width: 55px;
+            height: 55px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            @media screen and (min-width: $w480) {
+                width: 60px;
+                height: 60px;
+            }
+
+
+            @media screen and (min-width: $w760) {
+                width: 136px;
+                height: 48px;
+                @include bgimage-contain;
+            }
+        }
+    }
+
+
+
+}

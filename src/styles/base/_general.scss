@@ -1,0 +1,277 @@
+:root {
+
+    --color-text-03: rgba(126, 133, 143, 1);
+    --color-red-1: rgb(184, 0, 0);
+    --color-red-01: rgba(228, 88, 71, 1);
+    --color-white: rgba(255, 255, 255, 1);
+    --color-text-1: rgba(17, 17, 17, 1);
+    --color-text-2: rgba(118, 136, 173, 1);
+    --color-accent-1: #f96426;
+    --color-accent-2: #ed3514;
+    --color-bg-1: rgba(247, 247, 247, 1);
+    --color-bg-2: rgba(240, 250, 252, 1);
+    --color-bg-3: rgba(245, 248, 255, 1);
+    --color-bg-4: rgba(222, 247, 252, 1);
+    --color-bg-5: rgba(229, 238, 255, 1);
+    --color-bg-6: rgba(0, 26, 77, 1);
+    --color-bg-7: rgba(0, 20, 61, 1);
+    --color-borders-1: rgba(224, 224, 224, 1);
+    --color-borders-2: rgba(211, 235, 240, 1);
+    --color-borders-3: rgba(215, 225, 245, 1);
+    --color-borders-4: rgba(34, 64, 122, 1);
+    --color-green-1: rgba(0, 184, 122, 1);
+    --color-bg-green-1: rgba(240, 255, 250, 1);
+
+    --ui-btn-primary-bg-gradient-angle: 90deg;
+    --ui-btn-primary-bg-gradient-colors: #ec3213, #f96526;
+    --ui-btn-primary-hover-bg-gradient-colors: #f96526, #ec3213;
+
+    --main: #e93314;
+
+}
+
+
+
+html,
+body {
+
+    font-family: "Public Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 150%;
+    color: #111;
+    letter-spacing: normal;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    height: -webkit-fill-available;
+    -moz-scrollbar-color: var(--black) #fff;
+    -moz-scrollbar-width: thin;
+    scrollbar-gutter: stable;
+
+
+    @media screen and (min-width: $w1510) {
+        font-size: 16px;
+    }
+
+    @include scrollbar();
+
+}
+
+html * {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+
+    & * {
+        @include scrollbar();
+    }
+
+}
+
+
+
+
+button:active,
+button:hover,
+input:active,
+input:focus,
+input:hover {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+    padding: 0;
+    line-height: 130%;
+}
+
+body.page-hidden {
+    touch-action: none;
+    overflow: hidden !important;
+    overscroll-behavior-y: none;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+div.hidden {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+section {
+    overflow: hidden;
+    position: relative;
+}
+
+main {
+    width: 100%;
+    min-height: 70vh;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    background-color: transparent;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    width: 95%;
+    cursor: pointer;
+}
+
+input[type="date"] {
+    position: relative;
+}
+
+.dragscroll.dragging {
+    pointer-events: none;
+}
+
+
+
+@mixin container-breakpoint {
+    padding: 0 16px;
+    min-width: 316px;
+
+    @media screen and (min-width: $w480) {
+        padding: 0 24px;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: $w576) {
+        padding: 0 24px;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: $w760) {
+        padding: 0 45px;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: $w992) {
+        padding: 0 45px;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: $w1200) {
+        padding: 0 45px;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: $w1440) {
+        padding: 0 30px;
+        max-width: 1230px;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    @include container-breakpoint;
+}
+
+
+
+
+
+
+/* =========================================== */
+/* =========================================== */
+
+
+
+
+
+.lazyload {
+    opacity: 0;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.overflow--hidden {
+    overflow: hidden !important;
+}
+
+.overflow--hidden-fixed {
+    overflow: hidden !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.overflow--hidden-scrollBar {
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+}
+
+.safari-fixed {
+    height: calc(100vh - 1px);
+    overflow: hidden !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.table-responsive {
+    overflow-x: auto;
+
+    & table {
+        min-width: auto;
+    }
+}
+
+.lazyload {
+    opacity: 0;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}

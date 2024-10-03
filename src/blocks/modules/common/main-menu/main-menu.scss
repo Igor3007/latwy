@@ -1,0 +1,224 @@
+.main-menu {
+    position: fixed;
+    top: calc(var(--hgt-header, 54px) + var(--hgt-header-top));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-bg-2);
+    z-index: 100;
+    display: none;
+    animation: to_fade_main-menu 0.35s ease forwards;
+    opacity: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @media screen and (min-width: $w992) {
+        top: var(--hgt-header, 65px);
+    }
+
+    &.is-open {
+        display: block;
+    }
+
+    &__wrp {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__nav {
+        flex-grow: 1;
+    }
+}
+
+@keyframes to_fade_main-menu {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-menu {
+    background-color: var(--color-bg-2);
+    padding: 12px 0 0;
+    color: #000;
+
+    @media screen and (min-width: $w1440) {
+        padding: 92px 0 0;
+    }
+
+    @media screen and (min-width: $w1200) {
+        padding: 64px 0 0;
+    }
+
+    &__contacts {
+        padding: 16px;
+    }
+
+    & .header-phone-wrp {
+        display: block;
+    }
+
+    & .header-catalog-button {
+        display: none;
+    }
+
+    & .header {
+        &__links {
+
+
+            & ul {
+                display: block;
+
+                & li {
+                    width: 100%;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                }
+            }
+        }
+
+        &__contact {
+            margin-left: 0;
+        }
+    }
+
+    & .header-callback {
+        width: 100%;
+
+        & a {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    & .header-top {
+        display: block;
+        height: 100%;
+
+        & .container {
+            padding: 0;
+        }
+
+        &__personal,
+        &__wrp {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__personal {
+            margin: 0;
+        }
+
+        &__nav {
+            display: block;
+            order: 4;
+
+            & ul {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 5px 0;
+
+                & li {
+
+                    width: 100%;
+                    padding: 0px 16px;
+
+                    & .sub-menu {
+                        display: none;
+
+                        &.is-open {
+                            display: block;
+                            visibility: visible;
+                            position: relative;
+                            padding: 10px;
+                            background-color: #fff;
+                            border-radius: 8px;
+                            max-width: 400px;
+                            opacity: 1;
+                            transform: none;
+                            min-width: 220px;
+                            box-shadow: none;
+                        }
+
+                        & li {
+                            transform: none;
+                            border-radius: 6px;
+                            opacity: 1;
+                            background-color: #fff;
+                            padding-left: 0;
+                            padding-right: 0;
+
+                            & a {
+                                padding-left: 12px;
+                                padding-right: 12px;
+                                border-radius: 6px;
+                            }
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        &__region {
+            border-left: 0;
+            border-right: 0;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            border-top: 1px solid #eee;
+        }
+
+        &__profile {
+            border-right: 0;
+        }
+
+        & .header-top-btn {
+            border-left: 0;
+            border-right: 0;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+    }
+
+    & .header-contact {
+
+        padding-bottom: 12px;
+
+
+        &__value {
+            & a {
+                font-size: 22px;
+            }
+        }
+
+        &__label {
+            & a {
+                font-size: 16px;
+                color: var(--color-accent-1);
+            }
+        }
+    }
+
+    & a {
+        color: #000;
+    }
+
+}
+
+.open-modile-menu {
+    & .header__burger {
+        background-color: var(--color-accent-2);
+
+        & i {
+            background-color: #fff;
+        }
+    }
+}

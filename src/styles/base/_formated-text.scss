@@ -1,0 +1,434 @@
+.formated-text {
+
+    & h1 {
+        @include font-h1;
+        margin-bottom: 0.7em;
+        margin-top: 1em;
+
+        @media screen and (max-width: $w760) {
+            font-size: 28px;
+        }
+    }
+
+    & h2 {
+        @include font-h2;
+        margin-bottom: 0.7em;
+        margin-top: 1.2em;
+
+        @media screen and (max-width: $w760) {
+            font-size: 26px;
+        }
+    }
+
+    & h3 {
+        @include font-h3;
+        margin-bottom: 0.7em;
+        margin-top: 1.4em;
+
+        @media screen and (max-width: $w760) {
+            font-size: 24px;
+        }
+    }
+
+    & h4 {
+        @include font-h4;
+        margin-bottom: 0.7em;
+        margin-top: 1.5em;
+
+        @media screen and (max-width: $w760) {
+            font-size: 22px;
+        }
+    }
+
+    & h5 {
+        @include font-h5;
+        margin-bottom: 0.7em;
+        margin-top: 1.5em;
+
+        @media screen and (max-width: $w760) {
+            font-size: 18px;
+        }
+    }
+
+    & h6 {
+        font-size: 18px;
+        margin-bottom: 0.7em;
+        margin-top: 2em;
+
+        @media screen and (max-width: $w760) {
+            font-size: 16px;
+        }
+    }
+
+    & * {
+        line-height: 140%;
+
+    }
+
+
+
+
+
+
+
+
+    & table {
+
+        margin: 16px 0;
+        width: 100%;
+        min-width: 600px;
+
+        @media screen and (min-width: $w992) {
+            margin: 20px 0;
+        }
+
+
+
+        & th,
+        & td {
+            background-color: var(--color-bg-2);
+            padding: 8px 14px;
+            border-radius: 6px;
+            line-height: 120%;
+            font-size: 14px;
+
+            @media screen and (min-width: $w576) {
+                padding: 15px 16px 16px 16px;
+                line-height: 140%;
+            }
+
+
+            &:first-child {
+                background-color: var(--color-bg-6);
+                color: #fff;
+                font-weight: 500;
+                width: 180px;
+
+                @media screen and (min-width: $w992) {
+                    width: 320px;
+                }
+
+                @media screen and (min-width: $w576) {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        & th {
+            background-color: var(--color-bg-6);
+            color: #fff;
+        }
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+
+        margin: 16px 0;
+
+        @media screen and (min-width: $w992) {
+            margin: 20px 0;
+        }
+
+        & table {
+            margin: 0;
+        }
+    }
+
+    & a {
+        color: var(--color-accent-2);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    & div:not([class]),
+    & p {
+        margin: 10px 0;
+        line-height: 155%;
+
+        @media screen and (min-width: $w1440) {
+            margin: 20px 0;
+        }
+    }
+
+    & ul {
+
+        margin: 16px 0;
+        padding-left: 8px;
+
+        @media screen and (min-width: $w760) {
+            padding-left: 20px;
+        }
+
+        & li {
+
+            position: relative;
+            padding-left: 16px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+
+            @media screen and (min-width: $w1440) {
+                padding-bottom: 14px;
+                padding-left: 30px;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            &::before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                display: block;
+                position: absolute;
+                left: 4px;
+                top: 0.5em;
+                transform: rotate(45deg);
+                border-radius: 1px;
+                background-color: var(--color-accent-2);
+
+                @media screen and (min-width: $w1440) {
+                    width: 7.5px;
+                    height: 7.5px;
+                }
+            }
+        }
+    }
+
+    & img {
+
+        margin: 24px 0;
+    }
+
+    & ol {
+        counter-reset: number-list 00;
+        margin: 16px 0;
+        padding-left: 8px;
+
+        @media screen and (min-width: $w760) {
+            padding-left: 20px;
+        }
+
+        &>li {
+
+            counter-increment: number-list 1;
+            list-style-type: none;
+            position: relative;
+            margin-bottom: 10px;
+
+            padding-left: 20px;
+
+            @media screen and (min-width: $w760) {
+
+                padding-left: 30px;
+            }
+
+
+
+            &::before {
+                content: counter(number-list)"/";
+                color: var(--color-accent-2);
+                min-width: 35px;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                font-weight: 600;
+
+                @media screen and (min-width: $w760) {}
+            }
+        }
+    }
+
+    & strong {
+        font-weight: 700;
+    }
+
+    & .note {
+        background: var(--bg-01);
+        padding: 16px;
+        border-radius: 8px;
+        margin: 1.5em 0;
+
+        & strong {
+            color: $main;
+            font-weight: 600;
+
+            display: block;
+        }
+
+        & p {
+            margin: 0.7em 0;
+        }
+    }
+
+    & blockquote {
+        border: none;
+        padding: 16px;
+
+        background-color: var(--color-bg-2);
+        line-height: 147%;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 12px;
+
+        @media screen and (min-width: $w760) {
+            padding: 24px 24px 24px 124px;
+            background-position: 24px 24px;
+            background-repeat: no-repeat;
+            display: block;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNmZmYiLz48ZyBjbGlwLXBhdGg9InVybCgjcHJlZml4X19wcmVmaXhfX2NsaXAwXzU5Nl8xNDU3MikiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik00MC4yMjggNTAuMjU4aC0uNDZhNC4wNjIgNC4wNjIgMCAwMS00LjA1Ni0zLjgyNWwtMS41NTYtMjYuNjFhNC4wNjIgNC4wNjIgMCAwMTQuMDU1LTQuM2gzLjU3NGE0LjA2MiA0LjA2MiAwIDAxNC4wNTUgNC4zbC0xLjU1NiAyNi42MWE0LjA2MiA0LjA2MiAwIDAxLTQuMDU2IDMuODI1em0tLjIzIDE0LjIxOWE0LjA2MiA0LjA2MiAwIDExMC04LjEyNSA0LjA2MiA0LjA2MiAwIDAxMCA4LjEyNXoiIHN0cm9rZT0iIzAxQUZEMiIvPjxwYXRoIGQ9Ik0yOS4zNzcgMzguOTM4YTEyLjIxMyAxMi4yMTMgMCAwMC0xLjY2NiA2LjE3YzAgMi4yNDkuNjA3IDQuMzU3IDEuNjY2IDYuMTcybS01LjI2OC0xNS40MDNhMTguMjY5IDE4LjI2OSAwIDAwLTIuNDkyIDkuMjMyYzAgMy4zNjIuOTA5IDYuNTE3IDIuNDkyIDkuMjMxbS01LjI3Ni0yMS41MjdhMjQuMzYzIDI0LjM2MyAwIDAwLTMuMzEgMTIuMjk2IDI0LjM3IDI0LjM3IDAgMDAzLjMxIDEyLjI5Nm0zMS44MDMtNi4xNDdhMTIuMjEzIDEyLjIxMyAwIDAwMS42NTMtNi4xNWMwLTIuMjM4LS42MDItNC4zMzktMS42NTMtNi4xNDhtNS4yNjggMTUuMzU4YTE4LjI2OSAxOC4yNjkgMCAwMDIuNDc5LTkuMjFjMC0zLjM1My0uOTA0LTYuNS0yLjQ3OS05LjIwOW01LjI3NiAyMS40ODRhMjQuMzYzIDI0LjM2MyAwIDAwMy4yOTYtMTIuMjc0YzAtNC40NzMtMS4yLTguNjY2LTMuMjk2LTEyLjI3NCIgc3Ryb2tlPSIjRDNFQkYwIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0icHJlZml4X19wcmVmaXhfX2NsaXAwXzU5Nl8xNDU3MiI+PHBhdGggZmlsbD0iI2ZmZiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQgMTQpIiBkPSJNMCAwaDUydjUySDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+);
+        }
+
+        & h1,
+        & h2,
+        & h3,
+        & h4 {
+            margin: 0;
+        }
+
+        &>:last-child {
+            margin-bottom: 0;
+        }
+
+
+    }
+}
+
+.sp-block-table {
+
+    overflow-x: auto;
+
+    & table {
+
+        margin: 16px 0;
+        width: 100%;
+        min-width: 600px;
+        border-collapse: unset;
+
+        @media screen and (min-width: $w992) {
+            margin: 20px 0;
+        }
+
+        & th,
+        & td {
+            background-color: var(--color-bg-2);
+            padding: 8px 14px;
+            border-radius: 6px;
+            line-height: 120%;
+            font-size: 14px;
+            border: none;
+
+            @media screen and (min-width: $w576) {
+                padding: 15px 16px 16px 16px;
+                line-height: 140%;
+            }
+
+
+            &:first-child {
+                background-color: var(--color-bg-6);
+                color: #fff;
+                font-weight: 500;
+                width: 180px;
+
+                @media screen and (min-width: $w992) {
+                    width: 320px;
+                }
+
+                @media screen and (min-width: $w576) {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        & th {
+            background-color: var(--color-bg-6);
+            color: #fff;
+        }
+    }
+}
+
+.sp-lists {
+    & ul {
+
+        margin: 16px 0;
+        padding-left: 8px;
+
+        @media screen and (min-width: $w760) {
+            padding-left: 20px;
+        }
+
+        & li {
+
+            position: relative;
+            padding-left: 16px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+
+            @media screen and (min-width: $w1440) {
+                padding-bottom: 14px;
+                padding-left: 30px;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            &::before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                display: block;
+                position: absolute;
+                left: 4px;
+                top: 0.5em;
+                transform: rotate(45deg);
+                border-radius: 1px;
+                background-color: var(--color-accent-2);
+
+                @media screen and (min-width: $w1440) {
+                    width: 7.5px;
+                    height: 7.5px;
+                }
+            }
+        }
+    }
+}
+
+
+.sp-button_link,
+.sp-button_link:link,
+.sp-button_link:visited {
+    padding: 0.8em 2.05em 0.85em 2.05em;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    height: 52px;
+    white-space: nowrap;
+    transition: .3s cubic-bezier(.1, .82, .25, 1);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    background-color: var(--color-accent-1);
+    border-radius: 8px;
+
+    @media screen and (min-width: $w1440) {
+        font-size: 18px;
+    }
+
+
+    @media screen and (min-width: $w1200) {
+        height: 56px;
+    }
+
+    &:hover {
+        background-color: var(--color-accent-2);
+
+    }
+}

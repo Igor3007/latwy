@@ -1,0 +1,35 @@
+mixin pagination(data)
+ 
+  .pagination
+    .pagination__page
+      ul
+        li.next: span
+          +icons('#ic_arrow-prev', 48) 
+        li.active: a(href="#1") 1
+        li: a(href="#2") 2
+        li: a(href="#3") 3
+        li: span ...
+        li: a(href="#10") 10
+        li.next: a(href="#2")
+          +icons('#ic_arrow-next', 48) 
+
+
+mixin pagination-showmore(data)
+  .pagination
+    .pagination__more
+          a(href='#')
+            button.btn.btn-light
+              span Показать ещё
+              +icons('#ic_arr-down')
+    .pagination__page
+      ul
+        li.next: span
+          +icons('#ic_arrow-prev', 48) 
+        li.active: a(href="#1") 1
+        li: a(href="#2") 2
+        li: a(href="#3") 3
+        li: span ...
+        li: a(href="#10") 10
+        li.next: a(href="#2")
+          +icons('#ic_arrow-next', 48) 
+       
