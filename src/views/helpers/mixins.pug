@@ -121,10 +121,17 @@ mixin radio-desc(label, desc, name, val, check)
       span.radio__title!= label
       span.radio__desc!= desc
 
-mixin input-material(type, placeholder, value)
+mixin input-material(params)
   .input-material
-    input(type=''+type+'' value=(value?value:''))
-    label= placeholder 
+    label
+      =params.label
+      if(params.tooltip)
+        span.input-tooltip(data-tooltip=params.tooltip)
+    input(
+      type=(params.type?params.type:'text') 
+      value=(params.value?params.value:'') 
+      placeholder=value=(params.placeholder?params.placeholder:''))
+     
 
 mixin input-material-date(type, placeholder, value)
   .input-material.input-material--date

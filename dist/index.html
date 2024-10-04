@@ -25,9 +25,10 @@
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="prefetch" href="/img/sprites/sprite.svg" as="image" crossorigin>
     <link rel="stylesheet" href="styles/main.css?v=1.0">
   </head>
@@ -45,37 +46,551 @@
             <section class="section-profile">
               <div class="container">
                 <div class="profile">
+                  <div class="profile__title">Анкета </div>
                   <div class="profile__form"> 
                     <form action="#" method="POST">
                       <div class="form">
                         <fieldset>
-                          <legend>Анкета</legend>
                           <div class="form__item">
                             <div class="form__subitem">
-                              <input type="text" placeholder="Имя">
+                              <div class="input-material">
+                                <label>Имя
+                                </label>
+                                <input type="text" value="" placeholder="Имя, латиницей как в пасп."/>
+                              </div>
                             </div>
                             <div class="form__subitem">
-                              <input type="text" placeholder="Имя">
+                              <div class="input-material">
+                                <label>Фамилия
+                                </label>
+                                <input type="text" value="" placeholder="Фамилия, латиницей как в пасп."/>
+                              </div>
                             </div>
                             <div class="form__subitem">
-                              <input type="text" placeholder="Имя">
+                              <div class="input-material">
+                                <label>Предыдущая фамилия<span class="input-tooltip" data-tooltip="Если есть (латиницей)"></span>
+                                </label>
+                                <input type="text" value="" placeholder="Предыдущая фамилия, как в пасп."/>
+                              </div>
                             </div>
                             <div class="form__subitem">
-                              <input type="text" placeholder="Имя">
+                              <div class="input-material">
+                                <label>Родовая фамилия<span class="input-tooltip" data-tooltip="Фамилия в свидетельстве о рождении"></span>
+                                </label>
+                                <input type="text" value="" placeholder="Родовая фамилия, литиницей"/>
+                              </div>
                             </div>
                           </div>
                           <div class="form__item">
                             <div class="form__subitem">
-                              <input type="text" placeholder="Имя">
+                              <div class="input-material">
+                                <label>Предыдущее имя<span class="input-tooltip" data-tooltip="Если есть (латиницей)"></span>
+                                </label>
+                                <input type="text" value="" placeholder="Предыдущее имя"/>
+                              </div>
                             </div>
                             <div class="form__subitem">
-                              <input type="text" placeholder="Имя">
+                              <div class="input-material">
+                                <label>Имя отца
+                                </label>
+                                <input type="text" value="" placeholder="Имя отца, латиницей как в пасп. "/>
+                              </div>
                             </div>
                             <div class="form__subitem">
-                              <input type="text" placeholder="Имя">
+                              <div class="input-material">
+                                <label>Имя матери
+                                </label>
+                                <input type="text" value="" placeholder="Имя матери, латиницей как в пасп"/>
+                              </div>
                             </div>
                             <div class="form__subitem">
-                              <input type="text" placeholder="Имя">
+                              <div class="input-material">
+                                <label>Девичья фамилия матери<span class="input-tooltip" data-tooltip="Латиницей как в паспорте"></span>
+                                </label>
+                                <input type="text" value="" placeholder="Девичья фамилия матери"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <div class="form__item">
+                                <div class="form__subitem">
+                                  <div class="input-material">
+                                    <label>Дата рожден.
+                                    </label>
+                                    <input type="text" value="" placeholder="ДД.ММ.ГГГГ"/>
+                                  </div>
+                                </div>
+                                <div class="form__subitem">
+                                  <select placeholder="Пол">
+                                    <option value="" selected="selected">Пол</option>
+                                    <option value="">Муж</option>
+                                    <option value="">Жен</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Город рождения
+                                </label>
+                                <input type="text" value="" placeholder="Город рождения, на польском"/>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Национальность
+                                </label>
+                                <input type="text" value="" placeholder="Национальность"/>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <select placeholder="Страна">
+                                <option value="" selected="selected">Страна рождения</option>
+                                <option value="1">Беларусь</option>
+                                <option value="2">Россия</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <select placeholder="Семейное положение">
+                                <option value="" selected="selected">Семейное положение</option>
+                                <option value="1">Холост</option>
+                                <option value="2">Женат</option>
+                                <option value="2">Замужем</option>
+                                <option value="2">В разводе</option>
+                              </select>
+                            </div>
+                            <div class="form__subitem">
+                              <select placeholder="Образование">
+                                <option value="" selected="selected">Образование</option>
+                                <option value="1">Высшее</option>
+                                <option value="2">Среднее</option>
+                              </select>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Рост, см
+                                </label>
+                                <input type="text" value="" placeholder="Рост"/>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <select placeholder="Цвет глаз">
+                                <option value="" selected="selected">Цвет глаз</option>
+                                <option value="1">Зеленые</option>
+                                <option value="2">Карие</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <select placeholder="Особые приметы">
+                                <option value="" selected="selected">Особые приметы</option>
+                                <option value="1">Сутулый</option>
+                                <option value="2">Родинка на лбу</option>
+                              </select>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Номер PESEL
+                                </label>
+                                <input type="text" value="" placeholder="Номер PESEL"/>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Номер паспорта
+                                </label>
+                                <input type="text" value="" placeholder="Номер паспорта"/>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <legend>Основание нахождения в Польше</legend>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <select placeholder="Основание нахождения в Польше">
+                                <option value="" selected="selected">Основание</option>
+                                <option value="1">Сутулый</option>
+                                <option value="2">Родинка на лбу</option>
+                              </select>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="form__item">
+                                <div class="form__subitem">
+                                  <div class="input-material">
+                                    <label>Номер док.<span class="input-tooltip" data-tooltip="Если есть"></span>
+                                    </label>
+                                    <input type="text" value="" placeholder="Номер"/>
+                                  </div>
+                                </div>
+                                <div class="form__subitem">
+                                  <div class="input-material">
+                                    <label>Дата выдачи
+                                    </label>
+                                    <input type="text" value="" placeholder="ДД.ММ.ГГГГ"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Номер док.
+                                </label>
+                                <input type="text" value="" placeholder="Номер"/>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Конец действия
+                                </label>
+                                <input type="text" value="" placeholder="Конец действия"/>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <legend>Адрес проживания в Польше</legend>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <select placeholder="Город">
+                                <option value="" selected="selected">Город</option>
+                                <option value="1">Варшава</option>
+                                <option value="2">Вроцлав</option>
+                              </select>
+                            </div>
+                            <div class="form__subitem">
+                              <select placeholder="Улица" data-tooltip="Если нет в списке, впишите на польском в ручную">
+                                <option value="" selected="selected">Улица</option>
+                                <option value="1">Варшава</option>
+                                <option value="2">Вроцлав</option>
+                              </select>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="form__item">
+                                <div class="form__subitem">
+                                  <div class="input-material">
+                                    <label>Дом
+                                    </label>
+                                    <input type="text" value="" placeholder="Номер дома"/>
+                                  </div>
+                                </div>
+                                <div class="form__subitem">
+                                  <div class="input-material">
+                                    <label>Квартира
+                                    </label>
+                                    <input type="text" value="" placeholder="Номер Кв."/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Почтовый код
+                                </label>
+                                <input type="text" value="" placeholder="_ _ - _ _ _ _"/>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <legend>Информация о членах семьи, проживающих на территории Польши (если нет — не заполняем)</legend>
+                          <div class="form__group">
+                            <div class="form__group-title">1.</div>
+                            <div class="form__item">
+                              <div class="form__subitem">
+                                <div class="input-material">
+                                  <label>Имя и фамилия члена семьи
+                                  </label>
+                                  <input type="text" value="" placeholder="Имя и фамилия, как в пасп."/>
+                                </div>
+                              </div>
+                              <div class="form__subitem">
+                                <select placeholder="Пол">
+                                  <option value="" selected="selected">Пол</option>
+                                  <option value="1">МУЖ</option>
+                                  <option value="2">ЖЕН</option>
+                                </select>
+                              </div>
+                              <div class="form__subitem">
+                                <div class="input-material">
+                                  <label>Дата рождения
+                                  </label>
+                                  <input type="text" value="" placeholder="ДД.ММ.ГГГГ"/>
+                                </div>
+                              </div>
+                              <div class="form__subitem">
+                                <select placeholder="Степень родства">
+                                  <option value="" selected="selected">Степень родства</option>
+                                  <option value="1">Первая</option>
+                                  <option value="2">Вторая</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form__item">
+                              <div class="form__subitem">
+                                <select placeholder=" Город проживания">
+                                  <option value="" selected="selected">Город проживания </option>
+                                  <option value="1">Варшава</option>
+                                  <option value="2">Вроцлав</option>
+                                </select>
+                              </div>
+                              <div class="form__subitem">
+                                <select placeholder="Гражданство">
+                                  <option value="" selected="selected">Гражданство</option>
+                                  <option value="1">БЕЛАРУС</option>
+                                  <option value="2">УКРАИНЕЦ</option>
+                                </select>
+                              </div>
+                              <div class="form__subitem">
+                                <select placeholder="Подается ли член семьи на ВНЖ">
+                                  <option value="" selected="selected">Подается ли на ВНЖ.</option>
+                                  <option value="1">Да</option>
+                                  <option value="2">Нет</option>
+                                </select>
+                              </div>
+                              <div class="form__subitem">
+                                <select placeholder="Находится ли на содержании">
+                                  <option value="" selected="selected">Находится ли на содержании</option>
+                                  <option value="1">Да</option>
+                                  <option value="2">Нет</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form__item form__repeat"><span class="ic_24 ic_plus"></span>Добавить члена семьи</div>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <legend>Прочая информация</legend>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Дата последнего въезда в Польшу
+                                </label>
+                                <input type="text" value="" placeholder="ДД.ММ.ГГГГ"/>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Периоды пребывания в Польше
+                                </label>
+                                <input type="text" value="" placeholder="Укажите все периоды пребывания в Польше (в формате ДД.ММ.ГГГГ - ДД.ММ.ГГГГ; и тд) "/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__label">Поездки за предыдущие 5 лет, в том числе в Польшу:</div>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">SĄ (есть)</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">BRAK (нет)</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <select placeholder="Страна">
+                                <option value="" selected="selected">Страна</option>
+                                <option value="1">Польша</option>
+                                <option value="2">Беларусь</option>
+                              </select>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Период поездки (перемещение по Европе без отметок в паспорте тоже учитавается)<span class="input-tooltip" data-tooltip=" Укажите точные даты (например, 01.07.2024 - 14.07.2024), &lt;br&gt; если не помните точные даты, укажите месяц и год (07.2024)"></span>
+                                </label>
+                                <input type="text" value="" placeholder="Укажите период поездки"/>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <select placeholder="Пояснения">
+                                <option value="" selected="selected">Пояснения</option>
+                                <option value="1">Пояснения 1</option>
+                                <option value="2">Пояснения 2</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form__label">Информация о финансовых средствах, покрывающих расходы:</div>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <div class="group-subitem">
+                                <label class="checkbox">
+                                  <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Наемный работник</span>
+                                </label>
+                                <select placeholder="Тип договора">
+                                  <option value="" selected="selected">Тип договора</option>
+                                  <option value="1">Договор</option>
+                                  <option value="2">Договор</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="group-subitem">
+                                <label class="checkbox">
+                                  <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">ИП</span>
+                                </label>
+                                <div class="input-material">
+                                  <label>NIP
+                                  </label>
+                                  <input type="text" value="" placeholder="Укажите NIP"/>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="group-subitem">
+                                <label class="checkbox">
+                                  <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Спулка</span>
+                                </label>
+                                <div class="input-material">
+                                  <label>KRS
+                                  </label>
+                                  <input type="text" value="" placeholder="Укажите Укажите KRS"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <select placeholder="Медицинская страховка">
+                                <option value="" selected="selected">Медицинская страховка</option>
+                                <option value="2">страховка</option>
+                              </select>
+                            </div>
+                            <div class="form__subitem">
+                              <select placeholder="Информация об обременениях" data-tooltip="Информация об обременениях на территории Польши &lt;br&gt; или за ее пределами (например, алименты, судебное дело)">
+                                <option value="" selected="selected">Алименты, суд. дело и т.д.</option>
+                                <option value="2">Алименты</option>
+                              </select>
+                            </div>
+                            <div class="form__subitem">
+                              <div class="input-material">
+                                <label>Номер телефона в Польше
+                                </label>
+                                <input type="text" value="" placeholder="Номер телефона в Польше"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__item form__show"><span class="ic_24 ic_plus"></span>Добавить поездку </div>
+                        </fieldset>
+                        <fieldset>
+                          <div class="form-question">
+                            <div class="form-question__text">У меня есть акции или доли в обществе с ограниченной ответственностью, коммандитном товариществе, коммандитно-акционерном товариществе</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-question">
+                            <div class="form-question__text">Я вхожу в состав правления юридического лица, подлежащего регистрации в реестре предпринимателей</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-question">
+                            <div class="form-question__text">Я работал на территории Польши в 2022 году. (по контракту)</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-question">
+                            <div class="form-question__text">Я рассчитался с налоговой через декларацию PIT за 2022 год</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-question">
+                            <div class="form-question__text">Я работал на территории Польши в 2023  году. (по контракту)</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-question">
+                            <div class="form-question__text">Я рассчитался с налоговой через декларацию PIT за 2023 год</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-question">
+                            <div class="form-question__text">У меня есть задолженность по налогам</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-question">
+                            <div class="form-question__text">Я получил заявление о намерении доверить выполнение работы, зарегистрированное компетентной повятовой биржой труда (для граждан Армении, Беларуси, Грузии, Молдовы, России и Украины)</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-question">
+                            <div class="form-question__text">Приступил к работе на основании заявления о поручении выполнения работы, зарегистрированного компетентной повятовой биржой труда (для граждан Армении, Беларуси, Грузии, Молдовы, России и Украины)</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-question">
+                            <div class="form-question__text">Я веду индивидуальную предпринимательскую деятельность:</div>
+                            <div class="form-question__option">
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Да</span>
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Нет</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form__item">
+                            <div class="form__subitem">
+                              <button class="btn" type="submit">Сохранить</button>
                             </div>
                           </div>
                         </fieldset>
@@ -86,30 +601,6 @@
               </div>
             </section>
     </main>
-    <footer>
-      <div class="footer" id="Contact"> 
-        <div class="container"> 
-          <div class="footer-contact">
-            <div class="footer-item">
-              <div class="footer-item__label">Phone</div>
-              <div class="footer-item__link"><a href="tel:+13057777886">☎ +13057777886</a></div>
-            </div>
-            <div class="footer-item">
-              <div class="footer-item__label">Email </div>
-              <div class="footer-item__link"><a href="mailto:lanai101usa@gmail.com">lanai101usa@gmail.com</a></div>
-            </div>
-            <div class="footer-item">
-              <div class="footer-item__label">Address </div>
-              <div class="footer-item__link"><a href="https://maps.app.goo.gl/ykdjaCZi9RD7gL7V6">4931 SW 90 Way Cooper City 33328</a></div>
-            </div>
-          </div>
-          <div class="footer-bottom">
-            <div class="footer-bottom__com">© Lanai101.com Poll, patio screen enclosure </div>
-            <div class="footer-bottom__copyright">All rights Reserved</div>
-          </div>
-        </div>
-      </div>
-    </footer>
     <script src="/js/vendor.js"> </script>
     <script src="/js/common.js"> </script>
   </body>

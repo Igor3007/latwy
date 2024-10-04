@@ -1,7 +1,5 @@
 .btn {
 
-
-
     padding: 0.8em 2.05em 0.85em 2.05em;
     color: #fff;
     border: none;
@@ -9,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 130px;
+    min-width: 200px;
     height: 52px;
     white-space: nowrap;
     transition: .3s cubic-bezier(.1, .82, .25, 1);
@@ -18,18 +16,16 @@
     font-size: 16px;
     text-align: center;
     background-image: linear-gradient(var(--ui-btn-primary-bg-gradient-angle), var(--ui-btn-primary-bg-gradient-colors));
-    border-radius: 30px;
-
-
+    border-radius: 4px;
+    background-color: var(--main);
 
     @media screen and (min-width: $w1440) {
         font-size: 16px;
-        font-weight: 800;
+
     }
 
-
     @media screen and (min-width: $w1200) {
-        height: 56px;
+        height: 48px;
     }
 
     &:hover {

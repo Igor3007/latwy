@@ -34,15 +34,15 @@
         background-color: transparent;
         display: inline-block;
         margin-right: rem(10);
-        border: 2px solid var(--color-borders-2);
-        border-radius: 4px;
+        border: 1px solid var(--color-border);
+        border-radius: 5px;
         transition: 0.3s ease;
 
         &::after {
             content: "";
             position: absolute;
-            left: 3px;
-            top: 3px;
+            left: 4px;
+            top: 4px;
             width: 10px;
             height: 9px;
             transition: 0.5s cubic-bezier(0.08, 0.82, 0.17, 1);
@@ -65,16 +65,14 @@
 
         &:checked~.checkbox__elem {
             z-index: 2;
-            background-color: var(--color-accent-1);
-            border-color: var(--color-accent-1);
+            background-color: var(--color-1);
+            border-color: var(--color-1);
 
             &:hover {
-                border-color: var(--color-accent-2);
-                background-color: var(--color-accent-2);
+                border-color: var(--color-1);
+                background-color: var(--color-1);
 
-                &::after {
-                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMWExIDEgMCAwMTEtMWgxMGExIDEgMCAxMTAgMkgxYTEgMSAwIDAxLTEtMXoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=);
-                }
+
             }
         }
 
@@ -89,11 +87,11 @@
     &:hover {
         & .checkbox {
             &__elem {
-                border-color: var(--color-accent-2);
+                border-color: var(--color-1);
             }
 
             &__text {
-                color: var(--color-accent-2);
+                color: var(--color-1);
 
             }
         }
@@ -162,7 +160,7 @@
         margin-right: 10px;
         border-radius: 50%;
         transition: 0.15s linear;
-        border: 2px solid var(--color-accent-1);
+        border: 2px solid var(--color-1);
 
 
 
@@ -171,15 +169,15 @@
 
     & input {
         &:hover~.radio__elem {
-            border-color: var(--color-accent-2);
+            border-color: var(--color-1);
         }
 
         &:checked~.radio__elem {
-            border: 6px solid var(--color-accent-1);
+            border: 6px solid var(--color-1);
             background-color: #fff;
 
             &:hover {
-                border-color: var(--color-accent-2);
+                border-color: var(--color-1);
             }
         }
 
@@ -189,11 +187,11 @@
     &:hover {
         & .radio {
             &__elem {
-                border-color: var(--color-accent-2);
+                border-color: var(--color-1);
             }
 
             &__text {
-                color: var(--color-accent-2);
+                color: var(--color-1);
 
             }
         }

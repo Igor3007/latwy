@@ -216,181 +216,25 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     initMaska();
 
+    /* ==============================================
+     select
+     ============================================== */
 
-    /* ==================================================
-    burgerMenu
-    ==================================================*/
+    // public methods
+    // select.afSelect.open()
+    // select.afSelect.close()
+    // select.afSelect.update()
 
+    const selectCustom = new customSelect({
+        selector: 'select'
+    })
 
-    if (document.querySelector('.btn-burger')) {
-        document.querySelector('.btn-burger').addEventListener('click', () => {
-            document.querySelector('.btn-burger').classList.toggle('open')
-            document.querySelector('.header__nav').classList.toggle('is-open')
-        })
-    }
+    selectCustom.init()
 
+    /* ================================================
+    user-menu data-user-menu="open"
+    ================================================*/
 
-
-    /* ========================================
-    slider
-    ========================================*/
-
-
-    if (document.querySelector('[data-slider="project"]')) {
-        var splide = new Splide('[data-slider="project"]', {
-
-            arrows: true,
-            pagination: true,
-            gap: 24,
-            start: 0,
-            perPage: 3,
-
-
-            breakpoints: {
-                1200: {
-                    perPage: 3,
-                    gap: 24,
-                },
-                992: {
-                    perPage: 2,
-                    gap: 12,
-                },
-                576: {
-                    perPage: 1,
-                },
-
-            },
-
-        });
-
-
-
-
-        splide.mount();
-    }
-
-    /* =========================================
-    video youtube
-    =========================================*/
-
-    if (document.querySelector('.video')) {
-        document.querySelectorAll('.video').forEach(container => {
-
-            if (container.closest('.video-block__yt')) return false
-
-            const getYoutubeId = (url) => {
-                var m = url.match(/^.*(?:youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/);
-                if (!m || !m[1]) return null;
-                return m[1];
-            }
-
-            container.querySelector('.video__button').addEventListener('click', e => {
-                container.classList.add('is-play')
-
-                let iframe = document.createElement('iframe')
-                iframe.setAttribute('allowfullscreen', '')
-                iframe.setAttribute('src', '//www.youtube.com/embed/' + getYoutubeId(container.dataset.id) + '?autoplay=true')
-
-                container.querySelector('.video__iframe').append(iframe)
-            })
-
-
-        })
-    }
-
-    /* =================================================
-    popups
-    =================================================*/
-
-    function popupSuccess() {
-
-        const instancePopup = new afLightbox({
-            mobileInBottom: true
-        })
-
-        instancePopup.open(`
-           <div class="popup-thanks" >
-                <h2> Спасибо! </h2>
-                <p>Мы свяжемся с вами в ближайшее время!</p>
-           </div> `, false)
-
-    }
-
-    function initDataModal(ctx) {
-        const items = ctx.querySelectorAll('[data-modal]')
-
-        items.forEach(item => {
-            item.addEventListener('click', e => {
-
-                window.ajax({
-                    type: 'GET',
-                    url: item.dataset.modal
-                }, (status, response) => {
-
-                    const instancePopup = new afLightbox({
-                        mobileInBottom: true
-                    })
-
-                    instancePopup.open(response, (instance) => {
-
-
-                        instance.querySelectorAll('[data-scroll]').forEach(item => {
-                            item.addEventListener('click', (e) => {
-                                e.preventDefault()
-                                scrollToTargetAdjusted({
-                                    elem: document.querySelector(item.getAttribute('href')),
-                                    offset: 0
-                                })
-
-                                instancePopup.close()
-                            })
-                        })
-
-
-                    })
-                })
-
-            })
-        })
-    }
-
-    if (document.querySelector('[data-modal]')) initDataModal(document)
-
-    /* ========================================
-    slider
-    ========================================*/
-
-
-    if (document.querySelector('[data-slider="rev"]')) {
-        var splide = new Splide('[data-slider="rev"]', {
-
-            arrows: true,
-            pagination: true,
-            gap: 24,
-            start: 0,
-            perPage: 2,
-
-
-            breakpoints: {
-
-                992: {
-                    perPage: 2,
-                    gap: 12,
-                },
-                576: {
-                    perPage: 1,
-                    gap: 0
-                },
-
-            },
-
-        });
-
-
-
-
-        splide.mount();
-    }
 
 
 }); //dcl

@@ -25,6 +25,7 @@ $red: #DF1F26;
 $orange: #EB7D00;
 $green-dark: #1EBC61;
 $green-light: #1EBC61;
+$grayBlue: #ccc;
 
 
 $color-white: rgba(255, 255, 255, 1);
@@ -45,6 +46,46 @@ $color-borders-3: rgba(215, 225, 245, 1);
 $color-borders-4: rgba(34, 64, 122, 1);
 $color-green-1: rgba(0, 184, 122, 1);
 $color-bg-green-1: rgba(240, 255, 250, 1);
+
+$main-dark: #111111;
+$main-dark-1: #292833;
+$main-dark-2: #424152;
+$main-dark-3: #5A5970;
+
+$gray-74: #ABA9BC;
+
+$main1-2: #6B6985;
+$main: #525166;
+$main2: #92919F;
+$main-gray: #E7E6F5;
+$black: #222B32;
+$white: #fff;
+$darkViolet: #161b37;
+$violet: #A83BB1;
+$blue: #367fbd;
+$grayBlue: #86A5C1;
+//$red: #BF3232;
+$pink: #fe3e77;
+$dark: #222B32;
+$gray: #D6D6D6;
+$lgray: #ccc;
+$mgray: #b8b8b8;
+$yellow: #ffd223;
+$green: #2FA81A;
+$red: #cf1c5d;
+$orange: #EB7D00;
+
+$color-text-1: #0f172a;
+$color-text-2: #94a3b8;
+$color-border: #b6c2e2;
+$color-color-1: #5e3a9e;
+$color-color-bg: #f5f7fa;
+$color-bg-2: #eef1f8;
+$color-wight: #ffffff;
+$color-grad: linear-gradient(to bottom, #3d1465 0%, #854cfa 38.5%);
+$color-1: #854cfa;
+$color-gr: linear-gradient(to bottom, #ff0057 0%, #0080ff 100%);
+
 
 @mixin font-h1() {
 

@@ -1,32 +1,18 @@
 :root {
 
-    --color-text-03: rgba(126, 133, 143, 1);
-    --color-red-1: rgb(184, 0, 0);
-    --color-red-01: rgba(228, 88, 71, 1);
-    --color-white: rgba(255, 255, 255, 1);
-    --color-text-1: rgba(17, 17, 17, 1);
-    --color-text-2: rgba(118, 136, 173, 1);
-    --color-accent-1: #f96426;
-    --color-accent-2: #ed3514;
-    --color-bg-1: rgba(247, 247, 247, 1);
-    --color-bg-2: rgba(240, 250, 252, 1);
-    --color-bg-3: rgba(245, 248, 255, 1);
-    --color-bg-4: rgba(222, 247, 252, 1);
-    --color-bg-5: rgba(229, 238, 255, 1);
-    --color-bg-6: rgba(0, 26, 77, 1);
-    --color-bg-7: rgba(0, 20, 61, 1);
-    --color-borders-1: rgba(224, 224, 224, 1);
-    --color-borders-2: rgba(211, 235, 240, 1);
-    --color-borders-3: rgba(215, 225, 245, 1);
-    --color-borders-4: rgba(34, 64, 122, 1);
-    --color-green-1: rgba(0, 184, 122, 1);
-    --color-bg-green-1: rgba(240, 255, 250, 1);
+    --color-text-1: #0f172a;
+    --color-text-2: #94a3b8;
+    --color-border: #b6c2e2;
+    --color-color-1: #5e3a9e;
+    --color-color-bg: #f5f7fa;
+    --color-bg-2: #eef1f8;
+    --color-wight: #ffffff;
+    --color-grad: linear-gradient(to bottom, #3d1465 0%, #854cfa 38.5%);
+    --color-1: #854cfa;
+    --color-gr: linear-gradient(to bottom, #ff0057 0%, #0080ff 100%);
 
-    --ui-btn-primary-bg-gradient-angle: 90deg;
-    --ui-btn-primary-bg-gradient-colors: #ec3213, #f96526;
-    --ui-btn-primary-hover-bg-gradient-colors: #f96526, #ec3213;
 
-    --main: #e93314;
+    --main: #5E3A9E;
 
 }
 
@@ -35,7 +21,7 @@
 html,
 body {
 
-    font-family: "Public Sans", Helvetica, Arial, sans-serif;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 15px;
@@ -198,7 +184,7 @@ input[type="date"] {
 
     @media screen and (min-width: $w1440) {
         padding: 0 30px;
-        max-width: 1230px;
+        max-width: 1280px;
     }
 }
 
