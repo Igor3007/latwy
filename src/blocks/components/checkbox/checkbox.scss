@@ -160,7 +160,7 @@
         margin-right: 10px;
         border-radius: 50%;
         transition: 0.15s linear;
-        border: 2px solid var(--color-1);
+        border: 1px solid #B6C2E2;
 
 
 
@@ -282,5 +282,18 @@
         display: none;
         color: $gray-22;
 
+    }
+}
+
+.group-subitem,
+.form__item {
+    &[disabled] {
+
+        & .input-material,
+        & .af-select {
+            pointer-events: none;
+            filter: grayscale(1);
+            opacity: 0.6;
+        }
     }
 }

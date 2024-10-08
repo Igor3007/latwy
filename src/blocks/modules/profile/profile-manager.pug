@@ -1,0 +1,479 @@
+mixin profile
+    section.section-profile
+        .container
+            .profile
+                .profile__title Анкета 
+                .profile__form 
+                    form(action='#' method='POST')
+                        .form
+                            fieldset
+                                .form__item
+                                    .form__subitem: +input-material({
+                                        label: 'Имя',
+                                        placeholder: 'Имя, латиницей как в пасп.',
+                                        value: 'YULIYA'
+                                    })
+                                    .form__subitem: +input-material({
+                                        label: 'Фамилия',
+                                        placeholder: 'Фамилия, латиницей как в пасп.',
+                                        value: 'ARTSEMYEVA'
+                                    })
+                                    .form__subitem: +input-material({
+                                        label: 'Предыдущая фамилия',
+                                        placeholder: 'Предыдущая фамилия, как в пасп.',
+                                        value: '-'
+                                       
+                                    })
+                                    .form__subitem: +input-material({
+                                        label: 'Родовая фамилия',
+                                        placeholder: 'Родовая фамилия, литиницей',
+                                        value: 'ARTSEMYEVA'
+                                        
+                                    })
+
+                                .form__item
+                                    .form__subitem: +input-material({
+                                        label: 'Предыдущее имя',
+                                        placeholder: 'Предыдущее имя',
+                                         value: '—'
+                                    })
+                                    .form__subitem: +input-material({
+                                        label: 'Имя отца',
+                                        placeholder: 'Имя отца, латиницей как в пасп. ',
+                                        value: 'MIKALAI'
+                                    })
+                                    .form__subitem: +input-material({
+                                        label: 'Имя матери',
+                                        placeholder: 'Имя матери, латиницей как в пасп',
+                                        value: 'VOLHA'
+                                    })
+                                    .form__subitem: +input-material({
+                                        label: 'Девичья фамилия матери',
+                                        placeholder: 'Девичья фамилия матери',
+                                         value: 'KMITA'
+                                    })
+
+                                .form__item
+                                    .form__subitem
+                                        .form__item
+                                            .form__subitem: +input-material({
+                                                label: 'Дата рожден.',
+                                                placeholder: 'ДД.ММ.ГГГГ',
+                                                value: '2000.10.25'
+                                            })
+                                            .form__subitem: +input-material({
+                                                label: 'Пол',
+                                                placeholder: 'Пол',
+                                                value: 'K'
+                                            })
+                                    
+                                    .form__subitem: +input-material({
+                                        label: 'Город рождения',
+                                        placeholder: 'Город рождения, на польском',
+                                        value: 'HOMEL'
+                                    })
+                                    .form__subitem: +input-material({
+                                        label: 'Национальность',
+                                        placeholder: 'Национальность',
+                                        value: 'BIAŁORUSKA'
+                                    })
+                                    .form__subitem: +input-material({
+                                        label: 'Страна',
+                                        placeholder: 'Страна',
+                                        value: 'BIAŁORUŚ'
+                                    })
+                                .form__item
+
+                                    .form__subitem: +input-material({
+                                        label: 'Семейное положение',
+                                        placeholder: 'Семейное положение',
+                                        value: 'PANNA'
+                                    })
+
+                                    .form__subitem: +input-material({
+                                        label: 'Образование',
+                                        placeholder: 'Образование',
+                                        value: 'WYŻSZE'
+                                    })
+
+                                    .form__subitem: +input-material({
+                                        label: 'Рост, см',
+                                        placeholder: 'Рост',
+                                         mask: 'number',
+                                         value: '168'
+                                    })
+
+                                    .form__subitem: +input-material({
+                                        label: 'Цвет глаз',
+                                        placeholder: 'Цвет глаз',
+                                        value: 'BRĄZOWOZIELONE'
+                                    })
+
+
+                                .form__item
+
+                                    .form__subitem: +input-material({
+                                        label: 'Особые приметы',
+                                        placeholder: 'BRAK',
+                                        value: 'BRAK'
+                                    })
+
+                                    .form__subitem: +input-material({
+                                        label: 'Номер PESEL',
+                                        placeholder: '96060314502',
+                                        value: '96060314502'
+                                    })
+                                    .form__subitem: +input-material({
+                                        label: 'Номер паспорта',
+                                        placeholder: 'BM2737349',
+                                        value: 'BM2737349'
+                                    })
+                                    .form__subitem
+                                        +input-material({
+                                            label: 'Номер телефона в Польше',
+                                            placeholder: 'Номер телефона в Польше',
+                                            value: '575248796'
+                                        })
+                            fieldset
+                                legend Основание нахождения в Польше
+
+                                .form__item
+                                    .form__subitem: +input-material({
+                                                label: 'Город',
+                                                placeholder: 'Город',
+                                                value: 'WARSZAWA'
+                                            })
+
+                                    .form__subitem
+                                        .form__item
+                                             
+                                            .form__subitem: +input-material({
+                                                label: 'Номер док.',
+                                                placeholder: 'Номер',
+                                                value: '5879899995'
+                                            })
+                                             
+                                            .form__subitem: +input-material({
+                                                label: 'Дата выдачи',
+                                                placeholder: 'ДД.ММ.ГГГГ',
+                                                value: "25.10.2000"
+                                            })
+                                     
+                                    .form__subitem: +input-material({
+                                        label: 'Начало действия',
+                                        placeholder: 'Номер',
+                                        value: '25.10.2000'
+                                    })
+                                    
+                                    .form__subitem: +input-material({
+                                        label: 'Конец действия',
+                                        placeholder: 'Конец действия',
+                                        value: '25.10.2000'
+                                    })
+
+                            fieldset
+                                legend Адрес проживания в Польше
+
+                                .form__item
+                                    .form__subitem: +input-material({
+                                        label: 'Город',
+                                        placeholder: 'Город',
+                                        value: 'WARSZAWA'
+                                    })
+                                     
+                                    .form__subitem
+                                         .form__item
+                                            .form__subitem: +input-material({
+                                                label: 'Улица',
+                                                placeholder: 'Улица',
+                                                value: 'WIKTORJA'
+                                            })
+                                            .form__subitem: +input-material({
+                                                label: 'Дом',
+                                                placeholder: 'Дом',
+                                                value: '12'
+                                            })
+                                    .form__subitem
+                                        .form__item
+                                             
+                                            .form__subitem: +input-material({
+                                                label: 'Квартира',
+                                                placeholder: 'Номер квартиры',
+                                                value: 'Квартира',
+                                                mask: '-'
+                                            })
+                                             
+                                            .form__subitem: +input-material({
+                                                label: 'Почтовый код',
+                                                placeholder: '_ _ - _ _ _ _',
+                                                value: '05-500'
+                                            })
+                                     
+                                    .form__subitem: +input-material({
+                                        label: 'Полный адрес',
+                                        placeholder: 'Полный адрес',
+                                        value: 'WARSAWA, UL. WIKTORJA 12, 05-5',
+                                    })
+
+                            fieldset
+                                legend Информация о членах семьи, проживающих на территории Польши (если нет — не заполняем)
+
+                                .form__group(data-pf="family")
+
+                                    .form__group-title 1.
+
+                                    .form__item
+                                        .form__subitem: +input-material({
+                                                label: 'Имя и фамилия члена семьи',
+                                                placeholder: 'Имя и фамилия, как в пасп.',
+                                                value: 'YELYZAVETA RYZHKOVA',
+                                            })
+                                        .form__subitem: +input-material({
+                                                label: 'Пол',
+                                                placeholder: 'Пол',
+                                                value: 'К',
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Дата рождения',
+                                                placeholder: 'ДД.ММ.ГГГГ',
+                                                value: '01.08.2002',
+                                                mask: 'date'
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Степень родства',
+                                                placeholder: 'Степень родства',
+                                                value: 'ŻONA',
+                                            })
+
+                                    .form__item
+
+                                        .form__subitem: +input-material({
+                                                label: 'Город проживания',
+                                                placeholder: 'Город проживания',
+                                                value: 'WOŁOMIN'
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Гражданство',
+                                                placeholder: 'Гражданство',
+                                                value: 'UKRAINA'
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Подается ли на ВНЖ.',
+                                                placeholder: 'Подается ли на ВНЖ.',
+                                                value: 'TAK'
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Находится ли на содержании',
+                                                placeholder: 'Находится ли на содержании',
+                                                value: 'TAK'
+                                            })
+                                        
+                                      
+                                .form__group(data-pf="family")
+
+                                    .form__group-title 2.
+
+                                    .form__item
+                                        .form__subitem: +input-material({
+                                                label: 'Имя и фамилия члена семьи',
+                                                placeholder: 'Имя и фамилия, как в пасп.',
+                                                value: 'YELYZAVETA RYZHKOVA',
+                                            })
+                                        .form__subitem: +input-material({
+                                                label: 'Пол',
+                                                placeholder: 'Пол',
+                                                value: 'К',
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Дата рождения',
+                                                placeholder: 'ДД.ММ.ГГГГ',
+                                                value: '01.08.2002',
+                                                mask: 'date'
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Степень родства',
+                                                placeholder: 'Степень родства',
+                                                value: 'ŻONA',
+                                            })
+
+                                    .form__item
+
+                                        .form__subitem: +input-material({
+                                                label: 'Город проживания',
+                                                placeholder: 'Город проживания',
+                                                value: 'WOŁOMIN'
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Гражданство',
+                                                placeholder: 'Гражданство',
+                                                value: 'UKRAINA'
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Подается ли на ВНЖ.',
+                                                placeholder: 'Подается ли на ВНЖ.',
+                                                value: 'TAK'
+                                            })
+
+                                        .form__subitem: +input-material({
+                                                label: 'Находится ли на содержании',
+                                                placeholder: 'Находится ли на содержании',
+                                                value: 'TAK'
+                                            })
+                                        
+                                      
+
+                             
+                                     
+                                   
+                            fieldset
+                                legend Прочая информация
+
+                                .form__item
+                                    .form__subitem.form__subitem--w25: +input-material({
+                                                label: 'Дата последнего въезда в Польшу',
+                                                placeholder: 'ДД.ММ.ГГГГ',
+                                                mask: 'date',
+                                                value: '25.10.2020'
+                                            })
+
+                                    .form__subitem: +input-material({
+                                                label: 'Периоды пребывания в Польше',
+                                                placeholder: 'Укажите все периоды пребывания в Польше (в формате ДД.ММ.ГГГГ - ДД.ММ.ГГГГ; и тд) ',
+                                                value: '10.01.2019 - 15.02.2019; 10.01.2019 - 15.02.2019; 25.10.2020 — NADAL (PESEL UKR)'
+                                            })
+
+                                .form__label Поездки за предыдущие 5 лет, в том числе в Польшу:
+
+                               
+
+                                .form__item(data-pf="trip-fields")
+                                    .form__subitem
+                                        +input-textarea({
+                                            label: 'Период поездки (перемещение по Европе без отметок в паспорте тоже учитавается)',
+                                            placeholder: 'Укажите период поездки',
+                                            val: 'UKRAINA (POBYT); TURCJA 09.2022; MOŁDAWIA 02.04.2024 - 12.04.2024; RUMUNIA 12.04.2024 - 13.04.2024; WĘGRY 13.04.2024- 13.04.2024; SŁOWACJA 13.04.2024-14.04.2024; CZECHY 14.04.2024'
+                                        })
+
+                               
+
+                                .form__label Информация о финансовых средствах, покрывающих расходы:
+
+                                .form__item
+                                    .form__subitem
+                                        +input-material({
+                                                label: 'Тип договора',
+                                                placeholder: 'Тип договора',
+                                                value: 'UMOWA O PRACĘ'
+                                            }) 
+                                            
+                                    .form__subitem
+                                         
+                                            +input-material({
+                                                    label: 'Медицинская страховка',
+                                                    placeholder: 'Медицинская страховка',
+                                                    value: 'UBEZPIECZENIE PRYWATNE',
+                                            })
+                                    .form__subitem
+                                         
+                                        +input-material({
+                                                label: 'Информация об обременениях',
+                                                placeholder: 'Информация об обременениях',
+                                                value: 'NIE',
+                                            })
+
+
+                                .form__label Ответственный исполнитель
+
+                                .form__item
+                                    .form__subitem
+                                        +input-material({
+                                            label: 'ФИО',
+                                            placeholder: 'Впишите имя и фамилию',
+                                        }) 
+                                            
+                                    .form__subitem
+                                        +input-material({
+                                            label: 'E-mail',
+                                            placeholder: 'Ваш E-mail',
+                                        })
+
+                                    .form__subitem
+                                        .form__item
+                                            .form__subitem
+                                                +input-material({
+                                                    label: 'Телефон',
+                                                    placeholder: 'Телефон',
+                                                })
+
+                                            .form__subitem
+                                                +input-material({
+                                                    label: '№ удост. док.',
+                                                    placeholder: '№',
+                                                })
+                                
+
+                                
+
+                            fieldset
+                                .form-question
+                                    .form-question__text У меня есть акции или доли в обществе с ограниченной ответственностью, коммандитном товариществе, коммандитно-акционерном товариществе
+                                    .form-question__option
+                                        +radio('Да', 'q1')
+                                        +radio('Нет', 'q1')
+                                .form-question
+                                    .form-question__text Я вхожу в состав правления юридического лица, подлежащего регистрации в реестре предпринимателей
+                                    .form-question__option
+                                        +radio('Да', 'q2')
+                                        +radio('Нет', 'q2')
+                                .form-question
+                                    .form-question__text Я работал на территории Польши в 2022 году. (по контракту)
+                                    .form-question__option
+                                        +radio('Да', 'q3')
+                                        +radio('Нет', 'q3')
+                                .form-question
+                                    .form-question__text Я рассчитался с налоговой через декларацию PIT за 2022 год
+                                    .form-question__option
+                                        +radio('Да', 'q4')
+                                        +radio('Нет', 'q4')
+                                .form-question
+                                    .form-question__text Я работал на территории Польши в 2023  году. (по контракту)
+                                    .form-question__option
+                                        +radio('Да', 'q5')
+                                        +radio('Нет', 'q5')
+                                .form-question
+                                    .form-question__text Я рассчитался с налоговой через декларацию PIT за 2023 год
+                                    .form-question__option
+                                        +radio('Да', 'q6')
+                                        +radio('Нет', 'q6')
+                                .form-question
+                                    .form-question__text У меня есть задолженность по налогам
+                                    .form-question__option
+                                        +radio('Да', 'q7')
+                                        +radio('Нет', 'q7')
+                                .form-question
+                                    .form-question__text Я получил заявление о намерении доверить выполнение работы, зарегистрированное компетентной повятовой биржой труда (для граждан Армении, Беларуси, Грузии, Молдовы, России и Украины)
+                                    .form-question__option
+                                        +radio('Да',  'q8')
+                                        +radio('Нет',  'q8')
+                                .form-question
+                                    .form-question__text Приступил к работе на основании заявления о поручении выполнения работы, зарегистрированного компетентной повятовой биржой труда (для граждан Армении, Беларуси, Грузии, Молдовы, России и Украины)
+                                    .form-question__option
+                                        +radio('Да', 'q9')
+                                        +radio('Нет', 'q9')
+                                .form-question
+                                    .form-question__text Я веду индивидуальную предпринимательскую деятельность:
+                                    .form-question__option
+                                        +radio('Да', 'q11')
+                                        +radio('Нет', 'q11')
+
+                                .form__item
+                                    .form__subitem: button.btn.btn-line(type="submit") Изменить

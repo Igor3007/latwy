@@ -84,12 +84,21 @@ mixin bgimage(url)
 mixin bgimage--nolazy(url)
   span.bgimage(style="background-image: url("+url+")")
 
-mixin checkbox(label, name,  check)
+mixin checkbox(label, name,  check, val)
   label.checkbox
     if check
-      input(type="checkbox" name=""+name+"" checked="" )
+      input(type="checkbox" name=""+name+"" checked="" value=""+val+"")
     else
-      input(type="checkbox" name=""+name+"" )
+      input(type="checkbox" name=""+name+"" value=""+val+"")
+    span.checkbox__elem
+    span.checkbox__text!= label
+
+mixin checkbox-radio(label, name,  check, val)
+  label.checkbox
+    if check
+      input(type="radio" name=""+name+"" checked="" value=""+val+"")
+    else
+      input(type="radio" name=""+name+"" value=""+val+"")
     span.checkbox__elem
     span.checkbox__text!= label
 
@@ -127,10 +136,34 @@ mixin input-material(params)
       =params.label
       if(params.tooltip)
         span.input-tooltip(data-tooltip=params.tooltip)
-    input(
-      type=(params.type?params.type:'text') 
-      value=(params.value?params.value:'') 
-      placeholder=value=(params.placeholder?params.placeholder:''))
+
+    if(params.mask)
+
+      input(
+        type=(params.type?params.type:'text') 
+        value=(params.value?params.value:'') 
+        placeholder=value=(params.placeholder?params.placeholder:'')
+        data-input-mask=params.mask
+        )
+
+    else 
+
+      input(
+        type=(params.type?params.type:'text') 
+        value=(params.value?params.value:'') 
+        placeholder=value=(params.placeholder?params.placeholder:'')
+      )
+
+mixin input-textarea(params)
+  .input-material.input-material--textarea
+    label
+      =params.label
+      if(params.tooltip)
+        span.input-tooltip(data-tooltip=params.tooltip)
+
+      textarea()= params.val
+
+    
      
 
 mixin input-material-date(type, placeholder, value)

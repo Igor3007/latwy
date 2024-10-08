@@ -1,130 +1,420 @@
-class customSelect {
-    constructor(e) {
-        this.selector = e.selector, this.selectAll = document.querySelectorAll(this.selector)
+class afSelect {
+
+    constructor(option) {
+        this.selector = option.selector;
+        this.selectAll = document.querySelectorAll(this.selector)
+        this.on = option.on ? option.on : false
     }
+
     init() {
-        this.renderTemplate(), this.clickEventOut()
+        this.renderTemplate()
+        this.clickEventOut()
     }
-    reinit(e) {
-        let t = e.parentNode;
-        t.querySelector(".select-styled") && (t.querySelector(".select-styled").remove(), t.querySelector(".select-list").remove()), this.renderOption(t)
-    }
-    ajaxOption(e, t) {
-        let n = new XMLHttpRequest;
-        return n.open("GET", e.dataset.ajax), n.responseType = "json", n.setRequestHeader("Content-type", "application/json; charset=utf-8"), n.send(), n.onerror = function () {
-            console.err("Error: afSelec ajax request failed")
-        }, n.onreadystatechange = function () {
-            3 == n.readyState && e.closest(".af-select").querySelector(".select-list").classList.add("select-list--load"), 4 == n.readyState && e.closest(".af-select").querySelector(".select-list").classList.remove("select-list--load")
-        }, n.onload = function () {
-            t(n.response)
-        }, null
-    }
-    renderOption(i) {
-        var r = this,
-            s = i.querySelector("select"),
-            o = s.getAttribute("placeholder"),
-            a = s.getAttribute("multiple");
-        const c = document.createElement("div"),
-            l = (c.classList.add("select-styled"), c.innerHTML = "<span>" + o + "</span>", document.createElement("ul")),
-            e = (l.classList.add("select-options"), document.createElement("div"));
 
-        function d(e) {
-            e.querySelectorAll("select > option").forEach(function (e, t) {
-                const n = document.createElement("li");
-                if (n.innerHTML = e.innerText, n.setAttribute("rel", e.value), a) {
-                    let e = document.createElement("span");
-                    e.classList.add("af-check-multiple"), n.append(e)
-                }
+    reinit(elem) {
+        const _this = this;
 
-                function i(e) {
-                    if (a) {
-                        let t = [];
-                        return e.parentNode.querySelectorAll("option[selected]").forEach(function (e) {
-                            t.push(e.innerText)
-                        }), t.length ? t.join(",") : o
-                    }
-                    return e.innerText
-                }
-                0 != t || o || (c.innerHTML = "<span>" + e.innerText + "</span>"), e.getAttribute("selected") && (c.innerHTML = o ? '<span class="af-selected-placeholder" data-af-placeholder="' + o + '">' + i(e) + "</span>" : "<span>" + i(e) + "</span>", n.classList.add("active")), e.getAttribute("disabled") || (l.appendChild(n), r.clickEventListItem(n, e, t))
+        let item = elem.parentNode
+
+        if (item.querySelector('.select-styled')) {
+            item.querySelector('.select-styled').remove()
+            item.querySelector('.select-list').remove()
+
+            item.querySelectorAll('[selected]').forEach(opt => opt.removeAttribute('selected'))
+        }
+
+
+
+        _this.renderOption(item)
+        _this.clickEventOpenSelect(item)
+
+        item.classList.remove('af-select--selected')
+
+    }
+
+    ajaxOption(item, callback) {
+        let xhr = new XMLHttpRequest();
+        let result = null;
+        xhr.open('GET', item.dataset.ajax)
+        xhr.responseType = 'json';
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send()
+        xhr.onerror = function () {
+            console.err('Error: afSelect ajax request failed')
+        };
+
+        xhr.onreadystatechange = function () {
+
+            if (xhr.readyState == 3) {
+                item.closest('.af-select').querySelector('.select-list').classList.add('select-list--load')
+            }
+
+            if (xhr.readyState == 4) {
+                item.closest('.af-select').querySelector('.select-list').classList.remove('select-list--load')
+            }
+
+        };
+
+        xhr.onload = function () {
+            callback(xhr.response)
+        };
+
+        return result;
+    }
+
+    renderOption(item) {
+
+        var _this = this;
+        var select = item.querySelector('select')
+        var placeholder = select.getAttribute('placeholder')
+        var label = select.getAttribute('data-label')
+        var multiple = select.getAttribute('multiple')
+
+        const styledSelect = document.createElement('div')
+        styledSelect.classList.add('select-styled');
+        styledSelect.innerHTML = '<span>' + placeholder + '</span>';
+
+        const styledOptions = document.createElement('ul')
+        styledOptions.classList.add('select-options');
+
+        const styledList = document.createElement('div')
+        styledList.classList.add('select-list');
+
+        if (select.getAttribute('data-find') != 'false' && select.querySelectorAll('option').length > 5) {
+            const styledFindInput = document.createElement('input')
+            styledFindInput.setAttribute('type', 'text');
+            styledFindInput.setAttribute('placeholder', 'Поиск по списку');
+            styledList.appendChild(styledFindInput)
+
+            styledFindInput.addEventListener('keyup', (e) => {
+                this.findOption(e)
             })
         }
-        e.classList.add("select-list"), e.appendChild(l), i.querySelector(".select-styled") || i.appendChild(c), i.querySelector(".select-options") || i.appendChild(e), s.dataset.ajax && this.ajaxOption(s, function (e) {
-            s.innerHTML = "";
-            let n = s.dataset.selected,
-                t = s.getAttribute("placeholder");
-            e.unshift({
-                text: t || "-Выберите-",
-                value: ""
-            }), e.forEach(function (e) {
-                let t = document.createElement("option");
-                t.value = e.value, t.innerText = e.text, n == e.value && (t.setAttribute("selected", !0), s.removeAttribute("data-selected")), s.append(t)
-            }), d(i)
-        }), s.dataset.ajax || d(i), s.afSelect = new Object, s.afSelect.open = function () {
-            r.openSelect(i)
-        }, s.afSelect.close = function () {
-            r.closeSelect()
-        }, s.afSelect.update = function () {
-            r.reinit(s)
+
+        styledList.appendChild(styledOptions)
+
+        if (!item.querySelector('.select-styled')) {
+            item.appendChild(styledSelect)
         }
+
+        if (!item.querySelector('.select-options')) {
+            item.appendChild(styledList)
+        }
+
+
+
+        function createOptions(item) {
+            item.querySelectorAll('select > option').forEach(function (item, index) {
+
+                // create li elem
+                const li = document.createElement('li')
+                li.innerHTML = item.innerText
+                li.setAttribute('rel', item.value)
+
+                if (multiple) {
+                    let check = document.createElement('span')
+                    check.classList.add('af-check-multiple')
+                    li.append(check)
+                }
+
+                //если не задан placeholder, сделать им первый элемент
+                if (index == 0 && !placeholder) {
+                    styledSelect.innerHTML = '<span>' + item.innerText + '</span>';
+                }
+
+                //если есть selected элемент
+                if (item.getAttribute('selected')) {
+
+                    function selectedText(option) {
+                        if (multiple) {
+
+                            let selected_arr = [];
+
+                            option.parentNode.querySelectorAll('option[selected]').forEach(function (item) {
+                                selected_arr.push(item.innerText)
+                            })
+
+                            return (selected_arr.length ? selected_arr.join(', ') : placeholder);
+                        } else {
+                            return option.innerText
+                        }
+                    }
+
+                    if (!placeholder) {
+                        styledSelect.innerHTML = '<span>' + selectedText(item) + '</span>';
+                        li.classList.add('active')
+                    } else {
+                        styledSelect.innerHTML = '<span class="af-selected-placeholder" data-af-placeholder="' + placeholder + '">' + selectedText(item) + '</span>';
+                        li.classList.add('active')
+                    }
+                }
+                if (!item.getAttribute('disabled')) {
+                    styledOptions.appendChild(li)
+                    _this.clickEventListItem(li, item, index)
+                }
+
+            })
+
+            if (!item.querySelectorAll('select > option[selected]').length) {
+                styledSelect.innerHTML = '<span class="af-selected-placeholder" data-af-placeholder="' + placeholder + '">' + label + '</span>';
+
+            } else {
+                item.closest('.af-select').classList.add('af-select--selected')
+            }
+
+        }
+
+
+
+        //ajax option
+        if (select.dataset.ajax) {
+
+            this.ajaxOption(select, function (arr) {
+
+                select.innerHTML = '';
+
+                let attrSelectedId = select.dataset.selected;
+                let arrtPlaceholder = select.getAttribute('placeholder')
+
+                arr.unshift({
+                    text: (arrtPlaceholder ? arrtPlaceholder : '-Выберите-'),
+                    value: ''
+                });
+
+                arr.forEach(function (item) {
+                    let option = document.createElement('option')
+                    option.value = item.value
+                    option.innerText = item.text
+
+                    if (attrSelectedId == item.value) {
+                        option.setAttribute('selected', true)
+                        select.removeAttribute('data-selected')
+                    }
+
+                    select.append(option)
+                })
+
+                createOptions(item);
+            })
+
+        }
+
+        //default
+        if (!select.dataset.ajax) {
+            createOptions(item)
+        }
+
+
+        //add public methods
+
+
+        select['afSelect'] = new Object;
+
+        select.afSelect.open = function () {
+            _this.openSelect(item)
+        }
+        select.afSelect.close = function () {
+            _this.closeSelect()
+        }
+        select.afSelect.update = function () {
+            _this.reinit(select)
+        }
+
+
+
+    }
+
+    findOption(event) {
+
+        const listOption = event.target.closest('.select-list').querySelectorAll('li')
+        const q = event.target.value
+
+        listOption.forEach(item => {
+            if (item.innerText.toLowerCase().indexOf(q.toLowerCase()) !== -1) {
+                item.style.display = 'block'
+            } else {
+                item.style.display = 'none'
+            }
+        })
+
     }
 
     renderTemplate() {
-        const i = this,
-            r = [];
-        this.selectAll.forEach(function (e, t) {
-            if (!e.classList.contains("select-hidden")) {
-                e.classList.add("select-hidden");
-                const n = document.createElement("div");
-                n.classList.add("af-select"), e.getAttribute("multiple") && n.classList.add("af-select--multiple"), n.innerHTML = e.outerHTML, e.parentNode.replaceChild(n, e), i.clickEventOpenSelect(n), r.push(n)
 
-            }
-        }), r.forEach(function (e, t) {
-            i.renderOption(e)
-        })
-    }
+        const _this = this;
+        const istanse = []
 
-    openSelect(e) {
-        document.querySelectorAll("select").forEach(function (e) {
-            e.afSelect && e.afSelect.close()
-        }), e.querySelector("select").dataset.ajax && !e.querySelector(".select-styled").classList.contains("active") && (e.querySelector(".select-list").remove(), this.renderOption(e)), e.style.maxWidth = e.offsetWidth + "px", e.querySelector(".select-styled").classList.toggle("active"), e.querySelector(".select-options").classList.toggle("active"), e.querySelector(".select-list").classList.toggle("active"), document.querySelector("body").classList.toggle("af-select-open")
-    }
-    closeSelect() {
-        if (!document.querySelector(".select-styled.active")) return !1;
-        document.querySelector(".select-styled.active").classList.remove("active"), document.querySelector(".select-options.active").classList.remove("active"), document.querySelector(".select-list.active").classList.remove("active"), document.querySelector("body").classList.remove("af-select-open")
-    }
-    clickEventOut() {
-        const e = this;
-        document.addEventListener("click", function () {
-            e.closeSelect()
-        })
-    }
-    clickEventListItem(e, i, t) {
-        const r = i.parentNode.parentNode,
-            s = this,
-            o = r.querySelector("select").getAttribute("placeholder"),
-            a = r.querySelector("select").getAttribute("multiple"),
-            c = r.querySelector(".select-styled");
-        e.addEventListener("click", function (e) {
-            function t(e) {
-                if (a) {
-                    let t = [];
-                    return e.parentNode.querySelectorAll("option[selected]").forEach(function (e) {
-                        t.push(e.innerText)
-                    }), t.length ? t.join(",") : o
+
+
+        this.selectAll.forEach(function (item, index) {
+
+
+
+            if (!item.classList.contains('select-hidden')) {
+                item.classList.add('select-hidden');
+                const wrapper = document.createElement('div');
+                wrapper.classList.add('af-select');
+
+                if (item.getAttribute('multiple')) {
+                    wrapper.classList.add('af-select--multiple');
                 }
-                return e.innerText
+
+                if (item.getAttribute('data-label')) {
+                    wrapper.setAttribute('data-title', item.getAttribute('data-label'));
+                }
+
+                wrapper.innerHTML = item.outerHTML;
+                item.parentNode.replaceChild(wrapper, item);
+
+                //add event 
+
+                istanse.push(wrapper)
             }
-            e.stopPropagation(), e.preventDefault(), r.querySelector(".select-options li.active") && !a && r.querySelector(".select-options li.active").classList.remove("active"), this.classList.contains("active") ? (this.classList.remove("active"), i.removeAttribute("selected")) : (this.classList.add("active"), i.setAttribute("selected", "selected")), o ? c.innerHTML = '<span class="af-selected-placeholder" data-af-placeholder="' + o + '">' + t(i) + "</span>" : r.querySelector(".select-styled span").innerHTML = t(i), a || (r.querySelector("select").value = this.getAttribute("rel"));
-            var n = new Event("change");
-            r.querySelector("select").dispatchEvent(n), e.target.classList.contains("af-check-multiple") || s.closeSelect()
+
+        })
+
+        istanse.forEach(function (item, index) {
+            _this.renderOption(item)
+            _this.clickEventOpenSelect(item)
+        })
+
+
+    }
+
+    openSelect(elem) {
+
+        //console.log(elem)
+
+        if (elem.querySelector('.select-styled.active')) {
+            this.closeSelect()
+            return false
+        }
+
+        if (elem.querySelector('select').dataset.ajax && !elem.querySelector('.select-styled').classList.contains('active')) {
+            elem.querySelector('.select-list').remove()
+            this.renderOption(elem);
+        }
+
+        if (window.innerHeight - elem.getBoundingClientRect().bottom < 250) {
+            elem.classList.add('af-select--top')
+        } else {
+            elem.classList.contains('af-select--top') ? elem.classList.remove('af-select--top') : ''
+        }
+
+        elem.style.maxWidth = (elem.offsetWidth) + 'px'
+        elem.querySelector('.select-styled').classList.add('active')
+        elem.querySelector('.select-options').classList.add('active')
+        elem.querySelector('.select-list').classList.add('active')
+        document.querySelector('body').classList.add('af-select-open')
+
+    }
+
+    closeSelect() {
+        if (!document.querySelector('.select-styled.active')) return false
+
+        document.querySelector('.select-styled.active').classList.remove('active')
+        document.querySelector('.select-options.active').classList.remove('active')
+        document.querySelector('.select-list.active').classList.remove('active')
+        document.querySelector('body').classList.remove('af-select-open')
+    }
+
+    clickEventOut() {
+        const _this = this;
+        document.addEventListener('click', function (e) {
+            _this.closeSelect()
         })
     }
-    clickEventOpenSelect(e) {
-        const t = this;
 
-        function n(e) {
-            e.stopPropagation(), e.preventDefault(), t.openSelect(this)
-        }
-        e.removeEventListener("click", n), e.addEventListener("click", n)
+    clickEventListItem(elem, option, index) {
+
+        const parentElem = option.parentNode.parentNode
+        const _this = this;
+        const placeholder = parentElem.querySelector('select').getAttribute('data-label') || parentElem.querySelector('select').getAttribute('placeholder');
+        const label = parentElem.querySelector('select').getAttribute('placeholder')
+        const multiple = parentElem.querySelector('select').getAttribute('multiple')
+        const styledSelect = parentElem.querySelector('.select-styled')
+
+
+        elem.addEventListener('click', function (event) {
+
+            event.stopPropagation()
+            event.preventDefault()
+
+            option.closest('.af-select').classList.add('af-select--selected')
+
+            if (parentElem.querySelector('.select-options li.active')) {
+
+                // если мульти то не сбрасывать active
+                if (!multiple) {
+                    parentElem.querySelector('.select-options li.active').classList.remove('active')
+                }
+            }
+
+            if (this.classList.contains('active')) {
+                this.classList.remove('active')
+                option.removeAttribute('selected')
+            } else {
+                this.classList.add('active')
+                option.setAttribute('selected', 'selected')
+            }
+
+            function selectedText(option) {
+                if (multiple) {
+
+                    let selected_arr = [];
+
+                    option.parentNode.querySelectorAll('option[selected]').forEach(function (item) {
+                        selected_arr.push(item.innerText)
+                    })
+
+                    return (selected_arr.length ? selected_arr.join(', ') : placeholder);
+                } else {
+                    return option.innerText
+                }
+            }
+
+            //если есть placeholder
+            if (placeholder) {
+                styledSelect.innerHTML = '<span class="af-selected-placeholder" data-af-placeholder="' + placeholder + '">' + selectedText(option) + '</span>';
+            } else {
+                parentElem.querySelector('.select-styled span').innerHTML = selectedText(option)
+            }
+
+            if (!multiple) {
+                parentElem.querySelector('select').value = this.getAttribute('rel')
+            }
+
+            var dispatchEvent = new Event('change');
+            parentElem.querySelector('select').dispatchEvent(dispatchEvent);
+
+            if (!event.target.classList.contains('af-check-multiple')) {
+                _this.closeSelect()
+            }
+
+            if (_this.on.change) {
+                _this.on.change(option)
+            }
+
+
+
+        })
     }
+
+    clickEventOpenSelect(elem) {
+        const _this = this;
+
+        function addEventOpen(event) {
+            event.stopPropagation()
+            event.preventDefault()
+
+            if (event.target.closest('.select-styled')) {
+                _this.openSelect(this)
+            }
+
+        }
+
+        elem.removeEventListener('click', addEventOpen)
+        elem.addEventListener('click', addEventOpen)
+    }
+
 }

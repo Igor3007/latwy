@@ -113,13 +113,14 @@
         background-color: transparent;
         background-image: none;
 
-        border: 2px solid #ee3a16;
-        color: #fff;
+        border: 1px solid var(--main);
+        color: var(--main);
+        font-weight: 400;
 
         &:hover {
-            border-color: #ee3a16;
+            border-color: var(--main);
             color: #fff;
-            background-color: #ee3a16;
+            background-color: var(--main);
         }
     }
 

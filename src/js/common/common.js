@@ -212,28 +212,287 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     function initMaska() {
         new MaskInput("[data-maska]")
+
+        //number
+        new MaskInput("[data-input-mask='number']", {
+            mask: '9',
+            tokens: {
+                9: {
+                    pattern: /[0-9]/,
+                    repeated: true
+                },
+            }
+        })
+
+        new MaskInput("[data-input-mask='date']", {
+            mask: (value) => {
+                return '##.##.####'
+            },
+
+            postProcess: (value) => {
+
+                let arr = [];
+
+                value.split('.').forEach((num, index) => {
+                    if (index == 0) Number(num) > 31 ? arr.push(31) : arr.push(num)
+                    if (index == 1) Number(num) > 12 ? arr.push(12) : arr.push(num)
+                    if (index == 2) Number(num) > new Date().getFullYear() ? arr.push(new Date().getFullYear()) : arr.push(num)
+                })
+
+                return arr.join('.')
+
+            }
+
+        })
     }
 
     initMaska();
 
     /* ==============================================
      select
-     ============================================== */
+    ============================================== */
 
     // public methods
     // select.afSelect.open()
     // select.afSelect.close()
     // select.afSelect.update()
 
-    const selectCustom = new customSelect({
+    const selectCustom = new afSelect({
         selector: 'select'
     })
 
     selectCustom.init()
+    /* ====================================
+    ajax tooltip
+    ====================================*/
 
-    /* ================================================
-    user-menu data-user-menu="open"
-    ================================================*/
+    if (document.querySelector('[data-tooltip]')) {
+
+
+        class TooltipAjax {
+
+            constructor() {
+                this.$items = document.querySelectorAll('[data-tooltip]')
+                this.addEvents()
+                this.tooltip = null;
+            }
+
+            ajaxLoadTooltip(e, callback) {
+
+                callback({
+                    title: '',
+                    text: e.target.dataset.tooltip || e.target.closest('[data-tooltip]').dataset.tooltip
+                })
+
+            }
+
+            getTemplate(data) {
+                let html = ` <div class="tooltip-box" ><div class="af-spiner" ></div></div> `;
+                if (data) {
+
+                    html = `<div class="tooltip-box" >
+                               <div class="tooltip-box__title" >${data.title}</div>
+                               <div class="tooltip-box__text" >${data.text}</div>
+                           </div> `;
+                }
+                return html;
+            }
+
+            positionTooltip(e) {
+                const DomRect = e.target.getBoundingClientRect()
+                const tooltipW = this.tooltip.clientWidth;
+                const tooltipH = this.tooltip.clientHeight;
+                const offset = 16;
+
+                this.tooltip.style.left = (DomRect.x - (tooltipW / 2) + (offset / 2)) + 'px'
+                this.tooltip.style.top = (DomRect.y - tooltipH - (offset / 2)) + 'px'
+
+
+                if (this.tooltip.getBoundingClientRect().left < offset) {
+                    this.tooltip.classList.add('tooltip-box-item--left')
+                    this.tooltip.style.left = (DomRect.x - (DomRect.x / 2) + (offset / 2)) + 'px'
+                }
+
+                if (this.tooltip.getBoundingClientRect().top < offset) {
+                    this.tooltip.classList.add('tooltip-box-item--top')
+                    this.tooltip.style.top = (DomRect.y + (offset)) + 'px'
+                }
+            }
+
+            tooltipDesctop(e) {
+
+                this.tooltipRemove()
+                this.tooltip = document.createElement('div')
+                this.tooltip.innerHTML = this.getTemplate(false)
+                this.tooltip.classList.add('tooltip-box-item')
+
+                e.target.closest('span').append(this.tooltip)
+                this.positionTooltip(e)
+
+                //load data
+
+                this.ajaxLoadTooltip(e, (response) => {
+                    this.tooltip.innerHTML = this.getTemplate(response)
+                    this.positionTooltip(e)
+                })
+            }
+
+            tooltipPopup(e) {
+                const tooltipPopup = new afLightbox({
+                    mobileInBottom: true
+                })
+
+                tooltipPopup.open('<div class="popup-tooltip-box" >' + this.getTemplate(false) + '</div>', () => {
+                    this.ajaxLoadTooltip(e, (response) => {
+                        tooltipPopup.changeContent('<div class="popup-tooltip-box" >' + this.getTemplate(response) + '</div>')
+                    })
+                })
+            }
+
+            tooltipRemove() {
+                !this.tooltip || this.tooltip.remove()
+            }
+
+            addEvents() {
+                this.$items.forEach(item => {
+
+                    //for desctop
+                    if (document.body.clientWidth > 576) {
+
+                        item.addEventListener('mouseenter', e => {
+                            this.tooltipDesctop(e)
+
+                            //add event close on scroll
+                            window.addEventListener('scroll', e => {
+                                this.tooltipRemove()
+                            })
+
+                        })
+
+                        //add event close on outher click 
+                        item.addEventListener('mouseleave', e => {
+                            this.tooltipRemove()
+                        })
+
+                    } else {
+                        item.addEventListener('click', e => {
+                            //for mobile
+                            this.tooltipPopup(e)
+                        })
+                    }
+
+
+
+                })
+            }
+
+        }
+
+        new TooltipAjax()
+
+
+    }
+
+    /* =====================================
+    data-pf
+    =====================================*/
+
+    if (document.querySelector('[data-pf="trip"]')) {
+
+        let container = document.querySelector('[data-pf="trip"]')
+        let radio = container.querySelectorAll('[type=radio]')
+        let fields = document.querySelector('[data-pf="trip-fields"]')
+
+        radio.forEach(item => {
+            item.addEventListener('change', (e) => {
+                if (e.target.value != 1) {
+                    fields.setAttribute('disabled', 'disabled')
+                } else {
+                    fields.removeAttribute('disabled')
+                }
+            })
+
+            if (item.checked && item.value != 1) {
+                fields.setAttribute('disabled', 'disabled')
+            }
+        })
+
+    }
+
+    if (document.querySelector('[data-pf="group"]')) {
+        document.querySelectorAll('[data-pf="group"]').forEach(item => {
+
+            let checkbox = item.querySelector('[type=checkbox]')
+
+            if (!checkbox.checked) {
+                item.setAttribute('disabled', 'disabled')
+            }
+
+            checkbox.addEventListener('change', (e) => {
+                if (!e.target.checked) {
+                    item.setAttribute('disabled', 'disabled')
+                } else {
+                    item.removeAttribute('disabled')
+                }
+            })
+        })
+    }
+
+    // repeat trip
+    if (document.querySelector('[data-pf="add-trip"]')) {
+        document.querySelector('[data-pf="add-trip"]').addEventListener('click', (e) => {
+
+            let fields = document.querySelectorAll('[data-pf="trip-fields"]')
+
+            if (fields.length > 5) return false
+
+            let html = fields[0].cloneNode(true)
+
+            html.querySelectorAll('input').forEach(item => {
+                item.value = ''
+            })
+            html.querySelectorAll('select').forEach(item => {
+                item.value = ''
+                const selectCustom = new afSelect({
+                    selector: 'select'
+                })
+                selectCustom.reinit(item)
+            })
+
+            fields[(fields.length - 1)].after(html)
+        })
+    }
+
+    //repeat family unit 
+
+    if (document.querySelector('[data-pf="add-family"]')) {
+        document.querySelector('[data-pf="add-family"]').addEventListener('click', (e) => {
+
+            let fields = document.querySelectorAll('[data-pf="family"]')
+
+            if (fields.length > 10) return false
+
+            let html = fields[0].cloneNode(true)
+
+            html.querySelectorAll('input').forEach(item => {
+                item.value = ''
+            })
+
+            html.querySelectorAll('select').forEach(item => {
+                item.value = ''
+                const selectCustom = new afSelect({
+                    selector: 'select'
+                })
+                selectCustom.reinit(item)
+            })
+
+            html.querySelector('.form__group-title').innerText = (fields.length + 1) + '.'
+
+            fields[(fields.length - 1)].after(html)
+
+            initMaska()
+        })
+    }
 
 
 
