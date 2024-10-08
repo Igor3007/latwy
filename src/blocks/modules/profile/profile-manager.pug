@@ -1,33 +1,39 @@
+include ./quest
+
 mixin profile
     section.section-profile
         .container
             .profile
                 .profile__title Анкета 
                 .profile__form 
-                    form(action='#' method='POST')
+                    form(action='#' method='POST' data-pf="form")
                         .form
                             fieldset
                                 .form__item
                                     .form__subitem: +input-material({
                                         label: 'Имя',
                                         placeholder: 'Имя, латиницей как в пасп.',
-                                        value: 'YULIYA'
+                                        value: 'YULIYA',
+                                        required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Фамилия',
                                         placeholder: 'Фамилия, латиницей как в пасп.',
-                                        value: 'ARTSEMYEVA'
+                                        value: 'ARTSEMYEVA',
+                                        required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Предыдущая фамилия',
                                         placeholder: 'Предыдущая фамилия, как в пасп.',
-                                        value: '-'
+                                        value: '-',
+                                        required: true
                                        
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Родовая фамилия',
                                         placeholder: 'Родовая фамилия, литиницей',
-                                        value: 'ARTSEMYEVA'
+                                        value: 'ARTSEMYEVA',
+                                        required: true
                                         
                                     })
 
@@ -35,22 +41,26 @@ mixin profile
                                     .form__subitem: +input-material({
                                         label: 'Предыдущее имя',
                                         placeholder: 'Предыдущее имя',
-                                         value: '—'
+                                         value: '—',
+                                         required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Имя отца',
                                         placeholder: 'Имя отца, латиницей как в пасп. ',
-                                        value: 'MIKALAI'
+                                        value: 'MIKALAI',
+                                        required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Имя матери',
                                         placeholder: 'Имя матери, латиницей как в пасп',
-                                        value: 'VOLHA'
+                                        value: 'VOLHA',
+                                        required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Девичья фамилия матери',
                                         placeholder: 'Девичья фамилия матери',
-                                         value: 'KMITA'
+                                         value: 'KMITA',
+                                         required: true
                                     })
 
                                 .form__item
@@ -59,54 +69,64 @@ mixin profile
                                             .form__subitem: +input-material({
                                                 label: 'Дата рожден.',
                                                 placeholder: 'ДД.ММ.ГГГГ',
-                                                value: '2000.10.25'
+                                                value: '2000.10.25',
+                                                reverse: true,
+                                                required: true
                                             })
                                             .form__subitem: +input-material({
                                                 label: 'Пол',
                                                 placeholder: 'Пол',
-                                                value: 'K'
+                                                value: 'K',
+                                                required: true
                                             })
                                     
                                     .form__subitem: +input-material({
                                         label: 'Город рождения',
                                         placeholder: 'Город рождения, на польском',
-                                        value: 'HOMEL'
+                                        value: 'HOMEL',
+                                        required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Национальность',
                                         placeholder: 'Национальность',
-                                        value: 'BIAŁORUSKA'
+                                        value: 'BIAŁORUSKA',
+                                        required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Страна',
                                         placeholder: 'Страна',
-                                        value: 'BIAŁORUŚ'
+                                        value: 'BIAŁORUŚ',
+                                        required: true
                                     })
                                 .form__item
 
                                     .form__subitem: +input-material({
                                         label: 'Семейное положение',
                                         placeholder: 'Семейное положение',
-                                        value: 'PANNA'
+                                        value: 'PANNA',
+                                        required: true
                                     })
 
                                     .form__subitem: +input-material({
                                         label: 'Образование',
                                         placeholder: 'Образование',
-                                        value: 'WYŻSZE'
+                                        value: 'WYŻSZE',
+                                        required: true
                                     })
 
                                     .form__subitem: +input-material({
                                         label: 'Рост, см',
                                         placeholder: 'Рост',
                                          mask: 'number',
-                                         value: '168'
+                                         value: '168',
+                                         required: true
                                     })
 
                                     .form__subitem: +input-material({
                                         label: 'Цвет глаз',
                                         placeholder: 'Цвет глаз',
-                                        value: 'BRĄZOWOZIELONE'
+                                        value: 'BRĄZOWOZIELONE',
+                                        required: true
                                     })
 
 
@@ -115,24 +135,28 @@ mixin profile
                                     .form__subitem: +input-material({
                                         label: 'Особые приметы',
                                         placeholder: 'BRAK',
-                                        value: 'BRAK'
+                                        value: 'BRAK',
+                                        required: true
                                     })
 
                                     .form__subitem: +input-material({
                                         label: 'Номер PESEL',
                                         placeholder: '96060314502',
-                                        value: '96060314502'
+                                        value: '96060314502',
+                                        required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Номер паспорта',
                                         placeholder: 'BM2737349',
-                                        value: 'BM2737349'
+                                        value: 'BM2737349',
+                                        required: true
                                     })
                                     .form__subitem
                                         +input-material({
                                             label: 'Номер телефона в Польше',
                                             placeholder: 'Номер телефона в Польше',
-                                            value: '575248796'
+                                            value: '575248796',
+                                            required: true
                                         })
                             fieldset
                                 legend Основание нахождения в Польше
@@ -342,7 +366,8 @@ mixin profile
                                                 label: 'Дата последнего въезда в Польшу',
                                                 placeholder: 'ДД.ММ.ГГГГ',
                                                 mask: 'date',
-                                                value: '25.10.2020'
+                                                value: '25.10.2020',
+                                                reverse: true
                                             })
 
                                     .form__subitem: +input-material({
@@ -423,57 +448,4 @@ mixin profile
 
                                 
 
-                            fieldset
-                                .form-question
-                                    .form-question__text У меня есть акции или доли в обществе с ограниченной ответственностью, коммандитном товариществе, коммандитно-акционерном товариществе
-                                    .form-question__option
-                                        +radio('Да', 'q1')
-                                        +radio('Нет', 'q1')
-                                .form-question
-                                    .form-question__text Я вхожу в состав правления юридического лица, подлежащего регистрации в реестре предпринимателей
-                                    .form-question__option
-                                        +radio('Да', 'q2')
-                                        +radio('Нет', 'q2')
-                                .form-question
-                                    .form-question__text Я работал на территории Польши в 2022 году. (по контракту)
-                                    .form-question__option
-                                        +radio('Да', 'q3')
-                                        +radio('Нет', 'q3')
-                                .form-question
-                                    .form-question__text Я рассчитался с налоговой через декларацию PIT за 2022 год
-                                    .form-question__option
-                                        +radio('Да', 'q4')
-                                        +radio('Нет', 'q4')
-                                .form-question
-                                    .form-question__text Я работал на территории Польши в 2023  году. (по контракту)
-                                    .form-question__option
-                                        +radio('Да', 'q5')
-                                        +radio('Нет', 'q5')
-                                .form-question
-                                    .form-question__text Я рассчитался с налоговой через декларацию PIT за 2023 год
-                                    .form-question__option
-                                        +radio('Да', 'q6')
-                                        +radio('Нет', 'q6')
-                                .form-question
-                                    .form-question__text У меня есть задолженность по налогам
-                                    .form-question__option
-                                        +radio('Да', 'q7')
-                                        +radio('Нет', 'q7')
-                                .form-question
-                                    .form-question__text Я получил заявление о намерении доверить выполнение работы, зарегистрированное компетентной повятовой биржой труда (для граждан Армении, Беларуси, Грузии, Молдовы, России и Украины)
-                                    .form-question__option
-                                        +radio('Да',  'q8')
-                                        +radio('Нет',  'q8')
-                                .form-question
-                                    .form-question__text Приступил к работе на основании заявления о поручении выполнения работы, зарегистрированного компетентной повятовой биржой труда (для граждан Армении, Беларуси, Грузии, Молдовы, России и Украины)
-                                    .form-question__option
-                                        +radio('Да', 'q9')
-                                        +radio('Нет', 'q9')
-                                .form-question
-                                    .form-question__text Я веду индивидуальную предпринимательскую деятельность:
-                                    .form-question__option
-                                        +radio('Да', 'q11')
-                                        +radio('Нет', 'q11')
-
-                                .form__item
-                                    .form__subitem: button.btn.btn-line(type="submit") Изменить
+                            +quest

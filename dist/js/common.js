@@ -244,6 +244,27 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
 
         })
+
+        new MaskInput("[data-input-mask='date-reverse']", {
+            mask: (value) => {
+                return '####.##.##'
+            },
+
+            postProcess: (value) => {
+
+                let arr = [];
+
+                value.split('.').forEach((num, index) => {
+                    if (index == 2) Number(num) > 31 ? arr.push(31) : arr.push(num)
+                    if (index == 1) Number(num) > 12 ? arr.push(12) : arr.push(num)
+                    if (index == 0) Number(num) > new Date().getFullYear() ? arr.push(new Date().getFullYear()) : arr.push(num)
+                })
+
+                return arr.join('.')
+
+            }
+
+        })
     }
 
     initMaska();
@@ -491,6 +512,146 @@ document.addEventListener('DOMContentLoaded', function (event) {
             fields[(fields.length - 1)].after(html)
 
             initMaska()
+        })
+    }
+
+    // reverse date
+
+    if (document.querySelector('[data-pf="reverse"]')) {
+        const items = document.querySelectorAll('[data-pf="reverse"]')
+
+        function convertDateFormat(inputDate, input) {
+            // Проверяем, соответствует ли формат даты
+            const regex = /^(\d{2})\.(\d{2})\.(\d{4})$/;
+            const match = inputDate.match(regex);
+
+            if (match) {
+                const day = match[1];
+                const month = match[2];
+                const year = match[3];
+
+                // input.setAttribute('data-input-mask', 'date-reverse')
+
+                // Возвращаем дату YYYY.MM.DD
+                return `${year}.${month}.${day}`;
+            } else {
+                const regex2 = /^(\d{4})\.(\d{2})\.(\d{2})$/;
+                const match2 = inputDate.match(regex2);
+
+                if (match2) {
+                    const year = match2[1];
+                    const month = match2[2];
+                    const day = match2[3];
+
+                    // input.setAttribute('data-input-mask', 'date')
+
+                    // Возвращаем дату DD.MM.YYYY
+                    return `${day}.${month}.${year}`;
+                } else {
+                    alert('Не верный формат даты, допустимо ДД.ММ.ГГГГ или ГГГГ.ММ.ДД')
+                    return inputDate;
+                }
+            }
+        }
+
+        function initMaskConvertDate(input) {
+            if (input.value.match(/^(\d{2})\.(\d{2})\.(\d{4})$/)) {
+                input.setAttribute('data-input-mask', 'date')
+            }
+
+            if (input.value.match(/^(\d{4})\.(\d{2})\.(\d{2})$/)) {
+                input.setAttribute('data-input-mask', 'date-reverse')
+            }
+
+            initMaska()
+        }
+
+
+
+        items.forEach(item => {
+
+            item.addEventListener('click', e => {
+                let input = e.target.closest('div').querySelector('input')
+                if (input.value.length) {
+                    input.value = convertDateFormat(input.value, input)
+                    initMaska()
+                }
+
+            })
+        })
+
+    }
+
+    // submit form
+
+    if (document.querySelector('[data-pf="submit"]')) {
+        document.querySelector('[data-pf="submit"]').addEventListener('click', (e) => {
+
+
+            let form = document.querySelector('[data-pf="form"]')
+            let errLog = [];
+
+            form.querySelectorAll('input, select').forEach(item => {
+
+                console.log(item.tagName)
+
+                switch (item.tagName) {
+                    case 'INPUT':
+
+                        let parent = item.closest('.input-material')
+
+                        if (item.getAttribute('required') && !item.value.trim().length) {
+                            parent.classList.add('err')
+                            errLog.push(item.getAttribute('placeholder'))
+                        } else {
+
+                            if (parent) {
+                                !parent.classList.contains('err') || parent.classList.remove('err')
+                            }
+
+
+                        }
+
+                        break;
+                }
+            })
+
+            if (errLog.length) {
+                e.preventDefault()
+
+                const tooltipPopup = new afLightbox({
+                    mobileInBottom: true
+                })
+
+                let html = `
+                
+                    <div class="confirm" >
+                        <div class="confirm__title" >В анкете не заполнено полей ${errLog.length}</div>
+                        <div class="confirm__btn" >
+                            <button class="btn" data-confirm="save" >Сохранить</button>
+                            <button class="btn btn-line" data-confirm="edit" >Заполнить</button>
+                        </div>
+                    </div>
+
+                `;
+
+                tooltipPopup.open(html, (e) => {
+                    e.querySelector('[data-confirm="save"]').addEventListener('click', e => {
+                        form.submit()
+                    })
+
+                    e.querySelector('[data-confirm="edit"]').addEventListener('click', e => {
+                        tooltipPopup.close()
+
+                        scrollToTargetAdjusted({
+                            elem: document.querySelector('.err')
+                        })
+                    })
+                })
+            }
+
+
+
         })
     }
 

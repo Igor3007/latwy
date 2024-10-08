@@ -144,6 +144,7 @@ mixin input-material(params)
         value=(params.value?params.value:'') 
         placeholder=value=(params.placeholder?params.placeholder:'')
         data-input-mask=params.mask
+        required=params.required
         )
 
     else 
@@ -152,7 +153,11 @@ mixin input-material(params)
         type=(params.type?params.type:'text') 
         value=(params.value?params.value:'') 
         placeholder=value=(params.placeholder?params.placeholder:'')
+        required=params.required
       )
+
+    if params.reverse
+      span(data-pf="reverse" class="ic_reverse")
 
 mixin input-textarea(params)
   .input-material.input-material--textarea

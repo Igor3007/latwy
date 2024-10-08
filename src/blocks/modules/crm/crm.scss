@@ -1,0 +1,47 @@
+.user-filelist {
+
+
+
+    &__wrp {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex-basis: 140px;
+        flex-grow: 1;
+    }
+}
+
+.user-file {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 14px;
+    transition: 0.3s ease;
+
+    &__name {
+        padding-bottom: 12px;
+
+        & .ic_24 {
+            margin-right: 12px;
+        }
+    }
+
+    &__desc {
+        flex-grow: 1;
+        color: #909294;
+    }
+
+    &__date {
+        color: #909294;
+    }
+
+    &:hover {
+        border-color: #212529;
+    }
+}

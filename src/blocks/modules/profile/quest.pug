@@ -1,0 +1,55 @@
+mixin quest
+    fieldset
+        .form-question
+            .form-question__text У меня есть акции или доли в обществе с ограниченной ответственностью, коммандитном товариществе, коммандитно-акционерном товариществе
+            .form-question__option
+                +checkbox-radio('Да', 'q1')
+                +checkbox-radio('Нет', 'q1')
+        .form-question
+            .form-question__text Я вхожу в состав правления юридического лица, подлежащего регистрации в реестре предпринимателей
+            .form-question__option
+                +checkbox-radio('Да', 'q2')
+                +checkbox-radio('Нет', 'q2')
+        .form-question
+            .form-question__text Я работал на территории Польши в 2022 году. (по контракту)
+            .form-question__option
+                +checkbox-radio('Да', 'q3')
+                +checkbox-radio('Нет', 'q3')
+        .form-question
+            .form-question__text Я рассчитался с налоговой через декларацию PIT за 2022 год
+            .form-question__option
+                +checkbox-radio('Да', 'q4')
+                +checkbox-radio('Нет', 'q4')
+        .form-question
+            .form-question__text Я работал на территории Польши в 2023  году. (по контракту)
+            .form-question__option
+                +checkbox-radio('Да', 'q5')
+                +checkbox-radio('Нет', 'q5')
+        .form-question
+            .form-question__text Я рассчитался с налоговой через декларацию PIT за 2023 год
+            .form-question__option
+                +checkbox-radio('Да', 'q6')
+                +checkbox-radio('Нет', 'q6')
+        .form-question
+            .form-question__text У меня есть задолженность по налогам
+            .form-question__option
+                +checkbox-radio('Да', 'q7')
+                +checkbox-radio('Нет', 'q7')
+        .form-question
+            .form-question__text Я получил заявление о намерении доверить выполнение работы, зарегистрированное компетентной повятовой биржой труда (для граждан Армении, Беларуси, Грузии, Молдовы, России и Украины)
+            .form-question__option
+                +checkbox-radio('Да',  'q8')
+                +checkbox-radio('Нет',  'q8')
+        .form-question
+            .form-question__text Приступил к работе на основании заявления о поручении выполнения работы, зарегистрированного компетентной повятовой биржой труда (для граждан Армении, Беларуси, Грузии, Молдовы, России и Украины)
+            .form-question__option
+                +checkbox-radio('Да', 'q9')
+                +checkbox-radio('Нет', 'q9')
+        .form-question
+            .form-question__text Я веду индивидуальную предпринимательскую деятельность:
+            .form-question__option
+                +checkbox-radio('Да', 'q11')
+                +checkbox-radio('Нет', 'q11')
+
+        .form__item
+            .form__subitem: button.btn.btn-line(type="submit" data-pf="submit") Изменить
