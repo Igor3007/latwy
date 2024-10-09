@@ -104,10 +104,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
             document.querySelector(this.btnElem).addEventListener('click', function () {
                 this.parentNode.setAttribute('class', '')
             })
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('#status')) {
+                    this.close()
+                }
+            })
         }
 
         this.msg = function (_msg, _header) {
-            _header = (_header ? _header : 'Отлично!')
+            _header = (_header ? _header : false)
             this.onShow('complete', _header, _msg)
             if (this.autoHide) {
                 this.onHide();
@@ -134,9 +140,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
             document.querySelector(this.containerElem).classList.add(_type)
         }
 
+        this.close = function () {
+            document.querySelector(this.containerElem).setAttribute('class', '')
+        }
+
         this.onHide = function () {
             setTimeout(() => {
-                document.querySelector(this.containerElem).setAttribute('class', '')
+                this.close()
             }, this.timeOut);
         }
 
@@ -652,6 +662,36 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
 
+        })
+    }
+
+    // copy fields
+
+    if (document.querySelector('.profile--manager')) {
+        let container = document.querySelector('.profile--manager')
+        let inputs = container.querySelectorAll('.input-material')
+        let selects = container.querySelectorAll('.af-select')
+
+        const copyClipboard = (text) => {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    window.STATUS.msg('Скопирован в буфер!')
+                })
+                .catch(err => {
+                    window.STATUS.err('Не удалось скопировать в буфер обмена')
+                });
+        }
+
+        inputs.forEach(item => {
+            item.addEventListener('click', e => {
+                copyClipboard(item.querySelector('input').value)
+            })
+        })
+
+        selects.forEach(item => {
+            item.addEventListener('click', e => {
+                copyClipboard(item.querySelector('select').value)
+            })
         })
     }
 
