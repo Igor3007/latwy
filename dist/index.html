@@ -48,7 +48,7 @@
                 <div class="profile">
                   <div class="profile__title">Анкета </div>
                   <div class="profile__form"> 
-                    <form action="#" method="POST">
+                    <form action="#" method="POST" data-pf="form">
                       <div class="form">
                         <fieldset>
                           <div class="form__item">
@@ -56,21 +56,21 @@
                               <div class="input-material">
                                 <label>Имя
                                 </label>
-                                <input type="text" value="" placeholder="Имя, латиницей как в пасп."/>
+                                <input type="text" value="" placeholder="Имя, латиницей как в пасп." required="required"/>
                               </div>
                             </div>
                             <div class="form__subitem">
                               <div class="input-material">
                                 <label>Фамилия
                                 </label>
-                                <input type="text" value="" placeholder="Фамилия, латиницей как в пасп."/>
+                                <input type="text" value="" placeholder="Фамилия, латиницей как в пасп." required="required"/>
                               </div>
                             </div>
                             <div class="form__subitem">
                               <div class="input-material">
                                 <label>Предыдущая фамилия<span class="input-tooltip" data-tooltip="Если есть (латиницей)"></span>
                                 </label>
-                                <input type="text" value="" placeholder="Предыдущая фамилия, как в пасп."/>
+                                <input type="text" value="" placeholder="Предыдущая фамилия, как в пасп." required="required"/>
                               </div>
                             </div>
                             <div class="form__subitem">
@@ -571,12 +571,12 @@
                                     </label>
                                   </div>
                                 </div>
-                                <div class="form__item">
-                                  <div class="form__subitem">
-                                    <button class="btn btn-line" type="submit" data-pf="submit">Изменить</button>
-                                  </div>
-                                </div>
                               </fieldset>
+                        <div class="form__item">
+                          <div class="form__subitem">
+                            <button class="btn" type="submit" data-pf="submit">Сохранить</button>
+                          </div>
+                        </div>
                       </div>
                     </form>
                   </div>

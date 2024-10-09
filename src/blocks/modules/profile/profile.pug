@@ -6,21 +6,24 @@ mixin profile
             .profile
                 .profile__title Анкета 
                 .profile__form 
-                    form(action='#' method='POST')
+                    form(action='#' method='POST' data-pf="form")
                         .form
                             fieldset
                                 .form__item
                                     .form__subitem: +input-material({
                                         label: 'Имя',
                                         placeholder: 'Имя, латиницей как в пасп.',
+                                        required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Фамилия',
                                         placeholder: 'Фамилия, латиницей как в пасп.',
+                                        required: true
                                     })
                                     .form__subitem: +input-material({
                                         label: 'Предыдущая фамилия',
                                         placeholder: 'Предыдущая фамилия, как в пасп.',
+                                        required: true,
                                         tooltip: 'Если есть (латиницей)'
                                     })
                                     .form__subitem: +input-material({
@@ -334,3 +337,6 @@ mixin profile
                                 
 
                             +quest
+
+                            .form__item
+                                .form__subitem: button.btn(type="submit" data-pf="submit") Сохранить
