@@ -39,6 +39,11 @@ select {
     &--selected {
         & .select-styled span {
             color: #0F172A !important;
+            text-transform: uppercase;
+
+            &::before {
+                text-transform: none;
+            }
         }
     }
 

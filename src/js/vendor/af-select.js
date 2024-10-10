@@ -290,6 +290,12 @@ class afSelect {
             return false
         }
 
+        if (document.querySelector('.select-styled.active')) {
+            document.querySelectorAll('.select-styled.active').forEach(item => {
+                item.closest('.af-select').querySelector('select').afSelect.close()
+            })
+        }
+
         if (elem.querySelector('select').dataset.ajax && !elem.querySelector('.select-styled').classList.contains('active')) {
             elem.querySelector('.select-list').remove()
             this.renderOption(elem);

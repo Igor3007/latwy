@@ -163,9 +163,9 @@ mixin profile
 
                                 .form__item
                                     .form__subitem: +input-material({
-                                                label: 'Город',
-                                                placeholder: 'Город',
-                                                value: 'WARSZAWA'
+                                                label: 'Основание нахождения в Польше',
+                                                placeholder: 'Основание нахождения в Польше',
+                                                value: 'PESEL UKR'
                                             })
 
                                     .form__subitem
@@ -365,7 +365,6 @@ mixin profile
                                     .form__subitem.form__subitem--w25: +input-material({
                                                 label: 'Дата последнего въезда в Польшу',
                                                 placeholder: 'ДД.ММ.ГГГГ',
-                                                mask: 'date',
                                                 value: '25.10.2020',
                                                 reverse: true
                                             })
@@ -383,7 +382,7 @@ mixin profile
                                 .form__item(data-pf="trip-fields")
                                     .form__subitem
                                         +input-textarea({
-                                            label: 'Период поездки (перемещение по Европе без отметок в паспорте тоже учитавается)',
+                                            label: 'Страны периоды поездок, пояснения ',
                                             placeholder: 'Укажите период поездки',
                                             val: 'UKRAINA (POBYT); TURCJA 09.2022; MOŁDAWIA 02.04.2024 - 12.04.2024; RUMUNIA 12.04.2024 - 13.04.2024; WĘGRY 13.04.2024- 13.04.2024; SŁOWACJA 13.04.2024-14.04.2024; CZECHY 14.04.2024'
                                         })

@@ -223,6 +223,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
     function initMaska() {
         new MaskInput("[data-maska]")
 
+        //postcode
+        new MaskInput("[data-input-mask='postcode']", {
+            mask: '##-####',
+        })
+
         //number
         new MaskInput("[data-input-mask='number']", {
             mask: '9',
@@ -684,7 +689,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         inputs.forEach(item => {
             item.addEventListener('click', e => {
-                copyClipboard(item.querySelector('input').value)
+                copyClipboard(item.querySelector('input, textarea').value)
             })
         })
 

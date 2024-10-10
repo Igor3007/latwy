@@ -205,7 +205,7 @@
                           <legend>Основание нахождения в Польше</legend>
                           <div class="form__item">
                             <div class="form__subitem">
-                              <select placeholder="Основание" data-label="Основание нахождения в Польше">
+                              <select placeholder="Основание нахождения в Польше" data-label="Основание">
                                 <option value="1">Основание</option>
                                 <option value="2">Основание 2</option>
                               </select>
@@ -214,7 +214,7 @@
                               <div class="form__item">
                                 <div class="form__subitem">
                                   <div class="input-material">
-                                    <label>Номер док.<span class="input-tooltip" data-tooltip="Если есть"></span>
+                                    <label>Номер док.<span class="input-tooltip" data-tooltip="Возвращение из Европы без печати в паспорте о пересечении границы тоже считается"></span>
                                     </label>
                                     <input type="text" value="" placeholder="Номер"/>
                                   </div>
@@ -223,23 +223,23 @@
                                   <div class="input-material">
                                     <label>Дата выдачи
                                     </label>
-                                    <input type="text" value="" placeholder="ДД.ММ.ГГГГ"/>
+                                    <input type="text" value="" placeholder="ДД.ММ.ГГГГ" data-input-mask="date"/>
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div class="form__subitem">
                               <div class="input-material">
-                                <label>Номер док.
+                                <label>Начало действия
                                 </label>
-                                <input type="text" value="" placeholder="Номер"/>
+                                <input type="text" value="" placeholder="ДД.ММ.ГГГГ" data-input-mask="date"/>
                               </div>
                             </div>
                             <div class="form__subitem">
                               <div class="input-material">
                                 <label>Конец действия
                                 </label>
-                                <input type="text" value="" placeholder="Конец действия"/>
+                                <input type="text" value="" placeholder="ДД.ММ.ГГГГ" data-input-mask="date"/>
                               </div>
                             </div>
                           </div>
@@ -254,10 +254,11 @@
                               </select>
                             </div>
                             <div class="form__subitem">
-                              <select placeholder="Улица" data-label="Улица" data-tooltip="Если нет в списке, впишите на польском в ручную">
-                                <option value="1">Варшава</option>
-                                <option value="2">Вроцлав</option>
-                              </select>
+                              <div class="input-material">
+                                <label>Улица<span class="input-tooltip" data-tooltip="Если нет в списке, впишите на польском в ручную"></span>
+                                </label>
+                                <input type="text" value="" placeholder="Улица"/>
+                              </div>
                             </div>
                             <div class="form__subitem">
                               <div class="form__item">
@@ -281,7 +282,7 @@
                               <div class="input-material">
                                 <label>Почтовый код
                                 </label>
-                                <input type="text" value="" placeholder="_ _ - _ _ _ _"/>
+                                <input type="text" value="" placeholder="_ _ - _ _ _ _" data-input-mask="postcode"/>
                               </div>
                             </div>
                           </div>
@@ -332,7 +333,7 @@
                                 </select>
                               </div>
                               <div class="form__subitem">
-                                <select placeholder="Подается ли на ВНЖ." data-label="Подается ли член семьи на ВНЖ">
+                                <select placeholder="Подается ли член семьи на ВНЖ" data-label="Подается ли на ВНЖ.">
                                   <option value="1">Да</option>
                                   <option value="2">Нет</option>
                                 </select>
@@ -350,9 +351,9 @@
                         <fieldset>
                           <legend>Прочая информация</legend>
                           <div class="form__item">
-                            <div class="form__subitem">
+                            <div class="form__subitem form__subitem--w25">
                               <div class="input-material">
-                                <label>Дата последнего въезда в Польшу
+                                <label>Дата последнего въезда в Польшу<span class="input-tooltip" data-tooltip="Возвращение из Европы без печати в паспорте &lt;br&gt; о пересечении границы тоже считается"></span>
                                 </label>
                                 <input type="text" value="" placeholder="ДД.ММ.ГГГГ" data-input-mask="date"/>
                               </div>
@@ -446,7 +447,7 @@
                               </select>
                             </div>
                             <div class="form__subitem">
-                              <select placeholder="Алименты, суд. дело и т.д." data-label="Информация об обременениях" data-tooltip="Информация об обременениях на территории Польши &lt;br&gt; или за ее пределами (например, алименты, судебное дело)">
+                              <select placeholder="Информация об обременениях" data-label="Алименты, суд. дело и т.д." data-tooltip="Информация об обременениях на территории Польши &lt;br&gt; или за ее пределами (например, алименты, судебное дело)">
                                 <option value="2">Алименты</option>
                                 <option value="2">NIE</option>
                               </select>

@@ -126,7 +126,7 @@ mixin profile
 
                                 .form__item
                                     .form__subitem
-                                        select(placeholder="Основание" data-label="Основание нахождения в Польше")
+                                        select(placeholder="Основание нахождения в Польше" data-label="Основание")
                                              
                                             option(value="1") Основание
                                             option(value="2") Основание 2
@@ -136,22 +136,25 @@ mixin profile
                                             .form__subitem: +input-material({
                                                 label: 'Номер док.',
                                                 placeholder: 'Номер',
-                                                tooltip: 'Если есть'
+                                                tooltip: 'Возвращение из Европы без печати в паспорте о пересечении границы тоже считается'
                                             })
                                              
                                             .form__subitem: +input-material({
                                                 label: 'Дата выдачи',
                                                 placeholder: 'ДД.ММ.ГГГГ',
+                                                mask: 'date'
                                             })
                                      
                                     .form__subitem: +input-material({
-                                        label: 'Номер док.',
-                                        placeholder: 'Номер',
+                                        label: 'Начало действия',
+                                        placeholder: 'ДД.ММ.ГГГГ',
+                                        mask: 'date'
                                     })
                                     
                                     .form__subitem: +input-material({
                                         label: 'Конец действия',
-                                        placeholder: 'Конец действия',
+                                        placeholder: 'ДД.ММ.ГГГГ',
+                                        mask: 'date'
                                     })
 
                             fieldset
@@ -163,11 +166,15 @@ mixin profile
                                          
                                             option(value="1") Варшава
                                             option(value="2") Вроцлав
-                                    .form__subitem
-                                        select(placeholder="Улица" data-label="Улица" data-tooltip="Если нет в списке, впишите на польском в ручную")
-                                            
-                                            option(value="1") Варшава
-                                            option(value="2") Вроцлав
+                                    
+
+                                    .form__subitem: +input-material({
+                                            label: 'Улица',
+                                            placeholder: 'Улица',
+                                            tooltip: 'Если нет в списке, впишите на польском в ручную'
+                                        })
+
+                                         
                                     .form__subitem
                                         .form__item
                                              
@@ -185,6 +192,7 @@ mixin profile
                                     .form__subitem: +input-material({
                                         label: 'Почтовый код',
                                         placeholder: '_ _ - _ _ _ _',
+                                        mask: 'postcode'
                                     })
 
                             fieldset
@@ -228,7 +236,7 @@ mixin profile
                                                 option(value="1") БЕЛАРУС
                                                 option(value="2") УКРАИНЕЦ
                                         .form__subitem
-                                            select(placeholder="Подается ли на ВНЖ." data-label="Подается ли член семьи на ВНЖ")
+                                            select(placeholder="Подается ли член семьи на ВНЖ" data-label="Подается ли на ВНЖ.")
                                                
                                                 option(value="1") Да
                                                 option(value="2") Нет
@@ -249,10 +257,11 @@ mixin profile
                                 legend Прочая информация
 
                                 .form__item
-                                    .form__subitem: +input-material({
+                                    .form__subitem.form__subitem--w25: +input-material({
                                                 label: 'Дата последнего въезда в Польшу',
                                                 placeholder: 'ДД.ММ.ГГГГ',
-                                                mask: 'date'
+                                                mask: 'date',
+                                                tooltip: 'Возвращение из Европы без печати в паспорте <br> о пересечении границы тоже считается'
                                             })
 
                                     .form__subitem: +input-material({
@@ -324,7 +333,7 @@ mixin profile
                                             option(value="2") UBEZPIECZENIE PRYWATNE
                                             option(value="2") страховка
                                     .form__subitem
-                                        select(placeholder="Алименты, суд. дело и т.д." data-label="Информация об обременениях" data-tooltip="Информация об обременениях на территории Польши <br> или за ее пределами (например, алименты, судебное дело)")
+                                        select(placeholder="Информация об обременениях" data-label="Алименты, суд. дело и т.д." data-tooltip="Информация об обременениях на территории Польши <br> или за ее пределами (например, алименты, судебное дело)")
                                             
                                             option(value="2") Алименты
                                             option(value="2") NIE
