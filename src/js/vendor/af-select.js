@@ -23,8 +23,6 @@ class afSelect {
             item.querySelectorAll('[selected]').forEach(opt => opt.removeAttribute('selected'))
         }
 
-
-
         _this.renderOption(item)
         _this.clickEventOpenSelect(item)
 
@@ -80,16 +78,7 @@ class afSelect {
         const styledList = document.createElement('div')
         styledList.classList.add('select-list');
 
-        if (select.getAttribute('data-find') != 'false' && select.querySelectorAll('option').length > 5) {
-            const styledFindInput = document.createElement('input')
-            styledFindInput.setAttribute('type', 'text');
-            styledFindInput.setAttribute('placeholder', 'Поиск по списку');
-            styledList.appendChild(styledFindInput)
 
-            styledFindInput.addEventListener('keyup', (e) => {
-                this.findOption(e)
-            })
-        }
 
         styledList.appendChild(styledOptions)
 
@@ -164,12 +153,28 @@ class afSelect {
 
         }
 
+        const createFind = () => {
+            if ((select.getAttribute('data-find') != 'false' && select.querySelectorAll('option').length > 5)) {
+                const styledFindInput = document.createElement('input')
+                styledFindInput.setAttribute('type', 'text');
+                styledFindInput.setAttribute('placeholder', 'Поиск по списку');
 
+                if (!styledList.querySelector('input')) {
+                    styledList.prepend(styledFindInput)
+                }
+
+
+
+                styledFindInput.addEventListener('keyup', (e) => {
+                    this.findOption(e)
+                })
+            }
+        }
 
         //ajax option
         if (select.dataset.ajax) {
 
-            this.ajaxOption(select, function (arr) {
+            this.ajaxOption(select, (arr) => {
 
                 select.innerHTML = '';
 
@@ -195,6 +200,8 @@ class afSelect {
                 })
 
                 createOptions(item);
+
+                createFind()
             })
 
         }
@@ -203,6 +210,10 @@ class afSelect {
         if (!select.dataset.ajax) {
             createOptions(item)
         }
+
+
+        createFind()
+
 
 
         //add public methods
@@ -297,8 +308,8 @@ class afSelect {
         }
 
         if (elem.querySelector('select').dataset.ajax && !elem.querySelector('.select-styled').classList.contains('active')) {
-            elem.querySelector('.select-list').remove()
-            this.renderOption(elem);
+            // elem.querySelector('.select-list').remove()
+            // this.renderOption(elem);
         }
 
         if (window.innerHeight - elem.getBoundingClientRect().bottom < 250) {

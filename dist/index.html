@@ -137,11 +137,10 @@
                               </div>
                             </div>
                             <div class="form__subitem">
-                              <div class="input-material">
-                                <label>Национальность
-                                </label>
-                                <input type="text" value="" placeholder="Национальность"/>
-                              </div>
+                              <select placeholder="Национальность" data-label="Национальность" data-ajax="/json/nationality.json">
+                                <option value="2">Женат</option>
+                                <option value="3">Замужем</option>
+                              </select>
                             </div>
                             <div class="form__subitem">
                               <select placeholder="Страна рождения" data-label="Страна" data-ajax="/json/country.json">
@@ -152,14 +151,14 @@
                           </div>
                           <div class="form__item">
                             <div class="form__subitem">
-                              <select placeholder="Семейное положение" data-label="Семейное положение">
+                              <select placeholder="Семейное положение" data-label="Семейное положение" data-ajax="/json/family-status.json">
                                 <option value="1">Холост</option>
                                 <option value="2">Женат</option>
                                 <option value="3">Замужем</option>
                               </select>
                             </div>
                             <div class="form__subitem">
-                              <select placeholder="Образование" data-label="Образование">
+                              <select placeholder="Образование" data-label="Образование" data-ajax="/json/education.json" multiple="multiple">
                                 <option value="1">Высшее</option>
                                 <option value="2">Среднее</option>
                               </select>
@@ -172,18 +171,12 @@
                               </div>
                             </div>
                             <div class="form__subitem">
-                              <select placeholder="Цвет глаз" data-label="Цвет глаз">
-                                <option value="1">Зеленые</option>
-                                <option value="2">Карие</option>
-                              </select>
+                              <select placeholder="Цвет глаз" data-label="Цвет глаз" data-ajax="/json/eye-color.json"></select>
                             </div>
                           </div>
                           <div class="form__item">
                             <div class="form__subitem">
-                              <select placeholder="Особые приметы" data-label="Особые приметы">
-                                <option value="1">Сутулый</option>
-                                <option value="2">Родинка на лбу</option>
-                              </select>
+                              <select placeholder="Особые приметы" data-label="Особые приметы" data-ajax="/json/signs.json"></select>
                             </div>
                             <div class="form__subitem">
                               <div class="input-material">
@@ -205,10 +198,7 @@
                           <legend>Основание нахождения в Польше</legend>
                           <div class="form__item">
                             <div class="form__subitem">
-                              <select placeholder="Основание нахождения в Польше" data-label="Основание">
-                                <option value="1">Основание</option>
-                                <option value="2">Основание 2</option>
-                              </select>
+                              <select placeholder="Основание нахождения в Польше" data-label="Основание" data-ajax="/json/reasons.json"></select>
                             </div>
                             <div class="form__subitem">
                               <div class="form__item">
@@ -313,7 +303,7 @@
                                 </div>
                               </div>
                               <div class="form__subitem">
-                                <select placeholder="Степень родства" data-label="Степень родства">
+                                <select placeholder="Степень родства" data-label="Степень родства" data-ajax="/json/kinship.json">
                                   <option value="1">Первая</option>
                                   <option value="2">Вторая</option>
                                 </select>

@@ -1,0 +1,892 @@
+[{
+    "text": "NIE",
+    "value": "NIE"
+}, {
+    "text": "нет",
+    "value": "нет"
+}, {
+    "text": "BIELMO NA LEWYM OKU",
+    "value": "BIELMO NA LEWYM OKU"
+}, {
+    "text": "витилиго на левом глазу",
+    "value": "витилиго на левом глазу"
+}, {
+    "text": "BIELMO NA OCZACH",
+    "value": "BIELMO NA OCZACH"
+}, {
+    "text": "витилиго на глазах",
+    "value": "витилиго на глазах"
+}, {
+    "text": "BIELMO NA PRAWYM OKU",
+    "value": "BIELMO NA PRAWYM OKU"
+}, {
+    "text": "витилиго на правом глазу",
+    "value": "витилиго на правом глазу"
+}, {
+    "text": "BLIZNA NA CZOLE",
+    "value": "BLIZNA NA CZOLE"
+}, {
+    "text": "шрам на лбу",
+    "value": "шрам на лбу"
+}, {
+    "text": "BLIZNA NA DOLNEJ WARDZE",
+    "value": "BLIZNA NA DOLNEJ WARDZE"
+}, {
+    "text": "шрам на нижней губе",
+    "value": "шрам на нижней губе"
+}, {
+    "text": "BLIZNA NA GŁOWIE",
+    "value": "BLIZNA NA GŁOWIE"
+}, {
+    "text": "шрам на голове",
+    "value": "шрам на голове"
+}, {
+    "text": "BLIZNA NA LEWEJ RĘCE",
+    "value": "BLIZNA NA LEWEJ RĘCE"
+}, {
+    "text": "шрам на левой руке",
+    "value": "шрам на левой руке"
+}, {
+    "text": "BLIZNA NA LEWYM PRZEDRAMIENIU",
+    "value": "BLIZNA NA LEWYM PRZEDRAMIENIU"
+}, {
+    "text": "шрам на левом предплечье",
+    "value": "шрам на левом предплечье"
+}, {
+    "text": "BLIZNA NA NOSIE",
+    "value": "BLIZNA NA NOSIE"
+}, {
+    "text": "шрам на носу",
+    "value": "шрам на носу"
+}, {
+    "text": "BLIZNA NA PODBRÓDKU",
+    "value": "BLIZNA NA PODBRÓDKU"
+}, {
+    "text": "шрам на подбородке",
+    "value": "шрам на подбородке"
+}, {
+    "text": "BLIZNA NA PRAWEJ RĘCE",
+    "value": "BLIZNA NA PRAWEJ RĘCE"
+}, {
+    "text": "шрам на правой руке",
+    "value": "шрам на правой руке"
+}, {
+    "text": "BLIZNA NA PRAWYM PRZEDRAMIENIU",
+    "value": "BLIZNA NA PRAWYM PRZEDRAMIENIU"
+}, {
+    "text": "шрам на правом предплечье",
+    "value": "шрам на правом предплечье"
+}, {
+    "text": "BLIZNA NA WIELKIM PALCU LEWEJ RĘKI",
+    "value": "BLIZNA NA WIELKIM PALCU LEWEJ RĘKI"
+}, {
+    "text": "шрам на большом пальце левой руки",
+    "value": "шрам на большом пальце левой руки"
+}, {
+    "text": "BLIZNA PO NACIĘCIACH NA LEWYM BOKU TUŁOWIA",
+    "value": "BLIZNA PO NACIĘCIACH NA LEWYM BOKU TUŁOWIA"
+}, {
+    "text": "шрам от разрезов на левой стороне туловища",
+    "value": "шрам от разрезов на левой стороне туловища"
+}, {
+    "text": "BLIZNA (Y) NA LEWEJ DŁONI",
+    "value": "BLIZNA (Y) NA LEWEJ DŁONI"
+}, {
+    "text": "шрам(ы) на левой руке",
+    "value": "шрам(ы) на левой руке"
+}, {
+    "text": "BLIZNA (Y) NA LEWYM RAMIENIU",
+    "value": "BLIZNA (Y) NA LEWYM RAMIENIU"
+}, {
+    "text": "шрам(ы) на левом плече",
+    "value": "шрам(ы) на левом плече"
+}, {
+    "text": "BLIZNA (Y) NA PRAWEJ DŁONI",
+    "value": "BLIZNA (Y) NA PRAWEJ DŁONI"
+}, {
+    "text": "шрам(ы) на правой руке",
+    "value": "шрам(ы) на правой руке"
+}, {
+    "text": "BLIZNA (Y) NA PRAWYM RAMIENIU",
+    "value": "BLIZNA (Y) NA PRAWYM RAMIENIU"
+}, {
+    "text": "шрам(ы) на правом плече",
+    "value": "шрам(ы) на правом плече"
+}, {
+    "text": "BLIZNA(Y) NA SZYI",
+    "value": "BLIZNA(Y) NA SZYI"
+}, {
+    "text": "шрам(ы) на шее",
+    "value": "шрам(ы) на шее"
+}, {
+    "text": "BLIZNA(Y) NA TWARZY",
+    "value": "BLIZNA(Y) NA TWARZY"
+}, {
+    "text": "шарф(ы) на лице",
+    "value": "шарф(ы) на лице"
+}, {
+    "text": "BLIZNA(Y) PO LEWEJ STRONIE TWARZY",
+    "value": "BLIZNA(Y) PO LEWEJ STRONIE TWARZY"
+}, {
+    "text": "шрам(ы) на левой стороне лица",
+    "value": "шрам(ы) на левой стороне лица"
+}, {
+    "text": "BLIZNA(Y) PO PRAWEJ STRONIE TWARZY",
+    "value": "BLIZNA(Y) PO PRAWEJ STRONIE TWARZY"
+}, {
+    "text": "шрам(ы) на правой стороне лица",
+    "value": "шрам(ы) на правой стороне лица"
+}, {
+    "text": "BLIZNA(Y) PO RANACH KŁUTYCH NA LEWYM BOKU",
+    "value": "BLIZNA(Y) PO RANACH KŁUTYCH NA LEWYM BOKU"
+}, {
+    "text": "шрам(ы) от ножевых ранений на левой стороне",
+    "value": "шрам(ы) от ножевых ранений на левой стороне"
+}, {
+    "text": "BLIZNY NA DŁONIACH",
+    "value": "BLIZNY NA DŁONIACH"
+}, {
+    "text": "шрамы на руках",
+    "value": "шрамы на руках"
+}, {
+    "text": "BLIZNY POOPARZENIOWE-TWARZ, RĘCE, NOGI",
+    "value": "BLIZNY POOPARZENIOWE-TWARZ, RĘCE, NOGI"
+}, {
+    "text": "шрамы ожогов – лицо, руки, ноги",
+    "value": "шрамы ожогов – лицо, руки, ноги"
+}, {
+    "text": "BRAK DŁONI",
+    "value": "BRAK DŁONI"
+}, {
+    "text": "отсутствие рук",
+    "value": "отсутствие рук"
+}, {
+    "text": "BRAKI (UBYTKI) USZU",
+    "value": "BRAKI (UBYTKI) USZU"
+}, {
+    "text": "отсутствие ушей",
+    "value": "отсутствие ушей"
+}, {
+    "text": "BRAK LEWEJ DŁONI",
+    "value": "BRAK LEWEJ DŁONI"
+}, {
+    "text": "отсутствует левая рука",
+    "value": "отсутствует левая рука"
+}, {
+    "text": "BRAK LEWEJ GAŁKI OCZNEJ",
+    "value": "BRAK LEWEJ GAŁKI OCZNEJ"
+}, {
+    "text": "отсутствует левый глаз",
+    "value": "отсутствует левый глаз"
+}, {
+    "text": "BRAK LEWEJ NOGI",
+    "value": "BRAK LEWEJ NOGI"
+}, {
+    "text": "отсутствует левая нога",
+    "value": "отсутствует левая нога"
+}, {
+    "text": "BRAK LEWEJ RĘKI",
+    "value": "BRAK LEWEJ RĘKI"
+}, {
+    "text": "отсутствует левая рука",
+    "value": "отсутствует левая рука"
+}, {
+    "text": "BRAK MOWY",
+    "value": "BRAK MOWY"
+}, {
+    "text": "отсутствие речи",
+    "value": "отсутствие речи"
+}, {
+    "text": "BRAK NÓG",
+    "value": "BRAK NÓG"
+}, {
+    "text": "отсутствие ног",
+    "value": "отсутствие ног"
+}, {
+    "text": "BRAK NÓG I RĄK",
+    "value": "BRAK NÓG I RĄK"
+}, {
+    "text": "отсутствие ног и рук",
+    "value": "отсутствие ног и рук"
+}, {
+    "text": "BRAK PRAWEJ CZĘŚCI CZASZKI",
+    "value": "BRAK PRAWEJ CZĘŚCI CZASZKI"
+}, {
+    "text": "отсутствует правая часть черепа",
+    "value": "отсутствует правая часть черепа"
+}, {
+    "text": "BRAK PRAWEJ DŁONI",
+    "value": "BRAK PRAWEJ DŁONI"
+}, {
+    "text": "отсутствует правая рука",
+    "value": "отсутствует правая рука"
+}, {
+    "text": "BRAK PRAWEJ GAŁKI OCZNEJ",
+    "value": "BRAK PRAWEJ GAŁKI OCZNEJ"
+}, {
+    "text": "отсутствует правое глазное яблоко",
+    "value": "отсутствует правое глазное яблоко"
+}, {
+    "text": "BRAK PRAWEJ NOGI",
+    "value": "BRAK PRAWEJ NOGI"
+}, {
+    "text": "отсутствует правая нога",
+    "value": "отсутствует правая нога"
+}, {
+    "text": "BRAK PRAWEJ RĘKI",
+    "value": "BRAK PRAWEJ RĘKI"
+}, {
+    "text": "отсутствует правая рука",
+    "value": "отсутствует правая рука"
+}, {
+    "text": "BRAK RĄK",
+    "value": "BRAK RĄK"
+}, {
+    "text": "отсутствие рук",
+    "value": "отсутствие рук"
+}, {
+    "text": "BRAK SŁUCHU",
+    "value": "BRAK SŁUCHU"
+}, {
+    "text": "отсутствие слуха",
+    "value": "отсутствие слуха"
+}, {
+    "text": "BRAK (UBYTEK) KCIUKA LEWEJ DŁONI",
+    "value": "BRAK (UBYTEK) KCIUKA LEWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) большого пальца левой руки",
+    "value": "отсутствие (потеря) большого пальца левой руки"
+}, {
+    "text": "BRAK (UBYTEK) KCIUKA PRAWEJ DŁONI",
+    "value": "BRAK (UBYTEK) KCIUKA PRAWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) большого пальца правой руки",
+    "value": "отсутствие (потеря) большого пальца правой руки"
+}, {
+    "text": "BRAK (UBYTEK) LEWEGO UCHA",
+    "value": "BRAK (UBYTEK) LEWEGO UCHA"
+}, {
+    "text": "отсутствие левого уха",
+    "value": "отсутствие левого уха"
+}, {
+    "text": "BRAK (UBYTEK) NOSA",
+    "value": "BRAK (UBYTEK) NOSA"
+}, {
+    "text": "отсутствие носа",
+    "value": "отсутствие носа"
+}, {
+    "text": "BRAK (UBYTEK) PALCA MAŁEGO LEWEJ DŁONI",
+    "value": "BRAK (UBYTEK) PALCA MAŁEGO LEWEJ DŁONI"
+}, {
+    "text": "отсутствует (потеря) мизинца левой руки",
+    "value": "отсутствует (потеря) мизинца левой руки"
+}, {
+    "text": "BRAK (UBYTEK) PALCA MAŁEGO PRAWEJ DŁONI",
+    "value": "BRAK (UBYTEK) PALCA MAŁEGO PRAWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) мизинца правой руки",
+    "value": "отсутствие (потеря) мизинца правой руки"
+}, {
+    "text": "BRAK (UBYTEK) PALCA SERDECZNEGO LEWEJ DŁONI",
+    "value": "BRAK (UBYTEK) PALCA SERDECZNEGO LEWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) большого пальца левой руки",
+    "value": "отсутствие (потеря) большого пальца левой руки"
+}, {
+    "text": "BRAK (UBYTEK) PALCA SERDECZNEGO PRAWEJ DŁONI",
+    "value": "BRAK (UBYTEK) PALCA SERDECZNEGO PRAWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) большого пальца правой руки",
+    "value": "отсутствие (потеря) большого пальца правой руки"
+}, {
+    "text": "BRAK (UBYTEK) PALCA ŚRODKOWEGO LEWEJ DŁONI",
+    "value": "BRAK (UBYTEK) PALCA ŚRODKOWEGO LEWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) среднего пальца левой руки",
+    "value": "отсутствие (потеря) среднего пальца левой руки"
+}, {
+    "text": "BRAK (UBYTEK) PALCA ŚRODKOWEGO PRAWEJ DŁONI",
+    "value": "BRAK (UBYTEK) PALCA ŚRODKOWEGO PRAWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) среднего пальца правой руки",
+    "value": "отсутствие (потеря) среднего пальца правой руки"
+}, {
+    "text": "BRAK (UBYTEK) PALCA WSKAZUJĄCEGO LEWEJ DŁON",
+    "value": "BRAK (UBYTEK) PALCA WSKAZUJĄCEGO LEWEJ DŁON"
+}, {
+    "text": "отсутствие (потеря) указательного пальца левой руки",
+    "value": "отсутствие (потеря) указательного пальца левой руки"
+}, {
+    "text": "BRAK (UBYTEK) PALCA WSKAZUJĄCEGO PRAWEJ DŁO",
+    "value": "BRAK (UBYTEK) PALCA WSKAZUJĄCEGO PRAWEJ DŁO"
+}, {
+    "text": "отсутствие (потеря) указательного пальца правой руки",
+    "value": "отсутствие (потеря) указательного пальца правой руки"
+}, {
+    "text": "BRAK (UBYTEK) PRAWEGO UCHA",
+    "value": "BRAK (UBYTEK) PRAWEGO UCHA"
+}, {
+    "text": "отсутствие (потеря) правого уха",
+    "value": "отсутствие (потеря) правого уха"
+}, {
+    "text": "BRAK (UBYTKI) 2 PALCÓW LEWEJ DŁONI",
+    "value": "BRAK (UBYTKI) 2 PALCÓW LEWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) 2 пальцев левой руки",
+    "value": "отсутствие (потеря) 2 пальцев левой руки"
+}, {
+    "text": "BRAK (UBYTKI) 2 PALCÓW PRAWEJ DŁONI",
+    "value": "BRAK (UBYTKI) 2 PALCÓW PRAWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) 2 пальцев правой руки",
+    "value": "отсутствие (потеря) 2 пальцев правой руки"
+}, {
+    "text": "BRAK (UBYTKI) 3 PALCÓW LEWEJ DŁONI",
+    "value": "BRAK (UBYTKI) 3 PALCÓW LEWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) 3 пальцев левой руки",
+    "value": "отсутствие (потеря) 3 пальцев левой руки"
+}, {
+    "text": "BRAK (UBYTKI) 3 PALCÓW PRAWEJ DŁONI",
+    "value": "BRAK (UBYTKI) 3 PALCÓW PRAWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) 3 пальцев правой руки",
+    "value": "отсутствие (потеря) 3 пальцев правой руки"
+}, {
+    "text": "BRAK (UBYTKI) 4 PALCÓW LEWEJ DŁONI",
+    "value": "BRAK (UBYTKI) 4 PALCÓW LEWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) 4 пальцев левой руки",
+    "value": "отсутствие (потеря) 4 пальцев левой руки"
+}, {
+    "text": "BRAK (UBYTKI) 4 PALCÓW PRAWEJ DŁONI",
+    "value": "BRAK (UBYTKI) 4 PALCÓW PRAWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) 4 пальцев правой руки",
+    "value": "отсутствие (потеря) 4 пальцев правой руки"
+}, {
+    "text": "BRAK (UBYTKI) PALCÓW DŁONI",
+    "value": "BRAK (UBYTKI) PALCÓW DŁONI"
+}, {
+    "text": "отсутствие (потеря) пальцев руки",
+    "value": "отсутствие (потеря) пальцев руки"
+}, {
+    "text": "BRAK (UBYTKI) PALCÓW LEWEJ DŁONI",
+    "value": "BRAK (UBYTKI) PALCÓW LEWEJ DŁONI"
+}, {
+    "text": "отсутствие (потеря) пальцев левой руки",
+    "value": "отсутствие (потеря) пальцев левой руки"
+}, {
+    "text": "BRAK (UBYTKI) PALCÓW PRAWEJ DŁONI",
+    "value": "BRAK (UBYTKI) PALCÓW PRAWEJ DŁONI"
+}, {
+    "text": "отсутствие (утрата) пальцев правой руки",
+    "value": "отсутствие (утрата) пальцев правой руки"
+}, {
+    "text": "BRODAWKA-KĄCIK LEWEGO OKA",
+    "value": "BRODAWKA-KĄCIK LEWEGO OKA"
+}, {
+    "text": "бородавка на левом глазу",
+    "value": "бородавка на левом глазу"
+}, {
+    "text": "BRODAWKA-KĄCIK PRAWEGO OKA",
+    "value": "BRODAWKA-KĄCIK PRAWEGO OKA"
+}, {
+    "text": "бородавка на правом глазу",
+    "value": "бородавка на правом глазу"
+}, {
+    "text": "BRODAWKA NA CZOLE",
+    "value": "BRODAWKA NA CZOLE"
+}, {
+    "text": "бородка на лбу",
+    "value": "бородка на лбу"
+}, {
+    "text": "BRODAWKA NAD GÓRNĄ WARGĄ",
+    "value": "BRODAWKA NAD GÓRNĄ WARGĄ"
+}, {
+    "text": "бородка над верхней губой",
+    "value": "бородка над верхней губой"
+}, {
+    "text": "BRODAWKA NA LEWEJ STRONIE BRODY",
+    "value": "BRODAWKA NA LEWEJ STRONIE BRODY"
+}, {
+    "text": "бородка на левой стороне подбородка",
+    "value": "бородка на левой стороне подбородка"
+}, {
+    "text": "BRODAWKA NA PRAWEJ STRONIE BRODY",
+    "value": "BRODAWKA NA PRAWEJ STRONIE BRODY"
+}, {
+    "text": "бородка на правой стороне подбородка",
+    "value": "бородка на правой стороне подбородка"
+}, {
+    "text": "GŁUCHONIEMY",
+    "value": "GŁUCHONIEMY"
+}, {
+    "text": "глухонемойая",
+    "value": "глухонемойая"
+}, {
+    "text": "GUZ(Y) NA SZYI",
+    "value": "GUZ(Y) NA SZYI"
+}, {
+    "text": "шишка(и) на шее",
+    "value": "шишка(и) на шее"
+}, {
+    "text": "GUZ(Y) NA TWARZY",
+    "value": "GUZ(Y) NA TWARZY"
+}, {
+    "text": "шишка(и) на лице",
+    "value": "шишка(и) на лице"
+}, {
+    "text": "INNY",
+    "value": "INNY"
+}, {
+    "text": "другое",
+    "value": "другое"
+}, {
+    "text": "NAROŚL SZÓSTEGO PALCA-NA DŁONIACH I I STOP",
+    "value": "NAROŚL SZÓSTEGO PALCA-NA DŁONIACH I I STOP"
+}, {
+    "text": "рост шестого пальца на руках и ногах",
+    "value": "рост шестого пальца на руках и ногах"
+}, {
+    "text": "NIEDOMYKALNOŚĆ (OPADNIĘCIE) LEWEJ POWIEKI",
+    "value": "NIEDOMYKALNOŚĆ (OPADNIĘCIE) LEWEJ POWIEKI"
+}, {
+    "text": "опущение левого века",
+    "value": "опущение левого века"
+}, {
+    "text": "NIEDOMYKALNOŚĆ (OPADNIĘCIE) POWIEK",
+    "value": "NIEDOMYKALNOŚĆ (OPADNIĘCIE) POWIEK"
+}, {
+    "text": "опущение век",
+    "value": "опущение век"
+}, {
+    "text": "NIEDOMYKALNOŚĆ (OPADNIĘCIE) PRAWEJ POWIEKI",
+    "value": "NIEDOMYKALNOŚĆ (OPADNIĘCIE) PRAWEJ POWIEKI"
+}, {
+    "text": "опущение правого века",
+    "value": "опущение правого века"
+}, {
+    "text": "NIEDOWŁAD LEWEGO RAMIENIA",
+    "value": "NIEDOWŁAD LEWEGO RAMIENIA"
+}, {
+    "text": "парез левой руки",
+    "value": "парез левой руки"
+}, {
+    "text": "NIEDOWŁAD PRAWEGO RAMIENIA",
+    "value": "NIEDOWŁAD PRAWEGO RAMIENIA"
+}, {
+    "text": "парез правой руки",
+    "value": "парез правой руки"
+}, {
+    "text": "NIEWIDOMY (NIEDOWIDZENIE)",
+    "value": "NIEWIDOMY (NIEDOWIDZENIE)"
+}, {
+    "text": "слепота (нарушение зрения)",
+    "value": "слепота (нарушение зрения)"
+}, {
+    "text": "ODCHYLENIE OSI GAŁEK OCZNYCH",
+    "value": "ODCHYLENIE OSI GAŁEK OCZNYCH"
+}, {
+    "text": "отклонение оси глазных яблок",
+    "value": "отклонение оси глазных яблок"
+}, {
+    "text": "ODCHYLENIE OSI LEWEJ GAŁKI OCZNEJ",
+    "value": "ODCHYLENIE OSI LEWEJ GAŁKI OCZNEJ"
+}, {
+    "text": "отклонение оси левого глазного яблока",
+    "value": "отклонение оси левого глазного яблока"
+}, {
+    "text": "ODCHYLENIE OSI PRAWEJ GAŁKI OCZNEJ",
+    "value": "ODCHYLENIE OSI PRAWEJ GAŁKI OCZNEJ"
+}, {
+    "text": "отклонение оси правого глазного яблока",
+    "value": "отклонение оси правого глазного яблока"
+}, {
+    "text": "PERUKA",
+    "value": "PERUKA"
+}, {
+    "text": "парик",
+    "value": "парик"
+}, {
+    "text": "PRZEROST LEWEGO UCHA",
+    "value": "PRZEROST LEWEGO UCHA"
+}, {
+    "text": "гипертрофия левого уха",
+    "value": "гипертрофия левого уха"
+}, {
+    "text": "PRZEROST PRAWEGO UCHA",
+    "value": "PRZEROST PRAWEGO UCHA"
+}, {
+    "text": "гипертрофия правого уха",
+    "value": "гипертрофия правого уха"
+}, {
+    "text": "PRZESZCZEP SKÓRY NA CZOLE",
+    "value": "PRZESZCZEP SKÓRY NA CZOLE"
+}, {
+    "text": "пересадка кожи на лбу",
+    "value": "пересадка кожи на лбу"
+}, {
+    "text": "ROZSZCZEP DOLNEJ WARGI",
+    "value": "ROZSZCZEP DOLNEJ WARGI"
+}, {
+    "text": "расщелина нижней губы",
+    "value": "расщелина нижней губы"
+}, {
+    "text": "ROZSZCZEP GÓRNEJ WARGI",
+    "value": "ROZSZCZEP GÓRNEJ WARGI"
+}, {
+    "text": "расщелина верхней губы",
+    "value": "расщелина верхней губы"
+}, {
+    "text": "ROZSZCZEP WARG",
+    "value": "ROZSZCZEP WARG"
+}, {
+    "text": "расщелина губ",
+    "value": "расщелина губ"
+}, {
+    "text": "TATUAŻE NA PRZEDRAMIENIU I DŁONI LEWEJ RĘK",
+    "value": "TATUAŻE NA PRZEDRAMIENIU I DŁONI LEWEJ RĘK"
+}, {
+    "text": "татуировка на предплечье и левой руке",
+    "value": "татуировка на предплечье и левой руке"
+}, {
+    "text": "TATUAŻE NA PRZEDRAMIENIU I DŁONI PRAWEJ RĘ",
+    "value": "TATUAŻE NA PRZEDRAMIENIU I DŁONI PRAWEJ RĘ"
+}, {
+    "text": "татуировка на предплечье и правой руке",
+    "value": "татуировка на предплечье и правой руке"
+}, {
+    "text": "TATUAŻE NA PRZEDRAMIENIU LEWEJ I PRAWEJ RĘK",
+    "value": "TATUAŻE NA PRZEDRAMIENIU LEWEJ I PRAWEJ RĘK"
+}, {
+    "text": "татуировка на предплечье левой и правой рук",
+    "value": "татуировка на предплечье левой и правой рук"
+}, {
+    "text": "TATUAŻE NA STOPACH",
+    "value": "TATUAŻE NA STOPACH"
+}, {
+    "text": "татуировка на ногах",
+    "value": "татуировка на ногах"
+}, {
+    "text": "TATUAŻ-LEWA DŁOŃ I PRAWE PRZEDRAMIĘ",
+    "value": "TATUAŻ-LEWA DŁOŃ I PRAWE PRZEDRAMIĘ"
+}, {
+    "text": "татуировка на левой руке и правом предплечье",
+    "value": "татуировка на левой руке и правом предплечье"
+}, {
+    "text": "TATUAŻ-LEWA RĘKA",
+    "value": "TATUAŻ-LEWA RĘKA"
+}, {
+    "text": "татуировка на левой руке",
+    "value": "татуировка на левой руке"
+}, {
+    "text": "TATUAŻ-LEWE RAMIĘ",
+    "value": "TATUAŻ-LEWE RAMIĘ"
+}, {
+    "text": "татуировка на левой руке",
+    "value": "татуировка на левой руке"
+}, {
+    "text": "TATUAŻ NA DŁONIACH",
+    "value": "TATUAŻ NA DŁONIACH"
+}, {
+    "text": "татуировка на руках",
+    "value": "татуировка на руках"
+}, {
+    "text": "TATUAŻ NA KLATCE PIERSIOWEJ",
+    "value": "TATUAŻ NA KLATCE PIERSIOWEJ"
+}, {
+    "text": "татуировка на груди",
+    "value": "татуировка на груди"
+}, {
+    "text": "TATUAŻ NA LEWEJ DŁONI",
+    "value": "TATUAŻ NA LEWEJ DŁONI"
+}, {
+    "text": "тату на левой руке",
+    "value": "тату на левой руке"
+}, {
+    "text": "TATUAŻ NA LEWYM BARKU",
+    "value": "TATUAŻ NA LEWYM BARKU"
+}, {
+    "text": "тату на левом плече",
+    "value": "тату на левом плече"
+}, {
+    "text": "TATUAŻ NA NADGARSTKU LEWEJ RĘKI",
+    "value": "TATUAŻ NA NADGARSTKU LEWEJ RĘKI"
+}, {
+    "text": "тату на запястье левой руки",
+    "value": "тату на запястье левой руки"
+}, {
+    "text": "TATUAŻ NA NADGARSTKU PRAWEJ RĘKI",
+    "value": "TATUAŻ NA NADGARSTKU PRAWEJ RĘKI"
+}, {
+    "text": "тату на запястье правой руки",
+    "value": "тату на запястье правой руки"
+}, {
+    "text": "TATUAŻ NA PLECACH",
+    "value": "TATUAŻ NA PLECACH"
+}, {
+    "text": "тату на спине",
+    "value": "тату на спине"
+}, {
+    "text": "TATUAŻ NA PRAWEJ DŁONI",
+    "value": "TATUAŻ NA PRAWEJ DŁONI"
+}, {
+    "text": "тату на правой руке",
+    "value": "тату на правой руке"
+}, {
+    "text": "TATUAŻ NA PRAWYM BARKU",
+    "value": "TATUAŻ NA PRAWYM BARKU"
+}, {
+    "text": "тату на правом плече",
+    "value": "тату на правом плече"
+}, {
+    "text": "TATUAŻ NA PRZEDRAMIENIU LEWEJ RĘKI",
+    "value": "TATUAŻ NA PRZEDRAMIENIU LEWEJ RĘKI"
+}, {
+    "text": "тату на предплечье левой руки",
+    "value": "тату на предплечье левой руки"
+}, {
+    "text": "TATUAŻ NA PRZEDRAMIENIU PRAWEJ RĘKI",
+    "value": "TATUAŻ NA PRZEDRAMIENIU PRAWEJ RĘKI"
+}, {
+    "text": "тату на предплечье правой руки",
+    "value": "тату на предплечье правой руки"
+}, {
+    "text": "TATUAŻ NA SZYI",
+    "value": "TATUAŻ NA SZYI"
+}, {
+    "text": "тату на шее",
+    "value": "тату на шее"
+}, {
+    "text": "TATUAŻ NA TWARZY",
+    "value": "TATUAŻ NA TWARZY"
+}, {
+    "text": "тату на лице",
+    "value": "тату на лице"
+}, {
+    "text": "TATUAŻ PO LEWEJ STRONIE TWARZY",
+    "value": "TATUAŻ PO LEWEJ STRONIE TWARZY"
+}, {
+    "text": "тату на левой стороне лица",
+    "value": "тату на левой стороне лица"
+}, {
+    "text": "TATUAŻ PO PRAWEJ STRONIE TWARZY",
+    "value": "TATUAŻ PO PRAWEJ STRONIE TWARZY"
+}, {
+    "text": "тату на правой стороне лица",
+    "value": "тату на правой стороне лица"
+}, {
+    "text": "TATUAŻ-PRAWA DŁOŃ I LEWE PRZEDRAMIĘ",
+    "value": "TATUAŻ-PRAWA DŁOŃ I LEWE PRZEDRAMIĘ"
+}, {
+    "text": "тату — правая рука и левое предплечье",
+    "value": "тату — правая рука и левое предплечье"
+}, {
+    "text": "TATUAŻ-PRAWA RĘKA",
+    "value": "TATUAŻ-PRAWA RĘKA"
+}, {
+    "text": "тату — правая рука",
+    "value": "тату — правая рука"
+}, {
+    "text": "TATUAŻ-PRAWE RAMIĘ",
+    "value": "TATUAŻ-PRAWE RAMIĘ"
+}, {
+    "text": "тату — правая рука",
+    "value": "тату — правая рука"
+}, {
+    "text": "UBYTEK LEWEJ NOGI",
+    "value": "UBYTEK LEWEJ NOGI"
+}, {
+    "text": "потеря левой ноги",
+    "value": "потеря левой ноги"
+}, {
+    "text": "UBYTEK PRAWEJ NOGI",
+    "value": "UBYTEK PRAWEJ NOGI"
+}, {
+    "text": "потеря правой ноги",
+    "value": "потеря правой ноги"
+}, {
+    "text": "UBYTKI NÓG",
+    "value": "UBYTKI NÓG"
+}, {
+    "text": "потеря ноги",
+    "value": "потеря ноги"
+}, {
+    "text": "USZTYWNIENIE KRĘGOSŁUPA",
+    "value": "USZTYWNIENIE KRĘGOSŁUPA"
+}, {
+    "text": "ригидность позвоночника",
+    "value": "ригидность позвоночника"
+}, {
+    "text": "USZTYWNIENIE LEWEJ NOGI",
+    "value": "USZTYWNIENIE LEWEJ NOGI"
+}, {
+    "text": "окостенение левой ноги",
+    "value": "окостенение левой ноги"
+}, {
+    "text": "USZTYWNIENIE NÓG",
+    "value": "USZTYWNIENIE NÓG"
+}, {
+    "text": "окостенение ноги",
+    "value": "окостенение ноги"
+}, {
+    "text": "USZTYWNIENIE PRAWEJ NOGI",
+    "value": "USZTYWNIENIE PRAWEJ NOGI"
+}, {
+    "text": "окостенение правой ноги",
+    "value": "окостенение правой ноги"
+}, {
+    "text": "UTRATA WIDZENIA (NIEDOWIDZENIE) LEWEGO OKA",
+    "value": "UTRATA WIDZENIA (NIEDOWIDZENIE) LEWEGO OKA"
+}, {
+    "text": "потеря зрения (слепота) на левый глаз",
+    "value": "потеря зрения (слепота) на левый глаз"
+}, {
+    "text": "UTRATA WIDZENIA (NIEDOWIDZENIE) PRAWEGO OKA",
+    "value": "UTRATA WIDZENIA (NIEDOWIDZENIE) PRAWEGO OKA"
+}, {
+    "text": "потеря зрения (слепота) на левый глаз",
+    "value": "потеря зрения (слепота) на левый глаз"
+}, {
+    "text": "ZNAMIĘ (ZNAMIONA) NA LEWEJ DŁONI",
+    "value": "ZNAMIĘ (ZNAMIONA) NA LEWEJ DŁONI"
+}, {
+    "text": "родимое пятно (пятна) на левой руке",
+    "value": "родимое пятно (пятна) на левой руке"
+}, {
+    "text": "ZNAMIĘ (ZNAMIONA) NA PRAWEJ DŁONI",
+    "value": "ZNAMIĘ (ZNAMIONA) NA PRAWEJ DŁONI"
+}, {
+    "text": "родимое пятно (пятна) на правой руке",
+    "value": "родимое пятно (пятна) на правой руке"
+}, {
+    "text": "ZNAMIĘ (ZNAMIONA) NA SZYI",
+    "value": "ZNAMIĘ (ZNAMIONA) NA SZYI"
+}, {
+    "text": "родимое пятно (пятна) на шее",
+    "value": "родимое пятно (пятна) на шее"
+}, {
+    "text": "ZNAMIĘ (ZNAMIONA) NA TWARZY",
+    "value": "ZNAMIĘ (ZNAMIONA) NA TWARZY"
+}, {
+    "text": "родимое пятно (пятна) на лице",
+    "value": "родимое пятно (пятна) на лице"
+}, {
+    "text": "ZNAMIĘ (ZNAMIONA) PO LEWEJ STRONIE TWARZY",
+    "value": "ZNAMIĘ (ZNAMIONA) PO LEWEJ STRONIE TWARZY"
+}, {
+    "text": "родимое пятно (пятна) на левой стороне лица",
+    "value": "родимое пятно (пятна) на левой стороне лица"
+}, {
+    "text": "ZNAMIĘ (ZNAMIONA) PO PRAWEJ STRONIE TWARZY",
+    "value": "ZNAMIĘ (ZNAMIONA) PO PRAWEJ STRONIE TWARZY"
+}, {
+    "text": "родинка(и) на правой стороне лица",
+    "value": "родинка(и) на правой стороне лица"
+}, {
+    "text": "ZNAMIONA NA DŁONIACH",
+    "value": "ZNAMIONA NA DŁONIACH"
+}, {
+    "text": "родимое пятно(а) на руке",
+    "value": "родимое пятно(а) на руке"
+}, {
+    "text": "ZNIEKSZTAŁCENIE DOLNEJ WARGI",
+    "value": "ZNIEKSZTAŁCENIE DOLNEJ WARGI"
+}, {
+    "text": "деформация нижней губы",
+    "value": "деформация нижней губы"
+}, {
+    "text": "ZNIEKSZTAŁCENIE GÓRNEJ WARGI",
+    "value": "ZNIEKSZTAŁCENIE GÓRNEJ WARGI"
+}, {
+    "text": "деформация верхней губы",
+    "value": "деформация верхней губы"
+}, {
+    "text": "ZNIEKSZTAŁCENIE LEWEGO UCHA",
+    "value": "ZNIEKSZTAŁCENIE LEWEGO UCHA"
+}, {
+    "text": "деформация левого уха",
+    "value": "деформация левого уха"
+}, {
+    "text": "ZNIEKSZTAŁCENIE LEWEJ POWIEKI",
+    "value": "ZNIEKSZTAŁCENIE LEWEJ POWIEKI"
+}, {
+    "text": "деформация левого века",
+    "value": "деформация левого века"
+}, {
+    "text": "ZNIEKSZTAŁCENIE NOSA",
+    "value": "ZNIEKSZTAŁCENIE NOSA"
+}, {
+    "text": "деформация носа",
+    "value": "деформация носа"
+}, {
+    "text": "ZNIEKSZTAŁCENIE PALCA (PALCÓW) LEWEJ DŁONI",
+    "value": "ZNIEKSZTAŁCENIE PALCA (PALCÓW) LEWEJ DŁONI"
+}, {
+    "text": "деформация пальца(ов) левой руки",
+    "value": "деформация пальца(ов) левой руки"
+}, {
+    "text": "ZNIEKSZTAŁCENIE PALCA (PALCÓW) PRAWEJ DŁON",
+    "value": "ZNIEKSZTAŁCENIE PALCA (PALCÓW) PRAWEJ DŁON"
+}, {
+    "text": "деформация пальца(ов) правой руки",
+    "value": "деформация пальца(ов) правой руки"
+}, {
+    "text": "ZNIEKSZTAŁCENIE PALCÓW DŁONI",
+    "value": "ZNIEKSZTAŁCENIE PALCÓW DŁONI"
+}, {
+    "text": "деформация пальцев руки",
+    "value": "деформация пальцев руки"
+}, {
+    "text": "ZNIEKSZTAŁCENIE POWIEK",
+    "value": "ZNIEKSZTAŁCENIE POWIEK"
+}, {
+    "text": "деформация век",
+    "value": "деформация век"
+}, {
+    "text": "ZNIEKSZTAŁCENIE PRAWEGO KCIUKA",
+    "value": "ZNIEKSZTAŁCENIE PRAWEGO KCIUKA"
+}, {
+    "text": "деформация большого пальца правой руки",
+    "value": "деформация большого пальца правой руки"
+}, {
+    "text": "ZNIEKSZTAŁCENIE PRAWEGO UCHA",
+    "value": "ZNIEKSZTAŁCENIE PRAWEGO UCHA"
+}, {
+    "text": "деформация правого уха",
+    "value": "деформация правого уха"
+}, {
+    "text": "ZNIEKSZTAŁCENIE PRAWEJ POWIEKI",
+    "value": "ZNIEKSZTAŁCENIE PRAWEJ POWIEKI"
+}, {
+    "text": "деформация правого века",
+    "value": "деформация правого века"
+}, {
+    "text": "ZNIEKSZTAŁCENIE UKŁADU KOSTNEGO",
+    "value": "ZNIEKSZTAŁCENIE UKŁADU KOSTNEGO"
+}, {
+    "text": "деформация скелета",
+    "value": "деформация скелета"
+}, {
+    "text": "ZNIEKSZTAŁCENIE USZU",
+    "value": "ZNIEKSZTAŁCENIE USZU"
+}, {
+    "text": "деформация ушей",
+    "value": "деформация ушей"
+}, {
+    "text": "ZNIEKSZTAŁCENIE WARG",
+    "value": "ZNIEKSZTAŁCENIE WARG"
+}, {
+    "text": "деформация губ",
+    "value": "деформация губ"
+}, {
+    "text": "ZNIEKSZTAŁCENIE ŻUCHWY",
+    "value": "ZNIEKSZTAŁCENIE ŻUCHWY"
+}, {
+    "text": "деформация нижней челюсти",
+    "value": "деформация нижней челюсти"
+}, {
+    "text": "",
+    "value": ""
+}]

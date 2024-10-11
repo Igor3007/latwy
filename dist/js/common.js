@@ -702,4 +702,34 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
 
+
+
+
+
+    let str = `RUCHU BEZWIZOWEGO
+    безвизового движения
+    WIZY
+    визы
+    ZEZWOLENIA NA POBYT CZASOWY
+    разрешение на временное пребывание
+    DOKUMENTU UPRAWNIAJĄCEGO DO WJAZDU I POBYTU WYDANEGO PRZEZ INNE PAŃSTWO OBSZARU SCHENGEN
+    документ, разрешающий въезд и пребывание, выданный другой страной Шенгена`;
+
+
+
+    let result = [];
+
+    str.split('\n').forEach(item => {
+        result.push({
+            "text": item.trim().replace('/', ''),
+            "value": item.trim().replace('/', '')
+        })
+    })
+
+    console.log(JSON.stringify(result))
+
+
+
+
+
 }); //dcl
