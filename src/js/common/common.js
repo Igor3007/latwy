@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             ajaxLoadTooltip(e, callback) {
 
                 callback({
-                    title: '',
+                    title: 'Подсказка',
                     text: e.target.dataset.tooltip || e.target.closest('[data-tooltip]').dataset.tooltip
                 })
 
@@ -455,8 +455,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     }
 
-    if (document.querySelector('[data-pf="group"]')) {
-        document.querySelectorAll('[data-pf="group"]').forEach(item => {
+    if (document.querySelector('[data-pf="finance"]')) {
+        document.querySelectorAll('[data-pf="finance"] > .form__item').forEach(item => {
+
+            if (!item.querySelector('[type=checkbox]')) return false
 
             let checkbox = item.querySelector('[type=checkbox]')
 
@@ -464,12 +466,31 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 item.setAttribute('disabled', 'disabled')
             }
 
+            if (!checkbox.checked && checkbox.dataset.pf == 'naem') {
+                item.closest('[data-pf="finance"]').querySelector('[data-pf="naem-fields"]').setAttribute('disabled', 'disabled')
+            }
+
             checkbox.addEventListener('change', (e) => {
+
+                let moreField = item.closest('[data-pf="finance"]').querySelector('[data-pf="naem-fields"]')
+
                 if (!e.target.checked) {
                     item.setAttribute('disabled', 'disabled')
+
+                    if (checkbox.dataset.pf == 'naem') {
+                        moreField.setAttribute('disabled', 'disabled')
+                    }
+
+
                 } else {
                     item.removeAttribute('disabled')
+
+                    if (checkbox.dataset.pf == 'naem') {
+                        moreField.removeAttribute('disabled')
+                    }
                 }
+
+
             })
         })
     }
@@ -699,36 +720,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
             })
         })
     }
-
-
-
-
-
-
-
-    let str = `RUCHU BEZWIZOWEGO
-    безвизового движения
-    WIZY
-    визы
-    ZEZWOLENIA NA POBYT CZASOWY
-    разрешение на временное пребывание
-    DOKUMENTU UPRAWNIAJĄCEGO DO WJAZDU I POBYTU WYDANEGO PRZEZ INNE PAŃSTWO OBSZARU SCHENGEN
-    документ, разрешающий въезд и пребывание, выданный другой страной Шенгена`;
-
-
-
-    let result = [];
-
-    str.split('\n').forEach(item => {
-        result.push({
-            "text": item.trim().replace('/', ''),
-            "value": item.trim().replace('/', '')
-        })
-    })
-
-    console.log(JSON.stringify(result))
-
-
 
 
 

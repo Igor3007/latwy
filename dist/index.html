@@ -392,61 +392,93 @@
                           </div>
                           <div class="form__item form__show" data-pf="add-trip"><span class="ic_24 ic_plus"></span>Добавить поездку </div>
                           <div class="form__label">Информация о финансовых средствах, покрывающих расходы:</div>
-                          <div class="form__item">
-                            <div class="form__subitem">
-                              <div class="group-subitem" data-pf="group">
+                          <div class="form__finance" data-pf="finance">
+                            <div class="form__item">
+                              <div class="form__subitem form__subitem--w25">
                                 <label class="checkbox">
-                                  <input type="checkbox" name="tw" value="1"/><span class="checkbox__elem"></span><span class="checkbox__text">Наемный работник</span>
+                                  <input type="checkbox" name="" data-pf="naem" value=""><span class="checkbox__elem"></span><span class="checkbox__text">Наемный работник</span>
                                 </label>
+                              </div>
+                              <div class="form__subitem form__subitem--w25">
                                 <select placeholder="Тип договора" data-label="Тип договора">
                                   <option value="1">UMOWA O PRACĘ</option>
-                                  <option value="2">Договор</option>
+                                  <option value="2">Тип договора 2</option>
                                 </select>
                               </div>
                             </div>
-                            <div class="form__subitem">
-                              <div class="group-subitem" data-pf="group">
+                            <div class="form__item">
+                              <div class="form__subitem form__subitem--w25">
                                 <label class="checkbox">
-                                  <input type="checkbox" name="tw" value="2"/><span class="checkbox__elem"></span><span class="checkbox__text">ИП</span>
+                                  <input type="checkbox" name="undefined" value="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">ИП</span>
                                 </label>
+                              </div>
+                              <div class="form__subitem form__subitem--w25">
                                 <div class="input-material">
-                                  <label>NIP
+                                  <label>Укажите NIP
                                   </label>
                                   <input type="text" value="" placeholder="Укажите NIP"/>
                                 </div>
                               </div>
                             </div>
-                            <div class="form__subitem">
-                              <div class="group-subitem" data-pf="group">
-                                <label class="checkbox">
-                                  <input type="checkbox" name="tw" value="3"/><span class="checkbox__elem"></span><span class="checkbox__text">Спулка</span>
-                                </label>
+                            <div class="form__item">
+                              <div class="form__subitem form__subitem--w25">
+                                <div class="form-subcheckbox">
+                                  <div class="form-subcheckbox__left">
+                                    <label class="checkbox">
+                                      <input type="checkbox" name="undefined" value="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Фирма</span>
+                                    </label>
+                                  </div>
+                                  <div class="form-subcheckbox__right">
+                                    <label class="radio">
+                                      <input type="radio" name="type_ip" value="undefined"/><span class="radio__elem"></span><span class="radio__text">Презес</span>
+                                    </label>
+                                    <label class="radio">
+                                      <input type="radio" name="type_ip" value="undefined"/><span class="radio__elem"></span><span class="radio__text">Член правления</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form__subitem form__subitem--w25">
                                 <div class="input-material">
                                   <label>KRS
                                   </label>
-                                  <input type="text" value="" placeholder="Укажите Укажите KRS"/>
+                                  <input type="text" value="" placeholder="Укажите KRS"/>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="form__item">
-                            <div class="form__subitem">
-                              <select placeholder="Медицинская страховка" data-label="Медицинская страховка">
-                                <option value="2">UBEZPIECZENIE PRYWATNE</option>
-                                <option value="2">страховка</option>
-                              </select>
-                            </div>
-                            <div class="form__subitem">
-                              <select placeholder="Информация об обременениях" data-label="Алименты, суд. дело и т.д." data-tooltip="Информация об обременениях на территории Польши &lt;br&gt; или за ее пределами (например, алименты, судебное дело)">
-                                <option value="2">Алименты</option>
-                                <option value="2">NIE</option>
-                              </select>
-                            </div>
-                            <div class="form__subitem">
-                              <div class="input-material">
-                                <label>Номер телефона в Польше
+                            <div class="form__item">
+                              <div class="form__subitem form__subitem--w25">
+                                <label class="checkbox">
+                                  <input type="checkbox" name="undefined" value="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">На содержании супруга/и</span>
                                 </label>
-                                <input type="text" value="" placeholder="Номер телефона в Польше"/>
+                              </div>
+                            </div>
+                            <div class="form__item">
+                              <div class="form__subitem form__subitem--w25">
+                                <label class="checkbox">
+                                  <input type="checkbox" name="undefined" value="undefined"/><span class="checkbox__elem"></span><span class="checkbox__text">Студент (собственные средства)</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="form__item" data-pf="naem-fields">
+                              <div class="form__subitem">
+                                <select placeholder="Медицинская страховка" data-label="Медицинская страховка">
+                                  <option value="2">UBEZPIECZENIE PRYWATNE</option>
+                                  <option value="2">страховка</option>
+                                </select>
+                              </div>
+                              <div class="form__subitem">
+                                <select placeholder="Информация об обременениях" data-label="Алименты, суд. дело и т.д." data-tooltip="Информация об обременениях на территории Польши &lt;br&gt; или за ее пределами (например, алименты, судебное дело)">
+                                  <option value="2">Алименты</option>
+                                  <option value="2">NIE</option>
+                                </select>
+                              </div>
+                              <div class="form__subitem">
+                                <div class="input-material">
+                                  <label>Номер телефона в Польше
+                                  </label>
+                                  <input type="text" value="" placeholder="Номер телефона в Польше"/>
+                                </div>
                               </div>
                             </div>
                           </div>

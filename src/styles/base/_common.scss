@@ -165,7 +165,7 @@
             font-weight: 600;
 
             &:hover {
-                color: var(--color-accent-2)
+                color: #854CFA
             }
         }
 
@@ -226,11 +226,11 @@
 
                 &:hover {
                     background-color: var(--color-bg-3);
-                    color: var(--color-accent-2);
+                    color: #854CFA;
                     cursor: pointer;
 
                     & svg {
-                        fill: var(--color-accent-2);
+                        fill: #854CFA;
                     }
                 }
 
@@ -318,11 +318,11 @@
 
                     &:hover {
                         background-color: var(--color-bg-3);
-                        color: var(--color-accent-2);
+                        color: #854CFA;
                         cursor: pointer;
 
                         & svg {
-                            fill: var(--color-accent-2);
+                            fill: #854CFA;
                         }
                     }
 
@@ -419,7 +419,7 @@
     color: var(--color-text-1);
 
     & h2 {
-        color: var(--color-accent-2);
+        color: #854CFA;
     }
 }
 
@@ -563,7 +563,7 @@
 
                     &:hover {
                         background-color: var(--color-bg-2);
-                        color: var(--color-accent-2)
+                        color: #854CFA
                     }
 
 

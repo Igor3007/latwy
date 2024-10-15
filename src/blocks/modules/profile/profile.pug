@@ -85,7 +85,7 @@ mixin profile
                                             
                                             option(value="1") Холост
                                             option(value="2") Женат
-                                            option(value="3" ) Замужем
+                                            option(value="3") Замужем
                                            
 
                                     .form__subitem
@@ -293,47 +293,69 @@ mixin profile
 
                                 .form__label Информация о финансовых средствах, покрывающих расходы:
 
-                                .form__item
-                                    .form__subitem
-                                        .group-subitem(data-pf="group")
-                                            +checkbox('Наемный работник', 'tw', false, 1)
+                                .form__finance(data-pf="finance")
+                                    .form__item
+                                        .form__subitem.form__subitem--w25
+                                              label.checkbox
+                                                input(type="checkbox" name="" data-pf="naem" value="")
+                                                span.checkbox__elem
+                                                span.checkbox__text!= 'Наемный работник'
+
+                                        .form__subitem.form__subitem--w25
                                             select(placeholder="Тип договора" data-label="Тип договора")
-                                                
                                                 option(value="1") UMOWA O PRACĘ
-                                                option(value="2") Договор
-                                    .form__subitem
-                                        .group-subitem(data-pf="group")
-                                            +checkbox('ИП', 'tw', false, 2)
+                                                option(value="2") Тип договора 2
+
+                                    .form__item
+                                        .form__subitem.form__subitem--w25
+                                            +checkbox('ИП')
+                                        .form__subitem.form__subitem--w25
                                             +input-material({
-                                                    label: 'NIP',
-                                                    placeholder: 'Укажите NIP',
+                                                label: 'Укажите NIP',
+                                                placeholder: 'Укажите NIP',
                                             })
-                                    .form__subitem
-                                        .group-subitem(data-pf="group")
-                                            +checkbox('Спулка', 'tw', false, 3)
+
+                                    .form__item
+                                        .form__subitem.form__subitem--w25
+                                            .form-subcheckbox
+                                                .form-subcheckbox__left
+                                                    +checkbox('Фирма')
+                                                .form-subcheckbox__right
+                                                    +radio('Презес', 'type_ip')
+                                                    +radio('Член правления', 'type_ip')
+                                        .form__subitem.form__subitem--w25
                                             +input-material({
-                                                    label: 'KRS',
-                                                    placeholder: 'Укажите Укажите KRS',
-                                                })
+                                                label: 'KRS',
+                                                placeholder: 'Укажите KRS',
+                                            })
 
-                                                
+                                    .form__item
+                                        .form__subitem.form__subitem--w25
+                                            +checkbox('На содержании супруга/и')
 
-                                .form__item
-                                    .form__subitem
-                                        select(placeholder="Медицинская страховка" data-label="Медицинская страховка")
-                                          
-                                            option(value="2") UBEZPIECZENIE PRYWATNE
-                                            option(value="2") страховка
-                                    .form__subitem
-                                        select(placeholder="Информация об обременениях" data-label="Алименты, суд. дело и т.д." data-tooltip="Информация об обременениях на территории Польши <br> или за ее пределами (например, алименты, судебное дело)")
+                                    .form__item
+                                        .form__subitem.form__subitem--w25
+                                            +checkbox('Студент (собственные средства)')
+                                        
+
+                                                    
+
+                                    .form__item(data-pf="naem-fields")
+                                        .form__subitem
+                                            select(placeholder="Медицинская страховка" data-label="Медицинская страховка")
                                             
-                                            option(value="2") Алименты
-                                            option(value="2") NIE
-                                    .form__subitem
-                                        +input-material({
-                                                label: 'Номер телефона в Польше',
-                                                placeholder: 'Номер телефона в Польше',
-                                            })
+                                                option(value="2") UBEZPIECZENIE PRYWATNE
+                                                option(value="2") страховка
+                                        .form__subitem
+                                            select(placeholder="Информация об обременениях" data-label="Алименты, суд. дело и т.д." data-tooltip="Информация об обременениях на территории Польши <br> или за ее пределами (например, алименты, судебное дело)")
+                                                
+                                                option(value="2") Алименты
+                                                option(value="2") NIE
+                                        .form__subitem
+                                            +input-material({
+                                                    label: 'Номер телефона в Польше',
+                                                    placeholder: 'Номер телефона в Польше',
+                                                })
 
                                 
 

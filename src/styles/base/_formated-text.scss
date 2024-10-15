@@ -135,7 +135,7 @@
     }
 
     & a {
-        color: var(--color-accent-2);
+        color: #854CFA;
 
         &:hover {
             text-decoration: underline;
@@ -187,7 +187,7 @@
                 top: 0.5em;
                 transform: rotate(45deg);
                 border-radius: 1px;
-                background-color: var(--color-accent-2);
+                background-color: #854CFA;
 
                 @media screen and (min-width: $w1440) {
                     width: 7.5px;
@@ -229,7 +229,7 @@
 
             &::before {
                 content: counter(number-list)"/";
-                color: var(--color-accent-2);
+                color: #854CFA;
                 min-width: 35px;
                 display: inline-block;
                 position: absolute;
@@ -385,7 +385,7 @@
                 top: 0.5em;
                 transform: rotate(45deg);
                 border-radius: 1px;
-                background-color: var(--color-accent-2);
+                background-color: #854CFA;
 
                 @media screen and (min-width: $w1440) {
                     width: 7.5px;
@@ -428,7 +428,7 @@
     }
 
     &:hover {
-        background-color: var(--color-accent-2);
+        background-color: #854CFA;
 
     }
 }

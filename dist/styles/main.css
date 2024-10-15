@@ -304,7 +304,7 @@ input[type="date"] {
 }
 
 .formated-text a {
-  color: var(--color-accent-2);
+  color: #854CFA;
 }
 
 .formated-text a:hover {
@@ -343,7 +343,7 @@ input[type="date"] {
   top: 0.5em;
   transform: rotate(45deg);
   border-radius: 1px;
-  background-color: var(--color-accent-2);
+  background-color: #854CFA;
 }
 
 .formated-text img {
@@ -366,7 +366,7 @@ input[type="date"] {
 
 .formated-text ol > li::before {
   content: counter(number-list) "/";
-  color: var(--color-accent-2);
+  color: #854CFA;
   min-width: 35px;
   display: inline-block;
   position: absolute;
@@ -476,7 +476,7 @@ input[type="date"] {
   top: 0.5em;
   transform: rotate(45deg);
   border-radius: 1px;
-  background-color: var(--color-accent-2);
+  background-color: #854CFA;
 }
 
 .sp-button_link,
@@ -504,7 +504,7 @@ input[type="date"] {
 .sp-button_link:hover,
 .sp-button_link:link:hover,
 .sp-button_link:visited:hover {
-  background-color: var(--color-accent-2);
+  background-color: #854CFA;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -2076,7 +2076,7 @@ select {
 }
 
 .btn.btn-white:hover {
-  color: var(--color-accent-2);
+  color: #854CFA;
 }
 
 .btn.btn-white:disabled {
@@ -2099,7 +2099,7 @@ select {
 }
 
 .btn.btn-light:hover {
-  color: var(--color-accent-2);
+  color: #854CFA;
   background-color: var(--color-bg-3);
 }
 
@@ -2318,7 +2318,7 @@ select {
   line-height: 140%;
   font-size: 15px;
   color: #222;
-  font-weight: 500;
+  font-weight: 400;
   padding-top: 1px;
   transition: 0.3s ease;
 }
@@ -2429,15 +2429,6 @@ select {
   color: #222222;
 }
 
-.group-subitem[disabled] .input-material,
-.group-subitem[disabled] .af-select,
-.form__item[disabled] .input-material,
-.form__item[disabled] .af-select {
-  pointer-events: none;
-  filter: grayscale(1);
-  opacity: 0.6;
-}
-
 .breadcrumb {
   background-color: transparent;
   padding: 0 0 5px 0;
@@ -2474,7 +2465,7 @@ select {
 }
 
 .breadcrumb li a:hover {
-  color: var(--color-accent-2);
+  color: #854CFA;
 }
 
 .breadcrumb li::after {
@@ -3153,7 +3144,7 @@ input {
 }
 
 .af-popup__close svg:hover {
-  stroke: var(--color-accent-2);
+  stroke: #854CFA;
   transform: rotate(90deg);
 }
 
@@ -3395,7 +3386,7 @@ input {
 .pagination__page ul li span:hover,
 .pagination__page ul li a:hover {
   background-color: var(--color-bg-3);
-  color: var(--color-accent-2);
+  color: #854CFA;
 }
 
 .pagination__page ul li span:hover svg,
@@ -3435,7 +3426,7 @@ input {
 
 .pagination__page ul li.next a:hover svg,
 .pagination__page ul li.prev a:hover svg {
-  fill: var(--color-accent-2);
+  fill: #854CFA;
 }
 
 .pagination__page ul li.next span,
@@ -3509,7 +3500,7 @@ input {
 }
 
 .table__tr:hover .table__td {
-  background-color: var(--color-accent-2);
+  background-color: #854CFA;
   color: #fff;
 }
 
@@ -3821,7 +3812,7 @@ input {
 }
 
 .open-modile-menu .header__burger {
-  background-color: var(--color-accent-2);
+  background-color: #854CFA;
 }
 
 .open-modile-menu .header__burger i {
@@ -4039,6 +4030,51 @@ input {
   font-size: 18px;
 }
 
+.form-subcheckbox {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.form-subcheckbox__right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form__finance .checkbox {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.group-subitem[disabled] .form-subcheckbox__right,
+.group-subitem[disabled] .input-material,
+.group-subitem[disabled] .af-select,
+.form__item[disabled] .form-subcheckbox__right,
+.form__item[disabled] .input-material,
+.form__item[disabled] .af-select {
+  pointer-events: none;
+  filter: grayscale(1);
+  opacity: 0.6;
+  display: none;
+}
+
+.tooltip-box__title {
+  font-weight: 600;
+}
+
+.tooltip-box__text {
+  padding: 14px 0px;
+}
+
+div[data-fs=trip] label {
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  max-width: calc(50vw - 100px);
+  overflow: hidden;
+}
+
 .user-filelist__wrp {
   display: flex;
   gap: 20px;
@@ -4206,7 +4242,7 @@ input {
 }
 
 .page__text a:hover {
-  color: var(--color-accent-2);
+  color: #854CFA;
 }
 
 .page__tabs {
@@ -4256,13 +4292,13 @@ input {
 .page__tabs ul a:hover,
 .page__tabs ul span:hover {
   background-color: var(--color-bg-3);
-  color: var(--color-accent-2);
+  color: #854CFA;
   cursor: pointer;
 }
 
 .page__tabs ul a:hover svg,
 .page__tabs ul span:hover svg {
-  fill: var(--color-accent-2);
+  fill: #854CFA;
 }
 
 .page__tabs ul a.is-active,
@@ -4343,13 +4379,13 @@ input {
 .page__nav ul li > a:hover,
 .page__nav ul li > span:hover {
   background-color: var(--color-bg-3);
-  color: var(--color-accent-2);
+  color: #854CFA;
   cursor: pointer;
 }
 
 .page__nav ul li > a:hover svg,
 .page__nav ul li > span:hover svg {
-  fill: var(--color-accent-2);
+  fill: #854CFA;
 }
 
 .page__nav ul li > a.is-active,
@@ -4418,7 +4454,7 @@ input {
 }
 
 .popup-thanks h2 {
-  color: var(--color-accent-2);
+  color: #854CFA;
 }
 
 @keyframes to-fade-popup {
@@ -4526,7 +4562,7 @@ input {
 
 .page-document__aside ul li a:hover {
   background-color: var(--color-bg-2);
-  color: var(--color-accent-2);
+  color: #854CFA;
 }
 
 .page-document__aside ul li.is-active a {
@@ -5060,6 +5096,7 @@ input {
   }
 
   .form__subitem--w50 {
+    max-width: 50%;
     width: 50%;
   }
 
@@ -5282,8 +5319,41 @@ input {
     align-items: center;
   }
 
+  .form__repeat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .form__show {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   .form .btn {
     width: 100%;
+  }
+
+  .form-subcheckbox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-subcheckbox__right {
+    flex-direction: row;
+  }
+
+  .form__finance .checkbox {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .form__finance .form__item[disabled] .form__subitem {
+    margin: 0;
   }
 }
 
