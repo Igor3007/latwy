@@ -96,6 +96,8 @@ class afSelect {
             item.querySelectorAll('select > option').forEach(function (item, index) {
 
                 // create li elem
+                if(!item.value) return false
+
                 const li = document.createElement('li')
                 li.innerHTML = item.innerText
                 li.setAttribute('rel', item.value)
@@ -187,19 +189,25 @@ class afSelect {
                 });
 
                 arr.forEach(function (item) {
-                    let option = document.createElement('option')
-                    option.value = item.value
-                    option.innerText = item.text
+                    
 
-                    if (attrSelectedId == item.value) {
-                        option.setAttribute('selected', true)
-                        select.removeAttribute('data-selected')
-                    }
+                        let option = document.createElement('option')
+                        option.value = item.value
+                        option.innerText = item.text
 
-                    select.append(option)
+                        if (attrSelectedId == item.value) {
+                            option.setAttribute('selected', true)
+                            select.removeAttribute('data-selected')
+                        }
+                        select.append(option)
+                    
+                  
                 })
 
-                createOptions(item);
+                 
+                    createOptions(item);
+               
+                
 
                 createFind()
             })
